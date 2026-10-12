@@ -24,6 +24,8 @@ We aim to curate **20,000+** real and synthetic channel capture measurements spa
 
 ## 📣 Updates
 
+- 🤗 **October 2026** — [OpenH-RF v1.0 is publicly released on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
+- 📄 **October 2026** — [The OpenH-RF preprint is out on arXiv!](https://arxiv.org/abs/2610.13616)
 - 🚀 **September 2026** — [OpenH-RF v1.0 early-access pre-release is live on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
 
 ## How to Participate
