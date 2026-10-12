@@ -1,15 +1,16 @@
+<h1 align="center">
+  <a href="https://open-h.github.io/OpenH-RF/"><img src="site/assets/img/logo/logo-glow-transparent.svg" alt="" height="56" align="absmiddle"></a> OpenH-RF
+</h1>
+
+<p align="center"><em>The largest, openly licensed dataset of medical ultrasound channel capture data.</em></p>
+
 <div align="center">
 
-<img src="assets/openh-rf-header.jpg" alt="OpenH-RF" width="100%">
-
-# OpenH-RF
-
+[![Website](assets/badge-website.svg)](https://open-h.github.io/OpenH-RF/)
 [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-OpenH--RF-FFD21E?style=for-the-badge)](https://huggingface.co/datasets/nvidia/OpenH-RF)
 [![arXiv](https://img.shields.io/badge/arXiv-2610.13616-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.13616)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/gNTJeUsH2B)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
-
-*Enabling advanced ultrasound imaging techniques and evaluation through free, openly available and high-quality ultrasound channel capture data.*
 
 </div>
 
