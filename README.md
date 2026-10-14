@@ -60,7 +60,26 @@ The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en
 
 ## Dataset Format
 
-The OpenH-RF format is implemented using the [`zea`](https://github.com/tue-bmd/zea) ultrasound toolbox. See the `zea` documentation for the [data specification](https://zea.readthedocs.io/en/v0.1.0a3/data-acquisition.html). The [`examples/templates/`](examples/templates/) directories are starting points for a submission — each has a `convert.py` (data → openh-rf `.hdf5`), a `reconstruct.py` (raw channel data → B-mode), and a `pipeline.yaml`:
+OpenH-RF uses the file format of the [`zea`](https://github.com/tue-bmd/zea) ultrasound toolbox, described in its [data specification](https://zea.readthedocs.io/en/v0.1.0a3/data-acquisition.html). Every dataset on the [OpenH-RF Hugging Face page](https://huggingface.co/datasets/nvidia/OpenH-RF) follows the layout below, so any of them is a good example to copy.
+
+Each submission contains:
+
+| File | Contents |
+|------|----------|
+| `*.hdf5` | One `zea` file per acquisition, holding the raw channel data (required) and the full probe and scan geometry |
+| `reconstruct.py` | A runnable script that reconstructs a B-mode image from the raw channel data |
+| `pipeline.yaml` | The `zea` processing pipeline that `reconstruct.py` runs |
+| `README.md` | The data card, shown as the dataset page on Hugging Face |
+| `LICENSE` | CC BY 4.0 |
+
+If a submission bundles several sub-datasets with different acquisition types or geometries, give each sub-dataset folder its own `reconstruct.py` and `pipeline.yaml`. A single pair at the root is fine when the processing is the same for all of them.
+
+<details>
+<summary><b>Templates and examples</b></summary>
+
+<br>
+
+The [`examples/templates/`](examples/templates/) directories are starting points for a submission. Each has a `convert.py` (source data to OpenH-RF `.hdf5`), a `reconstruct.py` and a `pipeline.yaml`.
 
 | Example | Modality |
 |---------|----------|
@@ -74,7 +93,7 @@ The OpenH-RF format is implemented using the [`zea`](https://github.com/tue-bmd/
 | [`examples/reconstruct_example.py`](examples/reconstruct_example.py) | Reconstructing a B-mode image from raw RF channel data using the default `zea` pipeline |
 | [`examples/save_pipeline_example.py`](examples/save_pipeline_example.py) | Saving a `zea` processing pipeline as a reusable YAML config |
 
-For a submission usually one `pipeline.yaml` + `reconstruct.py` pair suffices. If your submission bundles multiple sub-datasets (distinct acquisition types or geometries) as separate folders under one submission root, please give each sub-dataset folder its own `pipeline.yaml` + `reconstruct.py` rather than sharing one pair at the root instead of growing branching logic to auto-detect which sub-dataset it's running on. A shared root-level pair is still perfectly fine when the pipeline is identical across all sub-datasets.
+</details>
 
 ## Setup
 
