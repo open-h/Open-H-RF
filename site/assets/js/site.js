@@ -160,7 +160,9 @@
       el(
         "p",
         { class: "steps" },
-        `Taking the ${d.id} dataset as an example, paste `,
+        "Taking the ",
+        el("a", { href: `#dataset/${d.name}`, text: d.id }),
+        " dataset as an example, paste ",
         path(folder),
         " as the dataset and ",
         path(`${folder}/pipeline.yaml`),

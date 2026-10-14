@@ -42,7 +42,7 @@ pip install "zea[jax,app]"
 zea app
 ```
 
-Taking the `tue-carotid` dataset as an example, paste `hf://nvidia/OpenH-RF/tue-carotid` as the dataset and `hf://nvidia/OpenH-RF/tue-carotid/pipeline.yaml` as the config, pick a file to see its contents, and press Run to beamform it. You can also stream the data directly in Python:
+Taking the [`tue-carotid`](https://open-h.github.io/OpenH-RF/#dataset/tue-carotid) dataset as an example, paste `hf://nvidia/OpenH-RF/tue-carotid` as the dataset and `hf://nvidia/OpenH-RF/tue-carotid/pipeline.yaml` as the config, pick a file to see its contents, and press Run to beamform it. You can also stream the data directly in Python:
 
 ```python
 import zea
