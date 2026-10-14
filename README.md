@@ -109,7 +109,7 @@ uv run python examples/save_pipeline_example.py
 
 `uv sync` creates `.venv/` and installs dependencies listed in `pyproject.toml`. Run any script with `uv run python <script>.py`, or activate the venv with `source .venv/bin/activate`.
 
-The repo pins `zea` v0.1.8. For more detailed installation instructions, see the [`zea` installation docs](https://zea.readthedocs.io/en/stable/installation.html).
+This repo pins `zea` v0.1.8. For more detailed installation instructions, see the [`zea` installation docs](https://zea.readthedocs.io/en/stable/installation.html).
 
 Pick a backend / accelerator with extras:
 
@@ -176,6 +176,28 @@ If you use OpenH-RF in your research, please cite the [OpenH-RF paper](https://a
 }
 ```
 
+If you use [`zea`](https://github.com/tue-bmd/zea) to access or process the data, please also cite the [`zea` paper](https://doi.org/10.21105/joss.09881):
+
+```bibtex
+@article{stevens2026zea,
+  title = {{zea}: A Toolbox for Cognitive Ultrasound Imaging},
+  author = {Stevens, Tristan S. W. and van Nierop, Wessel L. and Luijten, Ben and
+            van de Schaft, Vincent and Nolan, Ois{\'i}n and Federici, Beatrice and
+            van Harten, Louis D. and Penninga, Simon W. and Schueler, Noortje I. P. and
+            van Sloun, Ruud J. G.},
+  journal = {Journal of Open Source Software},
+  publisher = {The Open Journal},
+  year = {2026},
+  volume = {11},
+  number = {121},
+  pages = {9881},
+  doi = {10.21105/joss.09881},
+  url = {https://doi.org/10.21105/joss.09881}
+}
+```
+
+If you use a specific sub-dataset, please also check whether it has its own citation. Open the [dataset explorer](https://open-h.github.io/OpenH-RF/#explorer), click the dataset's card and see its Citation section.
+
 ## Contact
 
 - **Technical questions** — [openh.data+rf@gmail.com](mailto:openh.data+rf@gmail.com), the [Hugging Face dataset community page](https://huggingface.co/datasets/nvidia/OpenH-RF/discussions), or the [`zea` community page](https://github.com/tue-bmd/zea/discussions)
@@ -184,4 +206,4 @@ If you use OpenH-RF in your research, please cite the [OpenH-RF paper](https://a
 
 ## License
 
-Code in this repository is licensed under the [Apache License 2.0](LICENSE). The released dataset (when published) will be licensed under CC BY 4.0.
+Code in this repository is licensed under the [Apache License 2.0](LICENSE). The OpenH-RF v1.0 dataset is licensed under [CC BY 4.0](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/v1.0/LICENSE).
