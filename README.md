@@ -65,6 +65,9 @@ To get only the data you need, use the [dataset explorer](https://open-h.github.
 
 ## How to Participate
 
+> [!NOTE]
+> Contributions to OpenH-RF v1.0 are now closed. We are planning a v2.0 release in the future. If you are interested, please [get in touch](#contact) and [join our Discord](https://discord.gg/gNTJeUsH2B) to stay updated.
+
 1. **Review the RFP** — Read the [Request for Proposals](assets/OpenH-RF%20Request%20for%20Proposals%20(RFP).pdf) for technical scope, eligibility and evaluation criteria.
 2. **Submit a Proposal** — Prepare a concise proposal (≤ 5 pages) describing your dataset, collection methodology and target tasks. Submit to [this Google Form](https://forms.gle/tqiqYSnnar1AekB19).
 3. **Contribute Data** — Once approved, prepare your dataset in the OpenH-RF format, implemented in [`zea`](https://github.com/tue-bmd/zea) as documented [here](https://zea.readthedocs.io/en/stable/data-acquisition.html), along with a datacard specifying the CC BY 4.0 license. Approved contributors are given a dedicated shared storage location (S3 or Google Drive) for delivery and a Discord channel for coordination.
