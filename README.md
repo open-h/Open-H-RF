@@ -20,7 +20,7 @@ OpenH-RF is a collaborative initiative led by [Stanford University](https://med.
 
 The initial (v1.0) release of the dataset contains **19,336** real and synthetic channel capture measurements, spanning a wide variety of acquisition types, targets and downstream tasks, including reconstruction, flow, quantitative imaging, motion estimation and interpretation tasks, contributed by **38 institutions** across academia and industry. Released under [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/).
 
-The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en/latest/getting-started.html) ultrasound toolbox. Each file holds the raw per-element channel data together with the full transmit and receive geometry needed to beamform it. Where available, files also include derived images, maps, labels and auxiliary signals that help interpret the data.
+The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en/stable/getting-started.html) ultrasound toolbox. Each file holds the raw per-element channel data together with the full transmit and receive geometry needed to beamform it. Where available, files also include derived images, maps, labels and auxiliary signals that help interpret the data.
 
 > [!TIP]
 > Explore the dataset on our [catalog page](https://open-h.github.io/OpenH-RF/) and filter by imaging target, acquisition type, downstream task, or contributor.
@@ -35,7 +35,7 @@ The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en
 
 1. **Review the RFP** — Read the [Request for Proposals](assets/OpenH-RF%20Request%20for%20Proposals%20(RFP).pdf) for technical scope, eligibility and evaluation criteria.
 2. **Submit a Proposal** — Prepare a concise proposal (≤ 5 pages) describing your dataset, collection methodology and target tasks. Submit to [this Google Form](https://forms.gle/tqiqYSnnar1AekB19).
-3. **Contribute Data** — Once approved, prepare your dataset in the OpenH-RF format, implemented in [`zea`](https://github.com/tue-bmd/zea) as documented [here](https://zea.readthedocs.io/en/v0.1.0a3/data-acquisition.html), along with a datacard specifying the CC BY 4.0 license. Approved contributors are given a dedicated shared storage location (S3 or Google Drive) for delivery and a Discord channel for coordination.
+3. **Contribute Data** — Once approved, prepare your dataset in the OpenH-RF format, implemented in [`zea`](https://github.com/tue-bmd/zea) as documented [here](https://zea.readthedocs.io/en/stable/data-acquisition.html), along with a datacard specifying the CC BY 4.0 license. Approved contributors are given a dedicated shared storage location (S3 or Google Drive) for delivery and a Discord channel for coordination.
 4. **Co-author the Release** — Approved contributions are included in the public dataset and foundation model release — contributors are named co-authors in related publications upon project completion.
 
 ## Key Dates
@@ -60,7 +60,7 @@ The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en
 
 ## Dataset Format
 
-OpenH-RF uses the file format of the [`zea`](https://github.com/tue-bmd/zea) ultrasound toolbox, described in its [data specification](https://zea.readthedocs.io/en/v0.1.0a3/data-acquisition.html). Every dataset on the [OpenH-RF Hugging Face page](https://huggingface.co/datasets/nvidia/OpenH-RF) follows the layout below, so any of them is a good example to copy.
+OpenH-RF uses the file format of the [`zea`](https://github.com/tue-bmd/zea) ultrasound toolbox, described in its [data specification](https://zea.readthedocs.io/en/stable/data-acquisition.html). Every dataset on the [OpenH-RF Hugging Face page](https://huggingface.co/datasets/nvidia/OpenH-RF) follows the layout below, so any of them is a good example to copy.
 
 Each submission contains:
 
@@ -109,7 +109,7 @@ uv run python examples/save_pipeline_example.py
 
 `uv sync` creates `.venv/` and installs dependencies listed in `pyproject.toml`. Run any script with `uv run python <script>.py`, or activate the venv with `source .venv/bin/activate`.
 
-`zea` is pinned in `uv.lock` to a specific commit of the moving [`openh-rf-latest`](https://github.com/tue-bmd/zea/tree/openh-rf-latest) tag, so every clone builds against the same spec. When the spec advances and you want the newer `zea`, bump the pin with `uv lock --upgrade-package zea` and commit the updated `uv.lock`.
+The repo pins `zea` v0.1.8. For more detailed installation instructions, see the [`zea` installation docs](https://zea.readthedocs.io/en/stable/installation.html).
 
 Pick a backend / accelerator with extras:
 
@@ -124,7 +124,7 @@ Pick a backend / accelerator with extras:
 Set the matching `KERAS_BACKEND` (`jax`, `torch`, or `tensorflow`) before running examples.
 
 > [!NOTE]
-> On Windows, use WSL2.
+> On Windows, use WSL2. See [details](https://zea.readthedocs.io/en/stable/installation.html#windows-users).
 
 ## Citation
 
