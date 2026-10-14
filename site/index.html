@@ -230,15 +230,15 @@
             blood flow measurement and ultrasound inverse problems.
           </p>
           <p>
-            The initial release of the dataset contains <strong>19,336</strong> real and synthetic channel capture measurements, spanning a wide variety of acquisition types, targets and downstream tasks,
+            The initial (v1.0) release of the dataset contains <strong>19,336</strong> real and synthetic channel capture measurements, spanning a wide variety of acquisition types, targets and downstream tasks,
             including reconstruction, flow, quantitative imaging, motion estimation and interpretation tasks, contributed by <strong>38 institutions</strong> across academia and industry. Released under
             <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><strong>CC BY 4.0</strong></a>.
           </p>
           <p>
             The OpenH-RF format is implemented using the <a href="https://zea.readthedocs.io/en/latest/getting-started.html" target="_blank" rel="noopener">zea</a>
-            ultrasound toolbox. Each HDF5 file holds the raw per-element channel data together with the full
-            transmit and receive geometry needed to beamform it, and, where available, derived images, maps,
-            labels and auxiliary signals.
+            ultrasound toolbox. Each file holds the raw per-element channel data together with the full
+            transmit and receive geometry needed to beamform it. Where available, files also include derived
+            images, maps, labels and auxiliary signals that help interpret the data.
           </p>
         </div>
       </div>
