@@ -2,7 +2,7 @@
   <a href="https://open-h.github.io/OpenH-RF/"><img src="site/assets/img/logo/logo-glow-transparent.svg" alt="" height="56" align="absmiddle"></a> OpenH-RF
 </h1>
 
-<p align="center"><em>The largest, openly licensed dataset of medical ultrasound channel capture data.</em></p>
+<p align="center"><em>An open, large-scale, community-driven dataset of medical ultrasound channel capture data</em></p>
 
 <div align="center">
 
