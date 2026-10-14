@@ -31,6 +31,38 @@ The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en
 - 🤗 **October 2026** — [OpenH-RF v1.0 is publicly released on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
 - 🚀 **September 2026** — [OpenH-RF v1.0 early-access pre-release is live on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
 
+## Get the Data
+
+The dataset is on Hugging Face at [nvidia/OpenH-RF](https://huggingface.co/datasets/nvidia/OpenH-RF). The files can be streamed using [`zea`](https://zea.readthedocs.io/en/stable/getting-started.html).
+
+You can use `zea app` to inspect and preview the data in each dataset. For GPU-enabled installation instructions, [see here](https://zea.readthedocs.io/en/stable/installation.html). For a minimal install:
+
+```bash
+pip install "zea[jax,app]"
+zea app
+```
+
+Taking the `tue-carotid` dataset as an example, paste `hf://nvidia/OpenH-RF/tue-carotid` as the dataset and `hf://nvidia/OpenH-RF/tue-carotid/pipeline.yaml` as the config, pick a file to see its contents, and press Run to beamform it. You can also stream the data directly in Python:
+
+```python
+import zea
+
+with zea.Dataset("hf://nvidia/OpenH-RF/tue-carotid") as dataset:
+    print(dataset.file_paths[:3])  # print the first 3 filenames
+
+    file = dataset[0]            # streamed (only the bytes you read are downloaded)
+    file.summary()               # print the contents of the file
+    raw = file.data.raw_data[0]  # data for the first frame
+```
+
+Alternatively, copy the whole `tue-carotid` subset to disk:
+
+```bash
+zea data copy hf://nvidia/OpenH-RF/tue-carotid ./OpenH-RF/tue-carotid --key all
+```
+
+To get only the data you need, use the [dataset explorer](https://open-h.github.io/OpenH-RF/#explorer) on the website. Filter the datasets by acquisition type, imaging target, included metadata keys and more, then click **Generate download script** to get a script that fetches just the matching files.
+
 ## How to Participate
 
 1. **Review the RFP** — Read the [Request for Proposals](assets/OpenH-RF%20Request%20for%20Proposals%20(RFP).pdf) for technical scope, eligibility and evaluation criteria.
