@@ -46,8 +46,9 @@ The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en
 | ~~Proposal submission deadline~~ | ~~June 10, 2026~~ |
 | ~~Data collection window~~ | ~~May – July 2026~~ |
 | ~~Dataset delivery deadline~~ | ~~July 12, 2026~~ |
-| Model training & validation | August – September 2026 |
-| Public release (dataset + foundation model) | October 4, 2026 |
+| ~~Dataset public release (v1.0)~~ | ~~October 4, 2026~~ |
+| Model training & validation | Q4 2026 |
+| Foundation model release | TBD |
 
 ## Steering Committee
 
