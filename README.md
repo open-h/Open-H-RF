@@ -50,8 +50,8 @@ import zea
 with zea.Dataset("hf://nvidia/OpenH-RF/tue-carotid") as dataset:
     print(dataset.file_paths[:3])  # print the first 3 filenames
 
-    file = dataset[0]            # streamed (only the bytes you read are downloaded)
-    file.summary()               # print the contents of the file
+    file = dataset[0]  # streamed (only the bytes you read are downloaded)
+    file.summary()  # print the contents of the file
     raw = file.data.raw_data[0]  # data for the first frame
 ```
 
