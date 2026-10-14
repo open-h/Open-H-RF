@@ -20,16 +20,16 @@ OpenH-RF is a collaborative initiative led by [Stanford University](https://med.
 
 The initial (v1.0) release of the dataset contains **19,336** real and synthetic channel capture measurements, spanning a wide variety of acquisition types, targets and downstream tasks, including reconstruction, flow, quantitative imaging, motion estimation and interpretation tasks, contributed by **38 institutions** across academia and industry. Released under [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/).
 
-The OpenH-RF format is implemented using the [zea](https://zea.readthedocs.io/en/stable/getting-started.html) ultrasound toolbox. Each file holds the raw per-element channel data together with the full transmit and receive geometry needed to beamform it. Where available, files also include derived images, maps, labels and auxiliary signals that help interpret the data.
+The OpenH-RF format is implemented using the [`zea`](https://zea.readthedocs.io/en/stable/getting-started.html) ultrasound toolbox. Each file holds the raw per-element channel data together with the full transmit and receive geometry needed to beamform it. Where available, files also include derived images, maps, labels and auxiliary signals that help interpret the data.
 
 > [!TIP]
 > Explore the dataset on our [catalog page](https://open-h.github.io/OpenH-RF/) and filter by imaging target, acquisition type, downstream task, or contributor.
 
 ## 📣 Updates
 
-- 📄 **October 2026** — [The OpenH-RF preprint is out on arXiv!](https://arxiv.org/abs/2610.13616)
-- 🤗 **October 2026** — [OpenH-RF v1.0 is publicly released on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
-- 🚀 **September 2026** — [OpenH-RF v1.0 early-access pre-release is live on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
+- 📄 **October 2026:** [The OpenH-RF preprint is out on arXiv!](https://arxiv.org/abs/2610.13616)
+- 🤗 **October 2026:** [OpenH-RF v1.0 is publicly released on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
+- 🚀 **September 2026:** [OpenH-RF v1.0 early-access pre-release is live on Hugging Face!](https://huggingface.co/datasets/nvidia/OpenH-RF)
 
 ## Get the Data
 
@@ -68,10 +68,17 @@ To get only the data you need, use the [dataset explorer](https://open-h.github.
 > [!NOTE]
 > Contributions to OpenH-RF v1.0 are now closed. We are planning a v2.0 release in the future. If you are interested, please [get in touch](#contact) and [join our Discord](https://discord.gg/gNTJeUsH2B) to stay updated.
 
-1. **Review the RFP** — Read the [Request for Proposals](assets/OpenH-RF%20Request%20for%20Proposals%20(RFP).pdf) for technical scope, eligibility and evaluation criteria.
-2. **Submit a Proposal** — Prepare a concise proposal (≤ 5 pages) describing your dataset, collection methodology and target tasks. Submit to [this Google Form](https://forms.gle/tqiqYSnnar1AekB19).
-3. **Contribute Data** — Once approved, prepare your dataset in the OpenH-RF format, implemented in [`zea`](https://github.com/tue-bmd/zea) as documented [here](https://zea.readthedocs.io/en/stable/data-acquisition.html), along with a datacard specifying the CC BY 4.0 license. Approved contributors are given a dedicated shared storage location (S3 or Google Drive) for delivery and a Discord channel for coordination.
-4. **Co-author the Release** — Approved contributions are included in the public dataset and foundation model release — contributors are named co-authors in related publications upon project completion.
+<details>
+<summary><b>OpenH-RF v1.0 participation instructions</b></summary>
+
+<br>
+
+1. **Review the RFP:** Read the [Request for Proposals](assets/OpenH-RF%20Request%20for%20Proposals%20(RFP).pdf) for technical scope, eligibility and evaluation criteria.
+2. **Submit a Proposal:** Prepare a concise proposal (≤ 5 pages) describing your dataset, collection methodology and target tasks. Submit to [this Google Form](https://forms.gle/tqiqYSnnar1AekB19).
+3. **Contribute Data:** Once approved, prepare your dataset in the OpenH-RF format, implemented in [`zea`](https://github.com/tue-bmd/zea) as documented [here](https://zea.readthedocs.io/en/stable/data-acquisition.html), along with a data card specifying the CC BY 4.0 license. Approved contributors are given a dedicated shared storage location (S3 or Google Drive) for delivery and a Discord channel for coordination.
+4. **Co-author the Release:** Approved contributions are included in the public dataset and foundation model release. Contributors are named co-authors in related publications upon project completion.
+
+</details>
 
 ## Key Dates
 
@@ -235,9 +242,9 @@ If you use a specific sub-dataset, please also check whether it has its own cita
 
 ## Contact
 
-- **Technical questions** — [openh.data+rf@gmail.com](mailto:openh.data+rf@gmail.com), the [Hugging Face dataset community page](https://huggingface.co/datasets/nvidia/OpenH-RF/discussions), or the [`zea` community page](https://github.com/tue-bmd/zea/discussions)
-- **Administrative questions** — [wsimson@nvidia.com](mailto:wsimson@nvidia.com)
-- **Community** — [Join our Discord](https://discord.gg/gNTJeUsH2B)
+- **Technical questions:** [openh.data+rf@gmail.com](mailto:openh.data+rf@gmail.com), the [Hugging Face dataset community page](https://huggingface.co/datasets/nvidia/OpenH-RF/discussions), or the [`zea` community page](https://github.com/tue-bmd/zea/discussions)
+- **Administrative questions:** [wsimson@nvidia.com](mailto:wsimson@nvidia.com)
+- **Community:** [Join our Discord](https://discord.gg/gNTJeUsH2B)
 
 ## License
 
