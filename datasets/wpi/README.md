@@ -143,7 +143,7 @@ None. The data is either fully synthetic (Field II) or measured on an inanimate 
 ## Raw Source Data
 
 The raw pre-conversion outputs are archived under the same CC BY 4.0 license at
-<https://huggingface.co/datasets/RyoMurakami/Open-H-RF-eSAF-raw>: the raw Verasonics per-line
+<https://huggingface.co/datasets/RyoMurakami/OpenH-RF-eSAF-raw>: the raw Verasonics per-line
 channel-RF captures (with encoder logs) for the 5 measured acquisitions, and the per-case MATLAB intermediates (raw RF, in-plane DAS, eSAF output) for the 190 simulated cases.
 
 ## Citation
