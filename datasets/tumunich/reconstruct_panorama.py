@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Extended-field-of-view reconstruction for the tumunich dataset of OpenH-RF.
+"""Extended-field-of-view reconstruction for the tumunich dataset of Open-H-RF.
 
 The robot translates the probe 70 mm along its own lateral axis during the
 acquisition, so frames taken at different points in the sweep see overlapping
@@ -43,7 +43,7 @@ CONFIG = HERE / "pipeline_panorama.yaml"
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-INPUT = "hf://nvidia/OpenH-RF/tumunich/data/cirs_phantom/synth_apert_sweep_1.hdf5"
+INPUT = "hf://nvidia/Open-H-RF/tumunich/data/cirs_phantom/synth_apert_sweep_1.hdf5"
 OUTPUT = None  # PNG to write (default: <input>_panorama.png next to the sample)
 N_FRAMES = 20  # Frames to compound, spread evenly over the travel
 BLEND_TAPER = 0.25  # Fraction of each frame's width ramped down at either edge

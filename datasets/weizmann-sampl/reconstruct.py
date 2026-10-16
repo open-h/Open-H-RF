@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the weizmann-sampl dataset of OpenH-RF.
+"""Example reconstruction script for the weizmann-sampl dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/weizmann-sampl
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/weizmann-sampl
 
 B-mode reconstruction of focused ray-line thyroid channel data.
 
@@ -45,7 +45,7 @@ CONFIG = HERE / "pipeline.yaml"
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/weizmann-sampl/data/30_1.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/weizmann-sampl/data/30_1.hdf5"
 DATA_DIR = HERE / "subjects"  # HDF5 files to sample from (grid modes, used when ZEA_FILE is None)
 OUT = None
 # Frame 0 is unsettled: a near-field transient saturates the log compression

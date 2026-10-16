@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - beamforming
   - motion-estimation
   - abdominal-aortic-aneurysm
@@ -20,7 +20,7 @@ language:
 
 ![Reconstructed cineloop from AAA_subject11.hdf5](assets/AAA_subject11.gif)
 
-*Cine loop of [`data/AAA_subject11.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tue-aaa/data/AAA_subject11.hdf5), reconstructed from the raw channel data.*
+*Cine loop of [`data/AAA_subject11.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tue-aaa/data/AAA_subject11.hdf5), reconstructed from the raw channel data.*
 
 ## Dataset Description
 
@@ -58,11 +58,11 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/tue-aaa/data/AAA_subject11.hdf5 \
-  --config hf://nvidia/OpenH-RF/tue-aaa/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/tue-aaa/data/AAA_subject11.hdf5 \
+  --config hf://nvidia/Open-H-RF/tue-aaa/pipeline.yaml
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/tue-aaa/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/tue-aaa/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 ## Dataset Format
 
@@ -72,7 +72,7 @@ zea file format. Subject metadata is stored under `metadata/subject` (`age`, `se
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 15 HDF5 files; 53.08 GB (53,077,606,400 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 15 HDF5 files; 53.08 GB (53,077,606,400 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Samples / frames:** 15 acquisitions (one HDF5 file each), 500 frames per acquisition — 7,500 frames total
 - **Stored HDF5 size:** 53.08 GB (53,077,606,400 bytes).

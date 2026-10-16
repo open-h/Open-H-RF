@@ -24,10 +24,10 @@ Field names below are the zea spec fields (see `zea.data.spec.{ScanSpec, ProbeSp
 
 ### Transducer / probe (`/probe`)
 
-> **OpenH-RF note:** `probe_geometry` is technically optional in the generic zea spec but is **required for OpenH-RF submissions**. Because `/data/raw_data` is mandatory for every submission and reconstruction from raw channel data is impossible without element positions, treat a missing `probe_geometry` as a `blocker`.
+> **Open-H-RF note:** `probe_geometry` is technically optional in the generic zea spec but is **required for Open-H-RF submissions**. Because `/data/raw_data` is mandatory for every submission and reconstruction from raw channel data is impossible without element positions, treat a missing `probe_geometry` as a `blocker`.
 
 - [ ] `probe_geometry` `(n_el, 3)` in metres — element positions (number of
-      elements and pitch derive from this; there is no `n_elements`/`pitch` field) — **required for OpenH-RF**
+      elements and pitch derive from this; there is no `n_elements`/`pitch` field) — **required for Open-H-RF**
 - [ ] `type` (linear, curved, phased, matrix)
 - [ ] `element_width`, `element_height` (m) — needed for aperture/elevation modelling
 - [ ] `probe_center_frequency` (Hz); `probe_bandwidth_percent` (%) — recommended
@@ -62,7 +62,7 @@ Field names below are the zea spec fields (see `zea.data.spec.{ScanSpec, ProbeSp
 
 ## Severity rubric
 
-- `blocker`: missing transmit sequence, sampling rate, `probe_geometry`, or sound speed — reconstruction is impossible. `probe_geometry` is always a blocker for OpenH-RF (required to reconstruct from mandatory raw channel data)
+- `blocker`: missing transmit sequence, sampling rate, `probe_geometry`, or sound speed — reconstruction is impossible. `probe_geometry` is always a blocker for Open-H-RF (required to reconstruct from mandatory raw channel data)
 - `major`: any required field missing, or mismatch between file and data card
 - `minor`: recommended fields missing
 - `info`: more metadata could be helpful but isn't necessary

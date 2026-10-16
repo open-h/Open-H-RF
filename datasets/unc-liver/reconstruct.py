@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the unc-liver dataset of OpenH-RF.
+"""Example reconstruction script for the unc-liver dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/unc-liver
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/unc-liver
 
 B-mode reconstruction of simulated full synthetic aperture abdominal-wall channel data.
 
@@ -47,7 +47,7 @@ CONFIG = HERE / "pipeline.yaml"
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/unc-liver/data/fullwave_abdominal_wall_1283_reg.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/unc-liver/data/fullwave_abdominal_wall_1283_reg.hdf5"
 FRAME = 0
 OUT = HERE / "assets" / "bmode.png"
 SOS_MAP = False  # Also plot the ground-truth sos_map next to the B-mode (2 subplots)

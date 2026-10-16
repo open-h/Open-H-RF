@@ -1,13 +1,13 @@
 """The short name of each dataset, which the website shows and links it by.
 
-DATASETS maps a short name for every dataset card on the Hub (nvidia/OpenH-RF) to its
+DATASETS maps a short name for every dataset card on the Hub (nvidia/Open-H-RF) to its
 hf:// path. Collections with sub-cards (oslo, resolvestroke) count once per sub-card;
 their parent cards are not listed.
 """
 
 from __future__ import annotations
 
-HF_ROOT = "hf://nvidia/OpenH-RF"
+HF_ROOT = "hf://nvidia/Open-H-RF"
 
 DATASETS = {
     "colorado-boulder": {"hf": f"{HF_ROOT}/colorado-boulder"},

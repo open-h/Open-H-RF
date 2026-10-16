@@ -1,4 +1,4 @@
-"""Convert the tracked CIRS raw HF files to a local OpenH-RF/zea dataset."""
+"""Convert the tracked CIRS raw HF files to a local Open-H-RF/zea dataset."""
 
 import argparse
 import os

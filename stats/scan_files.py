@@ -40,7 +40,7 @@ from itertools import groupby, islice
 from pathlib import Path
 
 HERE = Path(__file__).parent
-REPO = "nvidia/OpenH-RF"
+REPO = "nvidia/Open-H-RF"
 TREE = HERE / "data" / "tree.json"
 OUT = HERE / "data" / "files"
 ABORT_AFTER = 20  # consecutive failures from the start that mean "stop, it's the setup"

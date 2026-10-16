@@ -8,7 +8,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - quantitative-ultrasound
   - phantom
   - raw-channel-data
@@ -22,7 +22,7 @@ size_categories:
 
 ![Weill Cornell QUS phantom dataset: B-mode, pooled Nakagami maps, and theoretical BSC curves](assets/hero.png)
 
-*B-mode (frame 0) and 20-frame pooled Nakagami maps from [`data/ac10_15m_SK.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/weillcornell/data/ac10_15m_SK.hdf5). The BSC curves are material-model references for the three phantoms; pooled Nakagami maps are statistical references.*
+*B-mode (frame 0) and 20-frame pooled Nakagami maps from [`data/ac10_15m_SK.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/weillcornell/data/ac10_15m_SK.hdf5). The BSC curves are material-model references for the three phantoms; pooled Nakagami maps are statistical references.*
 
 ## Dataset Description
 
@@ -67,11 +67,11 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/weillcornell/data/ac10_15m_SK.hdf5 \
-  --config hf://nvidia/OpenH-RF/weillcornell/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/weillcornell/data/ac10_15m_SK.hdf5 \
+  --config hf://nvidia/Open-H-RF/weillcornell/pipeline.yaml
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/weillcornell/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF). Besides the B-mode, it prints the selected frame's BSC band and unit, the QUS map shapes, and the error of the direct per-frame Nakagami maps against the pooled references.
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/weillcornell/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF). Besides the B-mode, it prints the selected frame's BSC band and unit, the QUS map shapes, and the error of the direct per-frame Nakagami maps against the pooled references.
 
 ## Dataset Format
 
@@ -85,7 +85,7 @@ The theoretical BSC is a homogeneous phantom material property: each phantom has
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 120 HDF5 files; 1.00 GB (1,002,700,800 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 120 HDF5 files; 1.00 GB (1,002,700,800 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Acquisitions / frames:** 120 acquisitions (3 phantoms x 2 operators x 20 probe placements, one HDF5 file each), 20 frames per acquisition — 2,400 frames total
 - **File naming:** `data/ac<n>_<phantom>_<operator>.hdf5`, with `n` from 1 to 20, e.g. `ac10_15m_SK.hdf5`

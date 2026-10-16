@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - medical-imaging
   - beamforming
   - in-vivo
@@ -21,7 +21,7 @@ size_categories:
 
 ![DAS B-mode reconstructions of four anatomies from the Siemens FSA channel data](assets/anatomies.png)
 
-*Four of the anatomies in this dataset, each beamformed from `data/raw_data`: [`Subject_03_acq_018`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/siemens-healthineers/data/Subject_03_acq_018.hdf5), [`Subject_02_acq_004`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/siemens-healthineers/data/Subject_02_acq_004.hdf5), [`Subject_03_acq_008`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/siemens-healthineers/data/Subject_03_acq_008.hdf5), [`Subject_05_acq_031`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/siemens-healthineers/data/Subject_05_acq_031.hdf5).*
+*Four of the anatomies in this dataset, each beamformed from `data/raw_data`: [`Subject_03_acq_018`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/siemens-healthineers/data/Subject_03_acq_018.hdf5), [`Subject_02_acq_004`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/siemens-healthineers/data/Subject_02_acq_004.hdf5), [`Subject_03_acq_008`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/siemens-healthineers/data/Subject_03_acq_008.hdf5), [`Subject_05_acq_031`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/siemens-healthineers/data/Subject_05_acq_031.hdf5).*
 
 ## Dataset Description
 
@@ -61,11 +61,11 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/siemens-healthineers/data/Subject_03_acq_008.hdf5 \
-  --config hf://nvidia/OpenH-RF/siemens-healthineers/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/siemens-healthineers/data/Subject_03_acq_008.hdf5 \
+  --config hf://nvidia/Open-H-RF/siemens-healthineers/pipeline.yaml
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/siemens-healthineers/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/siemens-healthineers/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 ## Dataset Format
 
@@ -105,7 +105,7 @@ All spatial maps carry per-pixel Cartesian `coordinates` in meters, last axis `[
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 590 HDF5 files; 228.54 GB (228,538,449,920 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 590 HDF5 files; 228.54 GB (228,538,449,920 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **590 acquisitions (4,539 frames) from 15 subjects**, one continuous dataset: 51 acquisitions / 411 frames (Subjects 01–03) from the first acquisition round and 539 acquisitions / 4,128 frames (Subjects 04–15) from the second.
 - **File naming:** one HDF5 per acquisition, `Subject_XX_acq_NNN.hdf5` (acquisitions numbered per subject in acquisition order).

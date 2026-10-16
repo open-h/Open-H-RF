@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - 3d
   - matrix-probe
   - diverging-wave
@@ -26,11 +26,11 @@ size_categories:
 
 <a href="assets/main_image.png"><img src="assets/main_image_small.png" alt="Transcranial contrast-enhanced power Doppler of a human subject (SP03-Left, bolus +10 s), x-z maximum-intensity projection" width="360"></a>
 
-*3D power Doppler of the transcranial CEUS acquisition [`clinical/SP03-Left/SP03-Left.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/resolvestroke/clinical/SP03-Left/SP03-Left.hdf5) at bolus +10 s, x-z maximum-intensity projection, reconstructed from the released channel data.*
+*3D power Doppler of the transcranial CEUS acquisition [`clinical/SP03-Left/SP03-Left.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/resolvestroke/clinical/SP03-Left/SP03-Left.hdf5) at bolus +10 s, x-z maximum-intensity projection, reconstructed from the released channel data.*
 
 ## Dataset Description
 
-[Resolve Stroke](https://www.resolvestroke.com/) develops SYLVER, a software-driven ultrasound platform that supports clinical assessment in patients suspected of, or at risk for, cerebral perfusion abnormalities by improving visualization of cerebral vasculature and providing complementary information on cerebral perfusion. SYLVER images with a 32×32 matrix array probe at 2 MHz using diverging-wave transmits. CE and FDA clearances are expected in 2026. This directory holds the data Resolve Stroke contributes to OpenH-RF: pre-beamformed RF/IQ channel data from an imaging phantom, a flow phantom, and in-vivo transcranial acquisitions, all de-identified and released under CC BY 4.0. The in-vivo data comes from the CPP-approved SCULPT clinical study. Two transmit sequences are included: a saddle sequence that images a 2D plane for real-time B-mode, and a 4 kHz single-aperture volume sequence for CEUS and blood-flow measurement.
+[Resolve Stroke](https://www.resolvestroke.com/) develops SYLVER, a software-driven ultrasound platform that supports clinical assessment in patients suspected of, or at risk for, cerebral perfusion abnormalities by improving visualization of cerebral vasculature and providing complementary information on cerebral perfusion. SYLVER images with a 32×32 matrix array probe at 2 MHz using diverging-wave transmits. CE and FDA clearances are expected in 2026. This directory holds the data Resolve Stroke contributes to Open-H-RF: pre-beamformed RF/IQ channel data from an imaging phantom, a flow phantom, and in-vivo transcranial acquisitions, all de-identified and released under CC BY 4.0. The in-vivo data comes from the CPP-approved SCULPT clinical study. Two transmit sequences are included: a saddle sequence that images a 2D plane for real-time B-mode, and a 4 kHz single-aperture volume sequence for CEUS and blood-flow measurement.
 
 Each dataset directory holds its data card (`README.md`), a `reconstruct.py` + `pipeline.yaml` beamforming recipe and, for the CEUS datasets, a power-Doppler reconstruction; the HDF5 files are on the Hub and the preview images in [`assets/`](assets/).
 
@@ -53,7 +53,7 @@ Each dataset directory holds its data card (`README.md`), a `reconstruct.py` + `
 
 ## Processing the Dataset
 
-Each sub-dataset has its own `reconstruct.py` and `pipeline.yaml`, as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF/tree/main/datasets/resolvestroke), built on the [zea library](https://github.com/tue-bmd/zea); the CEUS datasets add a power-Doppler reconstruction. See the data card of each sub-dataset for how to run them.
+Each sub-dataset has its own `reconstruct.py` and `pipeline.yaml`, as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF/tree/main/datasets/resolvestroke), built on the [zea library](https://github.com/tue-bmd/zea); the CEUS datasets add a power-Doppler reconstruction. See the data card of each sub-dataset for how to run them.
 
 The Python scripts carry their own `SPDX-License-Identifier: Apache-2.0` header; the dataset itself is CC BY 4.0.
 
@@ -63,7 +63,7 @@ The Python scripts carry their own `SPDX-License-Identifier: Apache-2.0` header;
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 43 HDF5 files; 110.62 GB (110,619,394,048 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 43 HDF5 files; 110.62 GB (110,619,394,048 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 ## Contents
 

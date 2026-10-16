@@ -29,11 +29,11 @@ DEFAULT_OUTPUT = Path(__file__).parent / "pala_sample.hdf5"
 
 
 def convert(path: Path, output_path: Path) -> Path:
-    """Convert a PALA HDF5 file to openh-rf format.
+    """Convert a PALA HDF5 file to open-h-rf format.
 
     Args:
         path: Path to the source PALA HDF5 file.
-        output_path: Destination path for the openh-rf HDF5 file.
+        output_path: Destination path for the open-h-rf HDF5 file.
 
     Returns:
         Path to the written output file.

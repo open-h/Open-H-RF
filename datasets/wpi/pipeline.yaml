@@ -1,4 +1,4 @@
-# Beamforming config for the OpenH-RF eSAF rotational 3D ultrasound sub-dataset.
+# Beamforming config for the Open-H-RF eSAF rotational 3D ultrasound sub-dataset.
 #
 # Each acquisition is raw RF channel data (n_ch = 1) from a single normal
 # plane-wave transmit per rotation frame on the JP_Linear_68 linear array

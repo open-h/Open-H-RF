@@ -15,7 +15,7 @@ tags:
   - multimodal
   - timeseries
   - video
-  - openh-rf
+  - open-h-rf
 language:
   - en
 size_categories:
@@ -26,7 +26,7 @@ size_categories:
 
 ![Example reconstruction](./assets/module_C.png)
 
-*Scan-converted B-mode of the Kyoto Kagaku SPACE FAN-ST fetal phantom, reconstructed from the synthetic channel data in [`acquisitions/`](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/ubc/module_C/acquisitions).*
+*Scan-converted B-mode of the Kyoto Kagaku SPACE FAN-ST fetal phantom, reconstructed from the synthetic channel data in [`acquisitions/`](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/ubc/module_C/acquisitions).*
 
 ## Dataset Description
 
@@ -101,11 +101,11 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/ubc/module_C/acquisitions/session_01/session_01_f1306.hdf5 \
-  --config hf://nvidia/OpenH-RF/ubc/module_C/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/ubc/module_C/acquisitions/session_01/session_01_f1306.hdf5 \
+  --config hf://nvidia/Open-H-RF/ubc/module_C/pipeline.yaml
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/ubc/module_C/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/ubc/module_C/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 Set `ZEA_FILE` and `FRAME` at the top of the script to pick a frame (default `session_01/session_01_f1306.hdf5`).
 
@@ -232,4 +232,4 @@ Room-camera recordings originally captured people. Released RGB/IR crops retain 
 
 The HDF5 `metadata/credit` field carries the following attribution:
 
-> University of British Columbia OpenH-RF contributors (2026). *UBC Module C: Synthetic Channel Proxy and Multimodal Fetal Phantom Ultrasound*. OpenH-RF. CC BY 4.0.
+> University of British Columbia Open-H-RF contributors (2026). *UBC Module C: Synthetic Channel Proxy and Multimodal Fetal Phantom Ultrasound*. Open-H-RF. CC BY 4.0.

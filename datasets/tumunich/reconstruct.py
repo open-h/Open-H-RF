@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the tumunich dataset of OpenH-RF.
+"""Example reconstruction script for the tumunich dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/tumunich
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/tumunich
 
 B-mode reconstruction of walking-aperture robotic ultrasound sweep channel data.
 
@@ -50,7 +50,7 @@ from zea.ops.base import Operation
 
 HERE = Path(__file__).parent
 CONFIG = HERE / "pipeline.yaml"  # written by build_pipeline(); this is what the run loads
-HF_CONFIG = "hf://nvidia/OpenH-RF/tumunich/pipeline.yaml"  # where CONFIG is published
+HF_CONFIG = "hf://nvidia/Open-H-RF/tumunich/pipeline.yaml"  # where CONFIG is published
 
 
 PARAMETERS = {
@@ -61,7 +61,7 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/tumunich/data/cirs_phantom/synth_apert_sweep_1.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/tumunich/data/cirs_phantom/synth_apert_sweep_1.hdf5"
 OUT = HERE / "assets" / f"{Path(ZEA_FILE).stem}_reconstructed.png"
 FRAME = 0  # Zero-based frame index to reconstruct
 DYNAMIC_RANGE = [-40, 0]  # dB range shown
@@ -73,7 +73,7 @@ FEEDTHROUGH_SAMPLES = 2
 
 
 def coords_to_imshow_mm(coords):
-    """openh-rf per-pixel coordinates (z, x, 3), last axis [x, y, z] in metres
+    """open-h-rf per-pixel coordinates (z, x, 3), last axis [x, y, z] in metres
     -> mpl imshow extent [left, right, bottom, top] in mm."""
     x = coords[..., 0]
     z = coords[..., 2]
@@ -81,7 +81,7 @@ def coords_to_imshow_mm(coords):
 
 
 # These ops are defined here, not in zea: a pipeline.yaml naming them resolves
-# only once this module is imported. See https://github.com/open-h/OpenH-RF
+# only once this module is imported. See https://github.com/open-h/Open-H-RF
 @ops_registry("power_compress")
 class PowerCompress(Operation):
     """Power (gamma) compression: raises the normalised envelope to ``exponent``."""

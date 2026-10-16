@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the siemens-healthineers dataset of OpenH-RF.
+"""Example reconstruction script for the siemens-healthineers dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/siemens-healthineers
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/siemens-healthineers
 
 B-mode reconstruction of in-vivo IQ channel data from a clinical scanner.
 
@@ -35,11 +35,11 @@ HERE = Path(__file__).parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/siemens-healthineers/data/Subject_01_acq_006.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/siemens-healthineers/data/Subject_01_acq_006.hdf5"
 CONFIG = HERE / "pipeline.yaml"
 OUT = None  # PNG path (default: <input>_recon.png)
 FRAME = 0
-HF_CONFIG = "hf://nvidia/OpenH-RF/siemens-healthineers/pipeline.yaml"  # where CONFIG is published
+HF_CONFIG = "hf://nvidia/Open-H-RF/siemens-healthineers/pipeline.yaml"  # where CONFIG is published
 
 
 def main():

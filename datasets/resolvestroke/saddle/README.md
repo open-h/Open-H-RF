@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - matrix-probe
   - diverging-wave
   - b-mode
@@ -24,13 +24,13 @@ size_categories:
 
 ![Saddle-array B-modes for all 21 datasets](../assets/saddle_bmode_montage.png)
 
-*Saddle-array B-modes of all 21 files in [`saddle/data/`](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/resolvestroke/saddle/data), one panel per dataset; the phantom (`PMP01`) shows a regular column of point targets.*
+*Saddle-array B-modes of all 21 files in [`saddle/data/`](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/resolvestroke/saddle/data), one panel per dataset; the phantom (`PMP01`) shows a regular column of point targets.*
 
 ## Dataset Description
 
 Single-frame anatomical B-mode acquisitions from the "saddle" imaging sequence of Resolve Stroke's SYLVER ultrasound device, using a 32×32 matrix probe. Each raw acquisition contains, alongside the multi-thousand-frame contrast-enhanced ultrasound (CEUS) sequence, one wide-angle diverging-wave frame (the *saddle* sequence: `x_ang` −24°…+24° in nine steps, no elevation steering, cylindrical elevation focus) received on the full 1024-element aperture through four consecutive 256-element receive events per transmit. Beamformed, this single frame gives a sector B-mode of the imaging plane: the structural reference view acquired at the same probe placement as the contrast (CEUS) recording.
 
-This directory contains one such reference B-mode per dataset: 20 clinical transcranial acquisitions (SCULPT study) and 1 static matrix-probe imaging phantom (21 files total). It is the structural companion to the OpenH-RF Resolve Stroke clinical CEUS clip submission, and the two use the same anonymized subject codes.
+This directory contains one such reference B-mode per dataset: 20 clinical transcranial acquisitions (SCULPT study) and 1 static matrix-probe imaging phantom (21 files total). It is the structural companion to the Open-H-RF Resolve Stroke clinical CEUS clip submission, and the two use the same anonymized subject codes.
 
 ## Dataset Contributor(s)
 
@@ -51,7 +51,7 @@ This directory contains one such reference B-mode per dataset: 20 clinical trans
 
 ## Intended Usage
 
-Matrix-probe diverging-wave beamforming research, anatomical B-mode reconstruction, and structural reference for the companion transcranial CEUS flow/perfusion datasets (OpenH-RF request-for-proposals task group 6.2, Blood Flow).
+Matrix-probe diverging-wave beamforming research, anatomical B-mode reconstruction, and structural reference for the companion transcranial CEUS flow/perfusion datasets (Open-H-RF request-for-proposals task group 6.2, Blood Flow).
 
 ## Dataset Characterization
 
@@ -61,10 +61,10 @@ Matrix-probe diverging-wave beamforming research, anatomical B-mode reconstructi
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/resolvestroke/saddle/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/resolvestroke/saddle/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 ```bash
-uv run --project /path/to/OpenH-RF python reconstruct.py
+uv run --project /path/to/Open-H-RF python reconstruct.py
 ```
 
 `reconstruct.py` streams `PMP01.hdf5` from the Hub by default; set `ZEA_FILE` at the top of the script to another of the 21 files (or a local path). The B-mode PNG is written to `assets/<file>_bmode.png`.
@@ -83,7 +83,7 @@ The hardware time-gain compensation is baked into `raw_data`; `scan/tgc_gain_cur
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 21 HDF5 files; 175.70 MB (175,702,016 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 21 HDF5 files; 175.70 MB (175,702,016 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - Files: 21 (20 clinical + 1 phantom)
 - Frames per file: 1

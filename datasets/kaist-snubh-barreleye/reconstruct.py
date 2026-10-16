@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the kaist-snubh-barreleye dataset of OpenH-RF.
+"""Example reconstruction script for the kaist-snubh-barreleye dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/kaist-snubh-barreleye
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/kaist-snubh-barreleye
 
 B-mode reconstruction of 9-angle plane-wave compounded in-vivo breast channel data.
 The 1-12 MHz band-pass rejects a persistent sub-MHz band before coherent
@@ -35,8 +35,8 @@ HERE = Path(__file__).parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/kaist-snubh-barreleye/data/S01_D1.hdf5"
-CONFIG = "hf://nvidia/OpenH-RF/kaist-snubh-barreleye/pipeline.yaml"
+ZEA_FILE = "hf://nvidia/Open-H-RF/kaist-snubh-barreleye/data/S01_D1.hdf5"
+CONFIG = "hf://nvidia/Open-H-RF/kaist-snubh-barreleye/pipeline.yaml"
 OUT = HERE / "assets" / "reconstruction.png"
 
 

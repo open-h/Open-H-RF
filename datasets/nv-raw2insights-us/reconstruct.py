@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the nv-raw2insights-us dataset of OpenH-RF.
+"""Example reconstruction script for the nv-raw2insights-us dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/nv-raw2insights-us
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/nv-raw2insights-us
 
 B-mode reconstruction of simulated full synthetic aperture (FSA) channel data.
 
@@ -39,13 +39,13 @@ HERE = Path(__file__).resolve().parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/nv-raw2insights-us/data/nv_r2i_us_validation_0084.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/nv-raw2insights-us/data/nv_r2i_us_validation_0084.hdf5"
 OUT = HERE / "assets" / "nv_raw2insights_us_reconstructed.png"
 CONFIG = HERE / "pipeline.yaml"
 
 
 def coords_to_imshow_mm(coords):
-    """openh-rf per-pixel coordinates (z, x, 3), last axis [x, y, z] in metres
+    """open-h-rf per-pixel coordinates (z, x, 3), last axis [x, y, z] in metres
     -> mpl imshow extent [left, right, bottom, top] in mm."""
     c = np.asarray(coords)
     x, z = c[..., 0] * 1e3, c[..., 2] * 1e3
@@ -182,7 +182,7 @@ def main():
     axes[6].set_xlabel("Lateral [mm]")
     axes[6].set_ylabel("Depth [mm]")
 
-    fig.suptitle(f"openh-rf sample (phase error: {phase_err[0]:.2f} rad)", fontsize=14, y=1.02)
+    fig.suptitle(f"open-h-rf sample (phase error: {phase_err[0]:.2f} rad)", fontsize=14, y=1.02)
     plt.tight_layout()
     Path(OUT).parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(OUT, dpi=150, bbox_inches="tight")

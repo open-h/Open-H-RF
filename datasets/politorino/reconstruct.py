@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the politorino dataset of OpenH-RF.
+"""Example reconstruction script for the politorino dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/politorino
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/politorino
 
 B-mode reconstruction of high-frame-rate fascicle tracking channel data, with
 the stored fascicle tracking overlaid: the superficial and deep aponeuroses as
@@ -43,7 +43,7 @@ HERE = Path(__file__).parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/politorino/data/PAT02/PAT02_w1.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/politorino/data/PAT02/PAT02_w1.hdf5"
 OUT = HERE / "assets" / "PAT02_w1_reconstructed.png"
 SAVE_PIPELINE = None  # Optionally write the pipeline to a reusable pipeline.yaml
 FRAME = 0

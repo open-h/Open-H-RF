@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the strasbourg-basel dataset of OpenH-RF.
+"""Example reconstruction script for the strasbourg-basel dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/strasbourg-basel
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/strasbourg-basel
 
 B-mode reconstruction of focused, walking-aperture bone channel data (BoneSRF).
 
@@ -54,7 +54,7 @@ CT_SEGMENT = {"distal": "Distal", "proximal": "Proximal", "wholebone": "Complete
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-SCAN = "hf://nvidia/OpenH-RF/strasbourg-basel/BoneSRF/data/phantom2_proximal.hdf5"
+SCAN = "hf://nvidia/Open-H-RF/strasbourg-basel/BoneSRF/data/phantom2_proximal.hdf5"
 FRAME = None  # frame to beamform (default: that scan's reference frame)
 DEVICE = None  # CUDA device ID (e.g. 'cuda:0', 'auto:1', or 'cpu')
 CT = True  # also write assets/ct_<scan>.png from the CT embedded in the file

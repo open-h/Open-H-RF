@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - zea
   - usct
   - tomography
@@ -24,7 +24,7 @@ size_categories:
 
 ![Ring-array USCT reconstruction of a forearm cross-section](assets/s1_l_reconstruct.png)
 
-*A left-forearm cross-section, slice 8 of [`data/s1_l.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/us4us/data/s1_l.hdf5), reconstructed beside the sinogram and reference image stored in the file.*
+*A left-forearm cross-section, slice 8 of [`data/s1_l.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/us4us/data/s1_l.hdf5), reconstructed beside the sinogram and reference image stored in the file.*
 
 ## Dataset Description
 Raw RF data acquired with the us4us Ltd. us4R system and a Draminski ring probe.
@@ -79,7 +79,7 @@ Ultrasound computed tomography image reconstruction.
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/us4us/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/us4us/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 The script rebuilds the attenuation sinogram and filtered-backprojection image from `data/raw_data` and plots them beside the versions stored in the file. Set `ZEA_FILE` and `FRAME` (the slice) at the top of the script.
 
@@ -91,7 +91,7 @@ All sub-datasets are provided in the ZEA file format. No preprocessing was perfo
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 18 HDF5 files; 32.66 GB (32,658,423,808 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 18 HDF5 files; 32.66 GB (32,658,423,808 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
   * Each forearm HDF5 file contains 10 slices of the subject; `yezitronix-b-rg-1.2.hdf5` contains 11 and `reference_water.hdf5` a single slice.
   * Stored HDF5 file sizes vary: 1.89 GB to 1.95 GB excluding the water reference. `reference_water.hdf5` is 183,107,584 bytes (183.11 MB).

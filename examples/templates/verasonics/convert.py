@@ -1,7 +1,7 @@
 """Convert: download a Verasonics .mat file and save as a zea HDF5 file.
 
 Downloads a Verasonics workspace .mat file from the zeahub/phantoms dataset on
-Hugging Face and converts it to the openh-rf HDF5 format using zea.File.create.
+Hugging Face and converts it to the open-h-rf HDF5 format using zea.File.create.
 VerasonicsFile reads all scan parameters directly from the .mat file.
 
 .. note::

@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - 3d
   - beamforming
   - elevational-saf
@@ -21,7 +21,7 @@ size_categories:
 
 <p align="center"><img src="assets/esaf_topview_sweep.gif" width="55%" alt="Top-view MIP: the naive reconstruction (magenta) accumulating into a smear arc as the probe sweeps 180 degrees about the rotation axis, against the eSAF label (cyan)"></p>
 
-*Top view down the rotation axis of a point target at 20 mm depth, 6 mm off-axis, [`data/tall_elev_H12__point_z020_r6.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/wpi/data/tall_elev_H12__point_z020_r6.hdf5). Magenta is the naive per-angle reconstruction, filling in as the array (white line) sweeps 180° about the rotation axis (small circle); cyan is the paired eSAF label shipped in the file; white is where both agree. eSAF collapses the rotational smear arc back onto the target (arc-FWHM 1.26 → 0.39 mm).*
+*Top view down the rotation axis of a point target at 20 mm depth, 6 mm off-axis, [`data/tall_elev_H12__point_z020_r6.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/wpi/data/tall_elev_H12__point_z020_r6.hdf5). Magenta is the naive per-angle reconstruction, filling in as the array (white line) sweeps 180° about the rotation axis (small circle); cyan is the paired eSAF label shipped in the file; white is where both agree. eSAF collapses the rotational smear arc back onto the target (arc-FWHM 1.26 → 0.39 mm).*
 
 ## Dataset Description
 
@@ -56,7 +56,7 @@ Advanced beamforming and **elevational resolution recovery** for rotational 3D U
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/wpi/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub, beamforms the rotation frame closest to ±90° (where an off-axis target lies in-plane) and plots it beside the per-frame rotation angle from `metadata/probe_pose`. Set `ZEA_FILE` and `FRAME` at the top of the script to pick another acquisition or frame. The default, frame 90 (~−90°) of [`data/experiment__acq_exp_30mm.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/wpi/data/experiment__acq_exp_30mm.hdf5), gives:
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/wpi/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub, beamforms the rotation frame closest to ±90° (where an off-axis target lies in-plane) and plots it beside the per-frame rotation angle from `metadata/probe_pose`. Set `ZEA_FILE` and `FRAME` at the top of the script to pick another acquisition or frame. The default, frame 90 (~−90°) of [`data/experiment__acq_exp_30mm.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/wpi/data/experiment__acq_exp_30mm.hdf5), gives:
 
 <p align="center"><img src="assets/bmode.png" width="70%" alt="B-mode frame of the measured phantom at -90 deg probe rotation, with the per-frame rotation-angle trajectory alongside it"></p>
 
@@ -82,7 +82,7 @@ Pre-processing: none for the simulations beyond the forward model; for the measu
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 195 HDF5 files; 1.87 GB (1,870,462,976 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 195 HDF5 files; 1.87 GB (1,870,462,976 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Acquisitions:** **195** = **190 simulated** + **5 measured phantom**.
   - *Simulated (190):* **10 probe types × 19 targets** (16 single points over depth {20,45,80,130} mm × radial offset from the rotation centre {0,2,4,6} mm, plus 3 pair/oblique cases). The probe axis is listed above under Data Collection Method; each file's own `description` attribute gives its exact probe/target/r0/depth. (The earlier compatible set has 18 acquisitions.)
@@ -143,7 +143,7 @@ None. The data is either fully synthetic (Field II) or measured on an inanimate 
 ## Raw Source Data
 
 The raw pre-conversion outputs are archived under the same CC BY 4.0 license at
-<https://huggingface.co/datasets/RyoMurakami/OpenH-RF-eSAF-raw>: the raw Verasonics per-line
+<https://huggingface.co/datasets/RyoMurakami/Open-H-RF-eSAF-raw>: the raw Verasonics per-line
 channel-RF captures (with encoder logs) for the 5 measured acquisitions, and the per-case MATLAB intermediates (raw RF, in-plane DAS, eSAF output) for the 190 simulated cases.
 
 ## Citation

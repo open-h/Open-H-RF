@@ -1,4 +1,4 @@
-"""Write the OpenH-RF banner (the header of the README, assets/openh-rf-header.jpg,
+"""Write the Open-H-RF banner (the header of the README,
 2752 x 938 px) as site/assets/img/logo/banner.svg, with the logo of logo.py. The
 text is Roboto Bold, drawn as outlines.
 
@@ -19,7 +19,7 @@ W, H = 2752, 938
 # The logo's frame in the banner: its pixels are 2.9 px, (0, 0) at (178, 302.5).
 SCALE, X0, Y0 = 2.9, 178, 302.5
 # The lines of text: left end, baseline.
-TEXT = [("OpenH-RF:", 843, 520), ("Open Data Initiative", 843, 731)]
+TEXT = [("Open-H-RF:", 843, 520), ("Open Data Initiative", 843, 731)]
 SIZE = 200
 
 # The network at the top right: nodes in focus (x, y, radius) and the lines between

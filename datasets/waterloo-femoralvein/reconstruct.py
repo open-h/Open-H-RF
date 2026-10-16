@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the waterloo-femoralvein dataset of OpenH-RF.
+"""Example reconstruction script for the waterloo-femoralvein dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/waterloo-femoralvein
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/waterloo-femoralvein
 
 B-mode reconstruction of steered plane-wave femoral vein channel data (UW-FemVeinRF).
 
@@ -65,10 +65,10 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/waterloo-femoralvein/data/Acq0.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/waterloo-femoralvein/data/Acq0.hdf5"
 CONFIG = HERE / "pipeline.yaml"
 OUT = HERE / "assets" / "reconstruct_output.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/waterloo-femoralvein/pipeline.yaml"
+HF_CONFIG = "hf://nvidia/Open-H-RF/waterloo-femoralvein/pipeline.yaml"
 FRAME = 5200
 POWER_THRESHOLD = 58.0  # Power Doppler mask threshold (dB); covers the vein lumen
 VMAX = 1.0  # Velocity color-scale max (m/s) for the quiver overlay; None -> 99th pct

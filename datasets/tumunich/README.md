@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - 3d
   - robotic
   - freehand
@@ -31,7 +31,7 @@ size_categories:
   </tr>
 </table>
 
-*Acquisition setup (left), a single-frame reconstruction (middle) and a panoramic reconstruction compounded along the robot-tracked sweep (right) of the CIRS 054GS phantom, [`data/cirs_phantom/synth_apert_sweep_1.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tumunich/data/cirs_phantom/synth_apert_sweep_1.hdf5).*
+*Acquisition setup (left), a single-frame reconstruction (middle) and a panoramic reconstruction compounded along the robot-tracked sweep (right) of the CIRS 054GS phantom, [`data/cirs_phantom/synth_apert_sweep_1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tumunich/data/cirs_phantom/synth_apert_sweep_1.hdf5).*
 
 ## Dataset Description
 
@@ -72,9 +72,9 @@ Primary task: **robotic tracked ultrasound acquisition** — compounding the per
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/tumunich/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/tumunich/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
-`reconstruct.py` beamforms a single frame and compares it to the stored Verasonics B-mode; [`reconstruct_panorama.py`](https://github.com/open-h/OpenH-RF/blob/main/datasets/tumunich/reconstruct_panorama.py), with `pipeline_panorama.yaml`, compounds a tracked sweep into the panoramic reconstruction shown above, using the per-frame robot poses.
+`reconstruct.py` beamforms a single frame and compares it to the stored Verasonics B-mode; [`reconstruct_panorama.py`](https://github.com/open-h/Open-H-RF/blob/main/datasets/tumunich/reconstruct_panorama.py), with `pipeline_panorama.yaml`, compounds a tracked sweep into the panoramic reconstruction shown above, using the per-frame robot poses.
 
 ## Dataset Format
 
@@ -88,7 +88,7 @@ Zero-valued rows pad the top of each stored frame so the image starts at the tra
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 11 HDF5 files; 62.25 GB (62,245,175,296 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 11 HDF5 files; 62.25 GB (62,245,175,296 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Phantoms:** 3 (vascular access arm phantom, CIRS 054GS, CIRS 074 thyroid)
 - **Files:** 11 zea HDF5 files across 3 sub-dataset folders

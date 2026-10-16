@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the tue-aaa dataset of OpenH-RF.
+"""Example reconstruction script for the tue-aaa dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/tue-aaa
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/tue-aaa
 
 B-mode reconstruction of in-vivo abdominal aortic aneurysm curved-array channel data.
 
@@ -58,9 +58,9 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/tue-aaa/data/AAA_subject11.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/tue-aaa/data/AAA_subject11.hdf5"
 OUT = HERE / "assets" / "AAApatient01_bmode.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/tue-aaa/pipeline.yaml"
+HF_CONFIG = "hf://nvidia/Open-H-RF/tue-aaa/pipeline.yaml"
 DEVICE = None  # CUDA device ID (e.g. 'cuda:0', 'auto:1', or 'cpu')
 
 

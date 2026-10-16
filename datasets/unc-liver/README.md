@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - synthetic-aperture
   - curvilinear
   - sound-speed-estimation
@@ -25,7 +25,7 @@ size_categories:
   <img src="assets/main.png" alt="Scan-converted B-mode through a simulated abdominal wall" width="480">
 </p>
 
-*Scan-converted B-mode reconstructed from the full-synthetic-aperture channel data of one simulated acquisition in [`data/`](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/unc-liver/data): the abdominal wall layers in the near field above the liver.*
+*Scan-converted B-mode reconstructed from the full-synthetic-aperture channel data of one simulated acquisition in [`data/`](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/unc-liver/data): the abdominal wall layers in the near field above the liver.*
 
 ## Dataset Description
 
@@ -82,7 +82,7 @@ The NLM does not endorse this dataset, and nothing here should be read as implyi
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/unc-liver/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/unc-liver/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 Set `ZEA_FILE` and `FRAME` at the top of the script to pick an acquisition. For current release files, use `zea==0.1.6` and any Keras backend (`reconstruct.py` falls back to torch if `KERAS_BACKEND` is unset, but respects whatever you have configured).
 
@@ -130,7 +130,7 @@ All maps are on the polar reconstruction grid: 640 radial samples spanning 5.0â€
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 1,906 HDF5 files; 202.69 GB (202,692,755,456 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 1,906 HDF5 files; 202.69 GB (202,692,755,456 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **1906 acquisitions**, 1 frame each, 128 transmits Ã— 128 receives per acquisition.
 - **Stored HDF5 size:** 202.69 GB (202,692,755,456 bytes).

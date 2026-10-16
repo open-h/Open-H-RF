@@ -1,4 +1,4 @@
-"""Write the OpenH-RF logo as SVG and PNG, with and without the glow, on a
+"""Write the Open-H-RF logo as SVG and PNG, with and without the glow, on a
 transparent, black and white background, into site/assets/img/logo/.
 
 The shapes and colours were traced from site/assets/img/logo.webp (211 x 160 px);

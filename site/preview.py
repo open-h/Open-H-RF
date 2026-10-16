@@ -92,7 +92,7 @@ def merge(numbers: list[int]) -> dict:
             "-C",
             str(DOCS),
             "-c",
-            "user.name=OpenH-RF site preview",
+            "user.name=Open-H-RF site preview",
             "-c",
             "user.email=preview@localhost",
             "merge",

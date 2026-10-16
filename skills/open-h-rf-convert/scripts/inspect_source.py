@@ -1,6 +1,6 @@
 """Inspect a source ultrasound dataset and emit a structured field inventory (JSON).
 
-Step 1 of the openh-rf-convert skill: discover a source file's structure without
+Step 1 of the open-h-rf-convert skill: discover a source file's structure without
 guessing, so the mapping interview can PROPOSE source->zea field mappings for the
 contributor to confirm. Supports HDF5 (incl. USTB UFF), MATLAB .mat (v7.3 via
 h5py, older via scipy), NumPy .npz/.npy, raw .bin + .json metadata sidecars.

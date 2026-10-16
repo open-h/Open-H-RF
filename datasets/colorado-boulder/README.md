@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - 3d
 language:
   - en
@@ -20,7 +20,7 @@ size_categories:
 | 2D ATS 539 phantom | 3D phantom | In-vivo quadriceps |
 |:---:|:---:|:---:|
 | ![Tracked SSA sweep through the 2D ATS 539 phantom](assets/ssa-sweep-phantom2d.gif) | ![Tracked SSA sweep through the 3D phantom](assets/ssa-sweep-phantom3d.gif) | ![Tracked SSA sweep along in-vivo quadriceps muscle](assets/ssa-sweep-invivo.gif) |
-| [`Sub-dataset-1`](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/colorado-boulder/Sub-dataset-1) | [`Sub-dataset-2`](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/colorado-boulder/Sub-dataset-2) | [`Sub-dataset-3`](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/colorado-boulder/Sub-dataset-3) |
+| [`Sub-dataset-1`](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/colorado-boulder/Sub-dataset-1) | [`Sub-dataset-2`](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/colorado-boulder/Sub-dataset-2) | [`Sub-dataset-3`](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/colorado-boulder/Sub-dataset-3) |
 
 *Motion-compensated tracked SSA reconstructions, one per sub-dataset. Each frame beamforms the raw RF channel data with its own tracked probe pose; a 40 mm window of frames is then coherently summed to synthesise a larger effective aperture, and the window slides along the freehand sweep.*
 
@@ -30,7 +30,7 @@ This dataset contains tracked swept synthetic aperture (SSA) ultrasound acquisit
 
 The data were acquired using a Verasonics Vantage research ultrasound system with a P4-2 phased array transducer. The dataset includes raw RF channel data, acquisition parameters, probe geometry, transmit information, and frame-wise tracked probe pose metadata.
 
-The purpose of this dataset is to provide reproducible examples for generalized ultrasound reconstruction, with a particular focus on motion-compensated tracked SSA reconstruction using the zea/OpenH-RF data format.
+The purpose of this dataset is to provide reproducible examples for generalized ultrasound reconstruction, with a particular focus on motion-compensated tracked SSA reconstruction using the zea/Open-H-RF data format.
 
 The phantom acquisitions do not contain human subject data, animal data, or protected health information (PHI). The in-vivo acquisitions were collected from healthy volunteer participants and de-identified prior to release.
 
@@ -88,7 +88,7 @@ None (N/A).
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/colorado-boulder/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/colorado-boulder/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 The script selects tracked frames at roughly 1 mm lateral spacing and writes the reconstruction to `ssa_bmode.png`. Point `ZEA_FILE` at any acquisition in the corpus to reconstruct it. [`assets/main_bmode.png`](./assets/main_bmode.png) was produced this way, compounding the full sweep into one image; the loops at the top of this card slide a shorter aperture window along the sweep instead.
 
@@ -98,7 +98,7 @@ The script selects tracked frames at roughly 1 mm lateral spacing and writes the
 
 [zea v0.1.7](https://github.com/tue-bmd/zea)
 
-The dataset is distributed in the zea/OpenH-RF HDF5 format.
+The dataset is distributed in the zea/Open-H-RF HDF5 format.
 
 Each file includes:
 

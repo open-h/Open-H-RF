@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - cavitation
 language:
   - en
@@ -51,7 +51,7 @@ The dataset contains data over a large pressure range, from very low pressures u
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/twente-cavitation/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/twente-cavitation/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 Set `ZEA_FILE` at the top of the script to pick an acquisition and `N_FRAMES` to set how many frames are averaged; the map is written to `assets/<file>.png`.
 
@@ -63,7 +63,7 @@ Set `ZEA_FILE` at the top of the script to pick an acquisition and `N_FRAMES` to
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 19 HDF5 files; 10.85 GB (10,850,533,376 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 19 HDF5 files; 10.85 GB (10,850,533,376 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - 19 aquisitions of 400 frames each, totalling 7600 frames
 - No train/validation/test split is defined; all acquisitions are provided in full.

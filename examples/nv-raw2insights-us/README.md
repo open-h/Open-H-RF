@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - medical-imaging
   - simulation
   - beamforming
@@ -19,14 +19,14 @@ size_categories:
   - n<1K
 ---
 
-# NV-Raw2Insights-US → OpenH-RF
+# NV-Raw2Insights-US → Open-H-RF
 
 A worked **submission example**: convert one sample of the public
 [`nvidia/NV-Raw2Insights-US`](https://huggingface.co/datasets/nvidia/NV-Raw2Insights-US)
-dataset into the OpenH-RF (`zea`) file format, then reconstruct a B-mode from the
+dataset into the Open-H-RF (`zea`) file format, then reconstruct a B-mode from the
 raw channel data to validate it.
 
-This directory follows the OpenH-RF Sub-Dataset Submission Guide. The **required
+This directory follows the Open-H-RF Sub-Dataset Submission Guide. The **required
 submission files** are:
 
 | File | Role |
@@ -103,7 +103,7 @@ Submitted in the [`zea` file format](https://zea.readthedocs.io/en/v0.1.0a3/data
 onto `zea` groups: raw IQ channel data, stored B-modes, the sound-speed map, the
 segmentation, scan parameters, and the per-sample phase-error metric. B-modes are
 log-compressed to 8-bit before storage. Each spatial map carries a per-pixel
-`coordinates` array (the point-based openh-rf spec) rather than a bounding-box
+`coordinates` array (the point-based open-h-rf spec) rather than a bounding-box
 extent; `convert.py` builds these with `zea.beamform.pixelgrid.cartesian_pixel_grid`.
 
 Per-sample contents of the converted HDF5:

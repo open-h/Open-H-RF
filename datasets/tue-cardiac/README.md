@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - echocardiography
   - cardiac
   - plax
@@ -33,7 +33,7 @@ size_categories:
   </tr>
 </table>
 
-*Parasternal long-axis cine loops of four volunteers, pulse-inversion harmonic tracks: focused ([`subject-002`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tue-cardiac/data/subject-002.hdf5)), wide ([`subject-004`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tue-cardiac/data/subject-004.hdf5)), focused ([`subject-006`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tue-cardiac/data/subject-006.hdf5)) and wide ([`subject-009`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tue-cardiac/data/subject-009.hdf5)).*
+*Parasternal long-axis cine loops of four volunteers, pulse-inversion harmonic tracks: focused ([`subject-002`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tue-cardiac/data/subject-002.hdf5)), wide ([`subject-004`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tue-cardiac/data/subject-004.hdf5)), focused ([`subject-006`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tue-cardiac/data/subject-006.hdf5)) and wide ([`subject-009`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tue-cardiac/data/subject-009.hdf5)).*
 
 ## Dataset Description
 
@@ -95,7 +95,7 @@ The dataset must not be used as a clinically validated diagnostic product.
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/tue-cardiac/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipelines/*.yaml` definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/tue-cardiac/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipelines/*.yaml` definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 Each file holds the eight transmit-encoding tracks. Set `ZEA_FILE`, `TRACK` and `FRAME` at the top of the script, together with the matching pipeline under `pipelines/` as `CONFIG` (`PIPELINE_FOR_TRACK` lists which track uses which; see also [Data Validation](#data-validation)). The image is written to `assets/`.
 
@@ -178,7 +178,7 @@ The source tensor order is preserved as `(n_frames, n_tx, n_ax, n_el, n_ch) = (1
 
 Suggested citation for the dataset:
 
-> Penninga, S. W., & van Sloun, R. J. G. (2026). *TU/e Cardiac RF Multi-Transmit* [Data set]. Eindhoven University of Technology, OpenH-RF.
+> Penninga, S. W., & van Sloun, R. J. G. (2026). *TU/e Cardiac RF Multi-Transmit* [Data set]. Eindhoven University of Technology, Open-H-RF.
 
 ```bibtex
 @misc{penninga_tue_cardiac_plax_2026,
@@ -186,13 +186,13 @@ Suggested citation for the dataset:
   author       = {Penninga, Simon W. and van Sloun, Ruud J. G.},
   year         = {2026},
   publisher    = {Biomedical Diagnostics Lab, Eindhoven University of Technology},
-  howpublished = {OpenH-RF dataset},
+  howpublished = {Open-H-RF dataset},
 }
 ```
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 12 HDF5 files; 199.18 GB (199,180,025,844 bytes) stored; root `zea_version` **0.1.4**.
+**Current Open-H-RF release:** 12 HDF5 files; 199.18 GB (199,180,025,844 bytes) stored; root `zea_version` **0.1.4**.
 - **Participants/files:** 12 distinct people represented by 12 HDF5 files.
 - **Tracks/acquisitions:** 8 tracks per file; 96 acquisitions total.
 - **Frames:** 100 per track; 9,600 frames total.

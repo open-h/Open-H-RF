@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the tue-carotid dataset of OpenH-RF.
+"""Example reconstruction script for the tue-carotid dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/tue-carotid
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/tue-carotid
 
 B-mode reconstruction of in-vivo carotid channel data.
 
@@ -33,8 +33,8 @@ HERE = Path(__file__).parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/tue-carotid/data/5_long_bifur_R_0000.hdf5"
-CONFIG = "hf://nvidia/OpenH-RF/tue-carotid/pipeline.yaml"
+ZEA_FILE = "hf://nvidia/Open-H-RF/tue-carotid/data/5_long_bifur_R_0000.hdf5"
+CONFIG = "hf://nvidia/Open-H-RF/tue-carotid/pipeline.yaml"
 FRAME = 0
 OUT = HERE / "assets" / "zea_carotid_2023_sample.png"
 

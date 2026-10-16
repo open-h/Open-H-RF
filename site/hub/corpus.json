@@ -26899,7 +26899,7 @@
     "ATL P4-1 (virtual calibrated 96-element array)": 500
    },
    "scanners": {
-    "OpenH-RF simulation": 500
+    "Open-H-RF simulation": 500
    },
    "zea_version": {
     "0.1.6": 500
@@ -27174,10 +27174,10 @@
     ],
     "attrs": {
      "description": [
-      "Synthetic OpenH-RF acquisition with one transmit pulse per track."
+      "Synthetic Open-H-RF acquisition with one transmit pulse per track."
      ],
      "us_machine": [
-      "OpenH-RF simulation"
+      "Open-H-RF simulation"
      ],
      "zea_version": [
       "0.1.6"
@@ -27911,7 +27911,7 @@
        []
       ],
       "values": [
-       "OpenH-RF simulation data converted to Zea format"
+       "Open-H-RF simulation data converted to Zea format"
       ],
       "distinct": 1
      },
@@ -30944,7 +30944,7 @@
        []
       ],
       "values": [
-       "University of British Columbia OpenH-RF contributors (2026). UBC Module C: Synthetic Channel Proxy and Multimodal Fetal Phantom Ultrasound. OpenH-RF. CC BY 4.0. Contributors: Septimiu E. Salcudean, Ro…"
+       "University of British Columbia Open-H-RF contributors (2026). UBC Module C: Synthetic Channel Proxy and Multimodal Fetal Phantom Ultrasound. Open-H-RF. CC BY 4.0. Contributors: Septimiu E. Salcudean, Ro…"
       ],
       "distinct": 1
      },

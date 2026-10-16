@@ -1,7 +1,7 @@
 # `huggingface/`: the dataset's documents
 
-`OpenH-RF/` is a clone of
-[`nvidia/OpenH-RF`](https://huggingface.co/datasets/nvidia/OpenH-RF), the
+`Open-H-RF/` is a clone of
+[`nvidia/Open-H-RF`](https://huggingface.co/datasets/nvidia/Open-H-RF), the
 dataset repo on the Hugging Face Hub, without its data. It is git-ignored:
 `setup.sh` creates it and moves it.
 

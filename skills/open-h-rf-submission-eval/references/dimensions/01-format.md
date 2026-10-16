@@ -11,20 +11,20 @@ The submission is actually in the *zea* file format and the on-disk structure ma
 ## Artifacts you need
 
 - The `.hdf5` file(s) in the submission (zea files are standard HDF5; `zea.File` is a thin wrapper around `h5py.File`)
-- `../../../openh-rf-shared/validate_zea_spec.py` — **the authoritative, programmatic compliance check**
+- `../../../open-h-rf-shared/validate_zea_spec.py` — **the authoritative, programmatic compliance check**
 - `zea.data.spec.{DataSpec, ScanSpec, ProbeSpec, MetadataSpec}` and <https://zea.readthedocs.io/en/openh-rf-latest/> — human-readable reference (the script is still ground truth when in doubt)
 
 **Do not read:** the data card, pipeline script, or any prose. This dimension is purely about the file on disk.
 
 ## Checks
 
-0. **Run `../../../openh-rf-shared/validate_zea_spec.py <file>` first — this is the authoritative check.** It opens the file with zea and runs zea's own validators — `File.validate` (structural) and `File.validate_spec` (full dtype / shape / dimension-consistency) — *against the zea version installed in the eval environment* (recorded as `zea_version` in the output). Read the JSON:
+0. **Run `../../../open-h-rf-shared/validate_zea_spec.py <file>` first — this is the authoritative check.** It opens the file with zea and runs zea's own validators — `File.validate` (structural) and `File.validate_spec` (full dtype / shape / dimension-consistency) — *against the zea version installed in the eval environment* (recorded as `zea_version` in the output). Read the JSON:
    - `compliant: true` → the file satisfies the installed zea spec. Proceed to the checks below only for items the spec does not cover (units conventions, NaN/Inf spot-checks, file-size sanity, naming).
    - `compliant: false` → each string in `errors` is a precise violation; map it to a finding. A validation exception is a `major` or `blocker` (blocker if a required group/field is absent or a shape is incompatible).
    - Heed any zea **warnings** the script echoes (e.g., "Custom spatial map key(s) added" — a non-standard map key validated as a generic `Map`): record as `minor`/`info` and suggest the supported key.
 1. **File opens with `zea`.** (Subsumed by check 0; if `validate_zea_spec.py` cannot even open the file, that's a `blocker`.)
 2. **Required top-level groups exist.** A zea file has at minimum `data` (channel data) and `scan` (geometry + transmit definition); `probe` is its own group (accessible as the `f.probe` property). Multi-track files replace top-level `data`/`scan` with a `tracks/` group — the validator settles this. Missing `data`/`scan` (and no `tracks`) is a `blocker`.
-3. **Raw channel data is present.** `/data/raw_data` **must** exist and be non-empty. OpenH-RF requires every submission to include raw pre-beamformed channel capture data — non-negotiable, even if the proposal claimed an alternative. `validate_zea_spec.py` enforces this explicitly (`has_raw_data`) because zea's generic spec does **not** require it. Missing/empty → `blocker`.
+3. **Raw channel data is present.** `/data/raw_data` **must** exist and be non-empty. Open-H-RF requires every submission to include raw pre-beamformed channel capture data — non-negotiable, even if the proposal claimed an alternative. `validate_zea_spec.py` enforces this explicitly (`has_raw_data`) because zea's generic spec does **not** require it. Missing/empty → `blocker`.
 4. **Channel-data array shape.** `/data/raw_data` must be `(n_frames, n_tx, n_ax, n_el, n_ch)` per the spec (`n_ax` = axial samples, `n_el` = elements, `n_ch` = channels, typically 1 for RF or 2 for I/Q). A documented variant is acceptable only if the dimension order is recorded in the file or data card.
 4. **Dtype is sensible.** Typically `float32` or `int16`. Object dtypes or strings in the data array are a `major`.
 5. **Units are recorded.** Sampling rate in Hz, center frequency in Hz, element positions in meters, sound speed in m/s. If units are missing or implicit, that's a `major`.

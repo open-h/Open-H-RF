@@ -12,7 +12,7 @@ from zea.ops import Operation
 
 
 # These ops are defined here, not in zea: a pipeline.yaml naming them resolves
-# only once this module is imported. See https://github.com/open-h/OpenH-RF
+# only once this module is imported. See https://github.com/open-h/Open-H-RF
 @ops_registry("openpros.network_ops.InversionNetInference")
 class InversionNetInference(Operation):
     """Reconstruct a normalized speed-of-sound map from preprocessed waveforms."""

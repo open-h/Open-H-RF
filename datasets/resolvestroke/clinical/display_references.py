@@ -10,8 +10,8 @@ Serves all 20 resolvestroke/clinical acquisitions (``SP01``-``SP10``, Left/Right
 pick one with ``SUBJECT`` below, or pass ``--input`` (a Hub ``hf://`` path or a
 local file).
 
-    uv run --project /path/to/OpenH-RF python display_references.py
-    uv run --project /path/to/OpenH-RF python display_references.py --input SP07-Right.hdf5
+    uv run --project /path/to/Open-H-RF python display_references.py
+    uv run --project /path/to/Open-H-RF python display_references.py --input SP07-Right.hdf5
 """
 
 import argparse
@@ -29,7 +29,7 @@ from zea import File
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus; override with --input.
 SUBJECT = "SP02-Left-2"
-DEFAULT_INPUT = f"hf://nvidia/OpenH-RF/resolvestroke/clinical/{SUBJECT}/{SUBJECT}.hdf5"
+DEFAULT_INPUT = f"hf://nvidia/Open-H-RF/resolvestroke/clinical/{SUBJECT}/{SUBJECT}.hdf5"
 
 # name, colormap, contrast limits (None = auto), signed (diverging max-|.| MIP)
 MAPS = [

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the tel-aviv dataset of OpenH-RF.
+"""Example reconstruction script for the tel-aviv dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/tel-aviv
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/tel-aviv
 
 B-mode reconstruction of multi-angle plane-wave acquisitions of mouse tumors and
 water-bead phantoms.
@@ -36,9 +36,9 @@ HERE = Path(__file__).parent
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy. The phantom acquisitions live under
 # tel-aviv/phantom and carry no segmentation.
-ZEA_FILE = "hf://nvidia/OpenH-RF/tel-aviv/mouse_tumor/seg/01-scan-3.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/tel-aviv/mouse_tumor/seg/01-scan-3.hdf5"
 CONFIG = HERE / "mouse_tumor" / "pipeline.yaml"  # this is what the run loads
-HF_CONFIG = "hf://nvidia/OpenH-RF/tel-aviv/mouse_tumor/pipeline.yaml"  # where CONFIG is published
+HF_CONFIG = "hf://nvidia/Open-H-RF/tel-aviv/mouse_tumor/pipeline.yaml"  # where CONFIG is published
 FRAME = 46
 OUT = HERE / "assets" / "01-scan-3_frame046.png"
 

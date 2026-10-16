@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - beamforming
   - phantom
   - 3d
@@ -21,7 +21,7 @@ size_categories:
 
 ![Tissue-mimicking phantom with point targets and an anechoic cyst](assets/bmode.png)
 
-*Frame 6 of [`data/ph.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/technion/phantom/data/ph.hdf5), reconstructed by `reconstruct.py`.*
+*Frame 6 of [`data/ph.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/technion/phantom/data/ph.hdf5), reconstructed by `reconstruct.py`.*
 
 ## Dataset Description
 
@@ -37,7 +37,7 @@ Pre-beamformed ultrasound **channel data** from a tissue-mimicking phantom, acqu
 
 ## Dataset Creation Date
 
-Source data 2018; converted to the OpenH-RF (zea) format 07/16/2026.
+Source data 2018; converted to the Open-H-RF (zea) format 07/16/2026.
 
 ## License / Terms of Use
 
@@ -61,12 +61,12 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/technion/phantom/data/ph.hdf5 \
-  --config hf://nvidia/OpenH-RF/technion/phantom/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/technion/phantom/data/ph.hdf5 \
+  --config hf://nvidia/Open-H-RF/technion/phantom/pipeline.yaml \
   --n-frames 1
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/technion/phantom/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/technion/phantom/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 ## Dataset Format
 
@@ -76,7 +76,7 @@ zea file format, a single HDF5 file `data/ph.hdf5`. Source complex samples repac
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 1 HDF5 file; 659.95 MB (659,947,520 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 1 HDF5 file; 659.95 MB (659,947,520 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Frames / acquisitions:** 12 frames · 1 acquisition.
 - **Stored HDF5 size:** 659.95 MB (659,947,520 bytes).

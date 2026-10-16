@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the stanford-murine dataset of OpenH-RF.
+"""Example reconstruction script for the stanford-murine dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/stanford-murine
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/stanford-murine
 
 B-mode reconstruction of murine full synthetic aperture, multifocal and
 Hadamard-encoded channel data.
@@ -40,10 +40,10 @@ CONFIG_BY_TRACK = {
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
 ZEA_FILE = (
-    "hf://nvidia/OpenH-RF/stanford-murine/data/RatExperiments/VerasonicsAcq/"
+    "hf://nvidia/Open-H-RF/stanford-murine/data/RatExperiments/VerasonicsAcq/"
     "Rat3/ExposedLiver/DATA_Tracks_20190319_115804.hdf5"
 )
-CONFIG_DIR = "hf://nvidia/OpenH-RF/stanford-murine"  # holds the pipeline_*.yaml configs
+CONFIG_DIR = "hf://nvidia/Open-H-RF/stanford-murine"  # holds the pipeline_*.yaml configs
 OUT_DIR = HERE / "assets"  # every PNG is written here
 
 

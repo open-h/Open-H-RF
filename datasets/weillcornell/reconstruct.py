@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the weillcornell dataset of OpenH-RF.
+"""Example reconstruction script for the weillcornell dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/weillcornell
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/weillcornell
 
 B-mode reconstruction of plane-wave channel data with its embedded QUS targets.
 
@@ -49,9 +49,9 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/weillcornell/data/ac10_15m_SK.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/weillcornell/data/ac10_15m_SK.hdf5"
 OUT = HERE / "assets" / "ac10_15m_SK_pipeline.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/weillcornell/pipeline.yaml"
+HF_CONFIG = "hf://nvidia/Open-H-RF/weillcornell/pipeline.yaml"
 FRAME = 0  # Frame index to reconstruct
 DEVICE = None  # Optional zea device, e.g. cpu, cuda:0, auto:0
 

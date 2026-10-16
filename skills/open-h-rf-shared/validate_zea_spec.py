@@ -75,15 +75,15 @@ def validate(path: Path) -> dict:
     except Exception as e:  # noqa: BLE001 - any spec violation is a finding
         result["errors"].append(f"{type(e).__name__}: {e}")
 
-    # OpenH-RF hard requirement: raw channel data must be present.
+    # Open-H-RF hard requirement: raw channel data must be present.
     if not result["has_raw_data"]:
         result["compliant"] = False
         result["errors"].append(
             "BLOCKER: /data/raw_data is missing — raw pre-beamformed channel "
-            "capture data is mandatory for every OpenH-RF submission."
+            "capture data is mandatory for every Open-H-RF submission."
         )
 
-    # OpenH-RF hard requirement: minimum zea version v0.1.0a3.
+    # Open-H-RF hard requirement: minimum zea version v0.1.0a3.
     file_ver = result["file_zea_version"]
     if file_ver is None:
         result["compliant"] = False

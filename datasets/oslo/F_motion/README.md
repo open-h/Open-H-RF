@@ -9,7 +9,7 @@ language:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - elastography
   - shear-wave
   - arfi
@@ -21,7 +21,7 @@ size_categories:
 
 ![Shear waves travelling outward after an acoustic push](assets/hero.gif)
 
-*First push-track sequence (frames 1-49) of [`SWE_L7_type_III.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/F_motion/SWE_L7_type_III.hdf5): B-mode (left) and axial displacement between consecutive frames (right), a lag-one autocorrelation (Kasai) estimate on the IQ beamformed with `pipeline.yaml`. The displacement estimate is not part of the reference pipeline.*
+*First push-track sequence (frames 1-49) of [`SWE_L7_type_III.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/F_motion/SWE_L7_type_III.hdf5): B-mode (left) and axial displacement between consecutive frames (right), a lag-one autocorrelation (Kasai) estimate on the IQ beamformed with `pipeline.yaml`. The displacement estimate is not part of the reference pipeline.*
 
 ## Dataset Description
 
@@ -47,7 +47,7 @@ Shear-wave elastography (SWE) and acoustic-radiation-force-impulse (ARFI) push-t
 
 ## Intended Usage
 
-Motion estimation (RFP task 6.4): shear-wave velocity estimation, ARFI displacement tracking, and high-frame-rate motion reconstruction. (OpenH-RF RFP task 6.4 Motion Estimation).
+Motion estimation (RFP task 6.4): shear-wave velocity estimation, ARFI displacement tracking, and high-frame-rate motion reconstruction. (Open-H-RF RFP task 6.4 Motion Estimation).
 
 ## Dataset Characterization
 
@@ -63,11 +63,11 @@ The example acquisition can be processed with the `pipeline.yaml` definition in 
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/oslo/F_motion/SWE_L7_type_III.hdf5 \
-  --config hf://nvidia/OpenH-RF/oslo/F_motion/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/oslo/F_motion/SWE_L7_type_III.hdf5 \
+  --config hf://nvidia/Open-H-RF/oslo/F_motion/pipeline.yaml
 ```
 
-This `pipeline.yaml` holds the pipeline and display window of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/oslo/reconstruct.py) at the root of this collection, as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)). These plane-wave tracking acquisitions use the non-focused `compound` pipeline, and the reference reconstruction shows a single tracking frame.
+This `pipeline.yaml` holds the pipeline and display window of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/oslo/reconstruct.py) at the root of this collection, as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)). These plane-wave tracking acquisitions use the non-focused `compound` pipeline, and the reference reconstruction shows a single tracking frame.
 
 ## Dataset Format
 
@@ -77,7 +77,7 @@ All acquisitions are stored in the **zea** HDF5 file format. Each `.hdf5` file i
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 4 HDF5 files; 354.42 MB (354,418,688 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 4 HDF5 files; 354.42 MB (354,418,688 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Number of acquisitions:** 4
 - **Total channel-capture frames:** 800

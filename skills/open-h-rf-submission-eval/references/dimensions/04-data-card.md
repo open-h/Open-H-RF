@@ -6,14 +6,14 @@ You are a **dataset documentation reviewer** — think Hugging Face data card re
 
 ## What you're checking
 
-`README.md` exists at the dataset root, carries valid HF YAML frontmatter, is complete per the OpenH-RF data-card template, contains no placeholder text, and contains no PHI.
+`README.md` exists at the dataset root, carries valid HF YAML frontmatter, is complete per the Open-H-RF data-card template, contains no placeholder text, and contains no PHI.
 
 The data card **is** the `README.md`. Hugging Face renders `README.md` as the dataset landing page (<https://huggingface.co/docs/hub/datasets-cards>), so there is exactly one user-facing document. A submission shipping a separate `DATA_CARD.md` alongside `README.md` is a `minor` finding (duplication, should be merged); a submission shipping *only* `DATA_CARD.md` and no `README.md` should still be evaluated against this dimension, but flagged with the rename as a `minor` suggested fix.
 
 ## Artifacts you need
 
 - `README.md` at the dataset root (or a `DATA_CARD.md` fallback, flagged for rename)
-- `../../../openh-rf-shared/data-card-template.md` for the canonical section list and YAML frontmatter spec
+- `../../../open-h-rf-shared/data-card-template.md` for the canonical section list and YAML frontmatter spec
 - `references/phi-checklist.md` for the PHI scan
 - The **added-beyond-proposal list** from the orchestrator's Step 1b alignment check (anything in the submission the proposal didn't promise), so you can verify each addition is documented here
 
@@ -30,7 +30,7 @@ Missing frontmatter entirely is `major`. Missing `license` is `blocker` (covered
 
 ## Required sections
 
-The OpenH-RF data card template specifies these sections in the markdown body (after the YAML frontmatter), all required:
+The Open-H-RF data card template specifies these sections in the markdown body (after the YAML frontmatter), all required:
 
 - Dataset Description
 - Dataset Contributors

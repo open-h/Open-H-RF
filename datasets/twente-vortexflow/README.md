@@ -8,7 +8,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - flow
   - phantom
   - blood-flow
@@ -22,7 +22,7 @@ size_categories:
 
 ![Optical camera view beside the B-mode reconstruction of a von Karman vortex street](assets/vortex_street.gif)
 
-*The Photron high-speed camera view (left) and the B-mode reconstruction (right) of [`data/AcqData_PVoltage80_TVoltage3.4.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/twente-vortexflow/data/AcqData_PVoltage80_TVoltage3.4.hdf5). Both come from `track_0`, frame for frame, so the optical and acoustic views show the same instant of the vortex street.*
+*The Photron high-speed camera view (left) and the B-mode reconstruction (right) of [`data/AcqData_PVoltage80_TVoltage3.4.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/twente-vortexflow/data/AcqData_PVoltage80_TVoltage3.4.hdf5). Both come from `track_0`, frame for frame, so the optical and acoustic views show the same instant of the vortex street.*
 
 ## Dataset Description
 
@@ -91,7 +91,7 @@ Suitable for research in:
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/twente-vortexflow/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the pipeline definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/twente-vortexflow/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the pipeline definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 `ZEA_FILE` and `FRAME` at the top of the script select the acquisition and frame; each track is reconstructed with its own pipeline (`pipeline_short_imaging_pulse.yaml`, `pipeline_chirp.yaml`).
 
@@ -114,7 +114,7 @@ No pre-processing (demodulation, decimation, filtering) has been applied before 
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 6 HDF5 files; 9.09 GB (9,088,991,232 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 6 HDF5 files; 9.09 GB (9,088,991,232 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 **Table 3. Acquisition settings.**
 

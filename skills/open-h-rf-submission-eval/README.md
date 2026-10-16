@@ -1,6 +1,6 @@
-# openh-rf-submission-eval
+# open-h-rf-submission-eval
 
-An agentic skill for evaluating submissions to the [OpenH-RF](https://github.com/open-h/OpenH-RF) open ultrasound channel-data initiative against the RFP and submission guide.
+An agentic skill for evaluating submissions to the [Open-H-RF](https://github.com/open-h/Open-H-RF) open ultrasound channel-data initiative against the RFP and submission guide.
 
 ## What it does
 
@@ -21,10 +21,10 @@ Each dimension is decoupled and designed for parallel sub-agent execution in Cla
 ## Layout
 
 ```
-openh-rf-submission-eval/
+open-h-rf-submission-eval/
 ├── SKILL.md                  # Orchestration: workflow, verdict logic, auto-fix rules
 ├── references/
-│   ├── rfp-summary.md        # OpenH-RF RFP scope and tiers
+│   ├── rfp-summary.md        # Open-H-RF RFP scope and tiers
 │   ├── phi-checklist.md      # HHS Safe Harbor 18 identifiers
 │   ├── imaging-artifacts.md  # Acquisition-induced vs pipeline-induced artifact taxonomy
 │   └── dimensions/
@@ -38,8 +38,8 @@ openh-rf-submission-eval/
 └── scripts/
     └── judge_bmode.py        # Objective sanity checks on a reconstructed image
 
-# Shared support files (sibling, read by this skill and openh-rf-convert):
-../openh-rf-shared/
+# Shared support files (sibling, read by this skill and open-h-rf-convert):
+../open-h-rf-shared/
 ├── validate_zea_spec.py      # Authoritative programmatic zea-format compliance check
 ├── pipeline_template.py      # Default DAS->envelope->log B-mode pipeline (auto-fix)
 └── data-card-template.md     # Canonical data card template
@@ -54,8 +54,8 @@ maintain a parallel copy.
 
 ### In Claude Code
 
-The skill lives at `skills/openh-rf-submission-eval/` in the OpenH-RF repo, with
-a committed `.claude/skills/openh-rf-submission-eval` symlink pointing at it.
+The skill lives at `skills/open-h-rf-submission-eval/` in the Open-H-RF repo, with
+a committed `.claude/skills/open-h-rf-submission-eval` symlink pointing at it.
 Clone the repo and Claude Code auto-discovers the skill with no extra setup — on
 Linux/macOS/WSL2; on native Windows, enable Developer Mode or use WSL2 so git
 materializes the symlink rather than a plain text file.
@@ -68,24 +68,24 @@ To use it outside this repo, symlink (or copy) the skill into your personal
 skills directory:
 
 ```bash
-ln -s "$(pwd)/skills/openh-rf-submission-eval" ~/.claude/skills/openh-rf-submission-eval
+ln -s "$(pwd)/skills/open-h-rf-submission-eval" ~/.claude/skills/open-h-rf-submission-eval
 ```
 
 ### As a packaged .skill file
 
 ```bash
 # Using the skill-creator packaging script
-python -m scripts.package_skill /path/to/openh-rf-submission-eval
-# Produces openh-rf-submission-eval.skill, which can be uploaded in Claude.ai
+python -m scripts.package_skill /path/to/open-h-rf-submission-eval
+# Produces open-h-rf-submission-eval.skill, which can be uploaded in Claude.ai
 ```
 
 ## How to use
 
 Once installed, ask Claude to evaluate a submission:
 
-> "Evaluate this OpenH-RF submission at `/path/to/submission/`"
+> "Evaluate this Open-H-RF submission at `/path/to/submission/`"
 >
-> "Can we accept the submission at ~/openh-rf/inbox/example-contributor-2026-06/?"
+> "Can we accept the submission at ~/open-h-rf/inbox/example-contributor-2026-06/?"
 
 The skill produces `evaluation_report.md` plus, if applicable, an `autofix/` directory containing auto-generated artifacts (B-mode pipeline, reference image, filled-in data-card fields).
 
@@ -97,7 +97,7 @@ The skill produces `evaluation_report.md` plus, if applicable, an `autofix/` dir
 
 ## What gets auto-fixed
 
-- Missing B-mode pipeline (generated from `../openh-rf-shared/pipeline_template.py` if metadata is sufficient)
+- Missing B-mode pipeline (generated from `../open-h-rf-shared/pipeline_template.py` if metadata is sufficient)
 - Derivable data-card fields (sample count, total size, per-sample feature table)
 - Missing reference B-mode images (rendered once the pipeline works)
 
@@ -105,7 +105,7 @@ What does **not** get auto-fixed: license declarations, consent/IRB status, subj
 
 ## License
 
-Apache-2.0, matching the OpenH-RF repository — this skill is software. (Note:
+Apache-2.0, matching the Open-H-RF repository — this skill is software. (Note:
 *dataset submissions* evaluated by this skill must be CC BY 4.0, which is the
 data license the initiative requires; that is a separate thing from the license
 of this tool.)

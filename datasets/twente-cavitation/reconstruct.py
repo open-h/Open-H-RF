@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the twente-cavitation dataset of OpenH-RF.
+"""Example reconstruction script for the twente-cavitation dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/twente-cavitation
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/twente-cavitation
 
 Passive acoustic map (PAM) reconstruction of one cavitation acquisition.
 
@@ -78,12 +78,12 @@ BEAMFORMER_KWARGS = {"subarray_size": 32, "diagonal_loading": 1e-2}
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
 ZEA_FILE = (
-    "hf://nvidia/OpenH-RF/twente-cavitation/data/cavitation_bubbles_1000kPa_01mL_per_min.hdf5"
+    "hf://nvidia/Open-H-RF/twente-cavitation/data/cavitation_bubbles_1000kPa_01mL_per_min.hdf5"
 )
 CONFIG = HERE / "pipeline.yaml"  # written by write_config(); this is what the run loads
 N_FRAMES = 10  # number of frames to average
 OUT = HERE / "assets" / f"{Path(ZEA_FILE).stem}.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/twente-cavitation/pipeline.yaml"  # where CONFIG is published
+HF_CONFIG = "hf://nvidia/Open-H-RF/twente-cavitation/pipeline.yaml"  # where CONFIG is published
 
 
 def build_pipeline() -> Pipeline:

@@ -30,11 +30,11 @@ ops need no merged zea PR — they only need to be defined (imported) before a c
 referencing them is loaded, which is why the YAML can list them by name.
 
 Runtime: about 14 min for a full acquisition on an RTX 4000 Ada with GPU JAX
-(``uv sync --extra gpu`` in the OpenH-RF repo; the plain ``uv sync`` installs a CPU-only
+(``uv sync --extra gpu`` in the Open-H-RF repo; the plain ``uv sync`` installs a CPU-only
 JAX and this script then takes hours). Lower ``N_FRAMES`` for a quick look.
 
 Usage:
-    KERAS_BACKEND=jax uv run --project /path/to/OpenH-RF python reconstruct_PD_3d.py
+    KERAS_BACKEND=jax uv run --project /path/to/Open-H-RF python reconstruct_PD_3d.py
 """
 
 import os
@@ -54,7 +54,7 @@ from zea.internal.registry import ops_registry
 from zea.ops import Operation
 
 HERE = Path(__file__).parent
-CONFIG = "hf://nvidia/OpenH-RF/resolvestroke/phantom_flow/pipeline_PD_3d.yaml"
+CONFIG = "hf://nvidia/Open-H-RF/resolvestroke/phantom_flow/pipeline_PD_3d.yaml"
 
 # Clip definitions (matching the combined file structure)
 CLIPS = [
@@ -74,7 +74,7 @@ COLORMAP = "hot"
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap INPUT for a local path to
 # run against your own copy.
-INPUT = "hf://nvidia/OpenH-RF/resolvestroke/phantom_flow/phantom_flow.hdf5"
+INPUT = "hf://nvidia/Open-H-RF/resolvestroke/phantom_flow/phantom_flow.hdf5"
 N_FRAMES = N_FRAMES_BF
 OUT = HERE / f"{Path(INPUT).stem}_PD_montage.png"
 
@@ -86,7 +86,7 @@ OUT = HERE / f"{Path(INPUT).stem}_PD_montage.png"
 # Custom pipeline operations (registered locally — no zea PR required).
 # --------------------------------------------------------------------------- #
 # These ops are defined here, not in zea: a pipeline.yaml naming them resolves
-# only once this module is imported. See https://github.com/open-h/OpenH-RF
+# only once this module is imported. See https://github.com/open-h/Open-H-RF
 @ops_registry("tissue_highpass")
 class TissueHighpass(Operation):
     """Slow-time high-pass (wall) filter to suppress stationary tissue clutter.

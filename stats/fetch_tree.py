@@ -1,7 +1,7 @@
-"""List every file in the OpenH-RF repo with its size.
+"""List every file in the Open-H-RF repo with its size.
 
 ``save`` writes the listing to ``data/tree.json`` and records the revision it is of in
-``data/source_revision.json``. Read from the ``huggingface/OpenH-RF`` clone's git
+``data/source_revision.json``. Read from the ``huggingface/Open-H-RF`` clone's git
 when it has the revision, which takes a second; otherwise one API crawl of three or
 four minutes. No file contents are downloaded either way.
 
@@ -19,11 +19,11 @@ from pathlib import Path
 from huggingface_hub import HfApi
 from scan_files import write_atomically
 
-REPO = "nvidia/OpenH-RF"
+REPO = "nvidia/Open-H-RF"
 OUT = Path(__file__).parent / "data" / "tree.json"
 PROVENANCE_OUT = Path(__file__).parent / "data" / "source_revision.json"
 # The Hub repo's documents and git history, cloned by huggingface/setup.sh.
-DOCS = Path(__file__).resolve().parent.parent / "huggingface" / "OpenH-RF"
+DOCS = Path(__file__).resolve().parent.parent / "huggingface" / "Open-H-RF"
 
 
 def fetch_tree(revision: str = "main") -> tuple[str, list[dict]]:

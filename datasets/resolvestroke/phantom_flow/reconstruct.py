@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the resolvestroke/phantom_flow dataset of OpenH-RF.
+"""Example reconstruction script for the resolvestroke/phantom_flow dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/resolvestroke/phantom_flow
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/resolvestroke/phantom_flow
 
 B-mode reconstruction of a matrix-probe diverging-wave pipe phantom flow acquisition.
 
@@ -37,12 +37,12 @@ from zea import Config, File, Pipeline
 from zea.beamform.pixelgrid import polar_pixel_grid
 
 HERE = Path(__file__).parent
-CONFIG = "hf://nvidia/OpenH-RF/resolvestroke/phantom_flow/pipeline.yaml"
+CONFIG = "hf://nvidia/Open-H-RF/resolvestroke/phantom_flow/pipeline.yaml"
 
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/resolvestroke/phantom_flow/phantom_flow.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/resolvestroke/phantom_flow/phantom_flow.hdf5"
 FRAME = 0
 OUT = HERE / "assets" / f"{Path(ZEA_FILE).stem}_bmode.png"
 

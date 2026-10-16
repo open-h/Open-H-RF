@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the ubc/module_A dataset of OpenH-RF.
+"""Example reconstruction script for the ubc/module_A dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/ubc/module_A
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/ubc/module_A
 
 B-mode reconstruction of the corrected synthetic-channel S-WAVE phantom data on
 a scanline grid, scan-converted to a physical sector.
@@ -48,7 +48,7 @@ HERE = Path(__file__).resolve().parent
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
 ZEA_FILE = (
-    "hf://nvidia/OpenH-RF/ubc/module_A/acquisitions/case_1.83/ubc_swave_cirs_1.83_p10_f13.hdf5"
+    "hf://nvidia/Open-H-RF/ubc/module_A/acquisitions/case_1.83/ubc_swave_cirs_1.83_p10_f13.hdf5"
 )
 OUT = HERE / "assets" / "reconstruct_1.83_p10_f13.png"
 FRAME = 0

@@ -7,7 +7,7 @@ from zea.ops import Operation
 
 
 # These ops are defined here, not in zea: a pipeline.yaml naming them resolves
-# only once this module is imported. See https://github.com/open-h/OpenH-RF
+# only once this module is imported. See https://github.com/open-h/Open-H-RF
 @ops_registry("openpros.custom_ops.MyRearrange")
 class MyRearrange(Operation):
     """Restore the original OpenPros ``data`` layout from the stored ``raw_data``."""

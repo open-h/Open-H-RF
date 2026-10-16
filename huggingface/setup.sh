@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Clone / refresh nvidia/OpenH-RF into huggingface/OpenH-RF without pulling its
+# Clone / refresh nvidia/Open-H-RF into huggingface/Open-H-RF without pulling its
 # ~39 TB of LFS payload.
 #
 #   ./huggingface/setup.sh             check it out at the revision the site shows
@@ -12,8 +12,8 @@
 # stats/data/ was taken at (stats/data/source_revision.json).
 set -euo pipefail
 
-SUB="huggingface/OpenH-RF"
-URL="https://huggingface.co/datasets/nvidia/OpenH-RF"
+SUB="huggingface/Open-H-RF"
+URL="https://huggingface.co/datasets/nvidia/Open-H-RF"
 RECORDED="stats/data/source_revision.json"
 ROOT="$(git -C "$(dirname "${BASH_SOURCE[0]}")" rev-parse --show-toplevel)"
 cd "$ROOT"

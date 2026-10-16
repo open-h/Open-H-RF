@@ -1,22 +1,22 @@
 ---
-name: openh-rf-submission-eval
-description: Evaluate a submission to the OpenH-RF (open ultrasound channel-data) initiative against the RFP and submission guide. Use this whenever the user wants to review, grade, validate, accept, or QA a proposed contribution to OpenH-RF, OpenH, or any open ultrasound channel/RF dataset — including when they hand over a folder, a Hugging Face link, a zea file, or a data card and ask whether it's ready, whether it meets the bar, what's missing, or whether it can be accepted. Also use when the user wants to auto-fix gaps in a submission, such as generating a missing B-mode pipeline, filling in data-card fields, or rendering a reference reconstruction. Trigger even if the user doesn't say OpenH-RF by name — ultrasound channel data plus a review or intake context is enough.
+name: open-h-rf-submission-eval
+description: Evaluate a submission to the Open-H-RF (open ultrasound channel-data) initiative against the RFP and submission guide. Use this whenever the user wants to review, grade, validate, accept, or QA a proposed contribution to Open-H-RF, Open-H, or any open ultrasound channel/RF dataset — including when they hand over a folder, a Hugging Face link, a zea file, or a data card and ask whether it's ready, whether it meets the bar, what's missing, or whether it can be accepted. Also use when the user wants to auto-fix gaps in a submission, such as generating a missing B-mode pipeline, filling in data-card fields, or rendering a reference reconstruction. Trigger even if the user doesn't say Open-H-RF by name — ultrasound channel data plus a review or intake context is enough.
 ---
 
-# OpenH-RF Submission Evaluator
+# Open-H-RF Submission Evaluator
 
-This skill reviews a contributor submission to the OpenH-RF initiative and produces a structured acceptance report. Each evaluation dimension is independent and is designed to be dispatched to a sub-agent in parallel.
+This skill reviews a contributor submission to the Open-H-RF initiative and produces a structured acceptance report. Each evaluation dimension is independent and is designed to be dispatched to a sub-agent in parallel.
 
 ## Minimum zea version
 
-Every submission must have been written with **zea ≥ v0.1.0a3** — OpenH-RF's acceptance floor. Older alphas (≤ v0.1.0a2) have format drift the current loaders no longer accept; this is an OpenH-RF policy, not a zea spec point. `validate_zea_spec.py` enforces it automatically: it sets `compliant: false` and emits a `blocker` finding when the file's `zea_version` attribute is missing or below the floor, so dimension 1 catches it without a separate manual check.
+Every submission must have been written with **zea ≥ v0.1.0a3** — Open-H-RF's acceptance floor. Older alphas (≤ v0.1.0a2) have format drift the current loaders no longer accept; this is an Open-H-RF policy, not a zea spec point. `validate_zea_spec.py` enforces it automatically: it sets `compliant: false` and emits a `blocker` finding when the file's `zea_version` attribute is missing or below the floor, so dimension 1 catches it without a separate manual check.
 
 ## What you're evaluating against
 
-OpenH-RF accepts pre-beamformed ultrasound channel data in the *zea* file format, licensed CC BY 4.0, accompanied by a Hugging Face–style `README.md` (which **is** the data card — Hugging Face renders `README.md` as the dataset landing page; see <https://huggingface.co/docs/hub/datasets-cards>) and a reconstruction pipeline that turns the raw channel data into a B-mode image. **There is exactly one user-facing document: `README.md`. There is no separate `DATA_CARD.md`.** The full requirements live in:
+Open-H-RF accepts pre-beamformed ultrasound channel data in the *zea* file format, licensed CC BY 4.0, accompanied by a Hugging Face–style `README.md` (which **is** the data card — Hugging Face renders `README.md` as the dataset landing page; see <https://huggingface.co/docs/hub/datasets-cards>) and a reconstruction pipeline that turns the raw channel data into a B-mode image. **There is exactly one user-facing document: `README.md`. There is no separate `DATA_CARD.md`.** The full requirements live in:
 
 - `references/rfp-summary.md` — RFP scope, tiers, eligibility, timeline
-- `../openh-rf-shared/data-card-template.md` — exact fields the `README.md` must contain, including the YAML frontmatter HF parses
+- `../open-h-rf-shared/data-card-template.md` — exact fields the `README.md` must contain, including the YAML frontmatter HF parses
 - **zea's spec classes** — `zea.data.spec.{DataSpec, ScanSpec, ProbeSpec, MetadataSpec}` and <https://zea.readthedocs.io/en/openh-rf-latest/> — what a valid zea file looks like and what fields it must expose (authoritative; no parallel copy maintained here)
 - `references/phi-checklist.md` — canonical HHS Safe Harbor 18 identifiers (used by dimensions 4 and 7)
 - `references/imaging-artifacts.md` — taxonomy of acquisition-induced vs pipeline-induced image artifacts (used by dimension 2)
@@ -67,7 +67,7 @@ Make an `inventory.json` recording what's present, what's missing, and file size
 
 Common carve-out examples: "3D position information will not be provided", "subject demographics aggregate-only", "annotations limited to N frames per acquisition".
 
-**Step 1b — check the submission against the proposal.** OpenH-RF wants submissions that match what was proposed and accepted, not something materially different. Compare the inventory to the proposal and record three things:
+**Step 1b — check the submission against the proposal.** Open-H-RF wants submissions that match what was proposed and accepted, not something materially different. Compare the inventory to the proposal and record three things:
 
 - **Delivered as proposed** — promised content that is present. No finding.
 - **Under-delivered** — content the proposal promised that is missing or materially smaller than promised, and that is *not* an accepted carve-out. This is a `major` finding (route it to the relevant dimension): the contributor should either deliver it or get a carve-out on record. (Missing `raw_data` is always a `blocker` regardless — see below.)
@@ -75,7 +75,7 @@ Common carve-out examples: "3D position information will not be provided", "subj
 
 Pass the alignment summary (under-delivered list + added-beyond-proposal list) into the relevant dimension sub-agents alongside the carve-out list.
 
-**Hard requirement — no carve-out applies.** Every OpenH-RF submission **must** include raw pre-beamformed channel capture data (`/data/raw_data` in zea format). This is the core of the dataset and is non-negotiable: a proposal that omits raw channel data does not qualify, and an evaluation that finds `/data/raw_data` missing or empty should mark dimension 1 (Format) `blocker` regardless of what the proposal says.
+**Hard requirement — no carve-out applies.** Every Open-H-RF submission **must** include raw pre-beamformed channel capture data (`/data/raw_data` in zea format). This is the core of the dataset and is non-negotiable: a proposal that omits raw channel data does not qualify, and an evaluation that finds `/data/raw_data` missing or empty should mark dimension 1 (Format) `blocker` regardless of what the proposal says.
 
 ### Step 2: Dispatch the seven dimension checks in parallel
 
@@ -93,8 +93,8 @@ If you're not in an environment with sub-agents, run them serially in the order 
 
 Several common gaps are fixable without going back to the contributor:
 
-- **Missing B-mode pipeline.** If metadata is sufficient (dimension 3 passed) but `reconstruct.py` / `pipeline.yaml` were not included, generate them. The template is at `../openh-rf-shared/pipeline_template.py` — use `zea.Pipeline.from_default()` as the starting point (standard chain: `Cast -> ApplyWindow -> Demodulate -> Beamform(PatchedGrid(TOFCorrection -> DelayAndSum) -> ReshapeGrid) -> EnvelopeDetect -> Normalize -> LogCompress`). Save the script as `reconstruct.py` and the saved pipeline as `pipeline.yaml` (**one per track**, matching the submission guide), then re-run dimension 2 against it. For a submission with multiple sub-datasets, generate a dedicated pair per sub-dataset folder that's missing one, rather than a single pair shared at the root.
-- **Missing or incomplete `README.md` (the data card).** Generate a single `README.md` — never a separate `DATA_CARD.md` — with HF YAML frontmatter (`license`, `pretty_name`, `task_categories`, `tags`) followed by the data-card sections from `../openh-rf-shared/data-card-template.md`. Auto-populate the derivable fields (number of samples, total size on disk, per-sample feature table, file format, dataset characterization) from the zea file. Flag the rest as `REQUIRES_CONTRIBUTOR` rather than silently filling. If a `DATA_CARD.md` already exists, merge its content into `README.md` and mark the standalone file for removal.
+- **Missing B-mode pipeline.** If metadata is sufficient (dimension 3 passed) but `reconstruct.py` / `pipeline.yaml` were not included, generate them. The template is at `../open-h-rf-shared/pipeline_template.py` — use `zea.Pipeline.from_default()` as the starting point (standard chain: `Cast -> ApplyWindow -> Demodulate -> Beamform(PatchedGrid(TOFCorrection -> DelayAndSum) -> ReshapeGrid) -> EnvelopeDetect -> Normalize -> LogCompress`). Save the script as `reconstruct.py` and the saved pipeline as `pipeline.yaml` (**one per track**, matching the submission guide), then re-run dimension 2 against it. For a submission with multiple sub-datasets, generate a dedicated pair per sub-dataset folder that's missing one, rather than a single pair shared at the root.
+- **Missing or incomplete `README.md` (the data card).** Generate a single `README.md` — never a separate `DATA_CARD.md` — with HF YAML frontmatter (`license`, `pretty_name`, `task_categories`, `tags`) followed by the data-card sections from `../open-h-rf-shared/data-card-template.md`. Auto-populate the derivable fields (number of samples, total size on disk, per-sample feature table, file format, dataset characterization) from the zea file. Flag the rest as `REQUIRES_CONTRIBUTOR` rather than silently filling. If a `DATA_CARD.md` already exists, merge its content into `README.md` and mark the standalone file for removal.
 - **Missing reference B-mode images.** Once you have a working pipeline, render 1–2 representative frames and add them to the submission. Link them from the `Data Validation` section of the `README.md`.
 
 Never auto-fix: license declarations, consent/IRB status, subject metadata, intended-usage descriptions, known-issues. These require the contributor.
@@ -104,7 +104,7 @@ Never auto-fix: license declarations, consent/IRB status, subject metadata, inte
 Produce `evaluation_report.md` with this exact structure:
 
 ```
-# OpenH-RF Submission Evaluation: <submission name>
+# Open-H-RF Submission Evaluation: <submission name>
 
 **Overall verdict:** Accept | Accept with revisions | Reject — needs resubmission
 **Evaluated on:** <date>
@@ -143,7 +143,7 @@ Example feedback paragraphs:
 
 > **3. Metadata sufficiency — FAIL.** The zea file is missing the speed-of-sound value used during acquisition, which means a downstream user can't reproduce your beamforming. Add `scan/sound_speed` (m/s) as a top-level attribute, or document it in the data card under "Acquisition system". Also worth double-checking: your sampling rate is recorded as 25 MHz but your center frequency is 7.5 MHz — that's only ~3.3× Nyquist; please confirm this is intentional rather than a unit error.
 
-> **6. Licensing & IP — FAIL.** Your data card says "released for academic research" — this is incompatible with CC BY 4.0, which OpenH-RF requires and which explicitly permits commercial use. Please confirm with your institution's legal team that you can release under CC BY 4.0, then update the License section to state that explicitly. If you cannot, the submission can't be accepted under the current RFP.
+> **6. Licensing & IP — FAIL.** Your data card says "released for academic research" — this is incompatible with CC BY 4.0, which Open-H-RF requires and which explicitly permits commercial use. Please confirm with your institution's legal team that you can release under CC BY 4.0, then update the License section to state that explicitly. If you cannot, the submission can't be accepted under the current RFP.
 
 ## Per-dimension findings (detail for reviewers)
 

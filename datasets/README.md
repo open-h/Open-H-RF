@@ -1,6 +1,6 @@
-# OpenH-RF — reconstructions
+# Open-H-RF — reconstructions
 
-The code counterpart to [**OpenH-RF**](https://huggingface.co/datasets/nvidia/OpenH-RF) on the Hugging Face Hub. The data lives there; the reconstructions scripts are here.
+The code counterpart to [**Open-H-RF**](https://huggingface.co/datasets/nvidia/Open-H-RF) on the Hugging Face Hub. The data lives there; the reconstructions scripts are here.
 
 Each directory consists of:
 

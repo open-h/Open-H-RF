@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - medical-imaging
   - in-vivo
   - muscle
@@ -23,7 +23,7 @@ size_categories:
 
 ![Reconstructed cineloop from Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5](assets/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.gif)
 
-*Cine loop of the relaxed left calf (lateral, longitudinal), [`data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/waterloo-muscle/data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5), reconstructed from the raw channel data with the `pipeline.yaml` in this folder.*
+*Cine loop of the relaxed left calf (lateral, longitudinal), [`data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/waterloo-muscle/data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5), reconstructed from the raw channel data with the `pipeline.yaml` in this folder.*
 
 ## Dataset Description
 
@@ -73,13 +73,13 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/waterloo-muscle/data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5 \
-  --config hf://nvidia/OpenH-RF/waterloo-muscle/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/waterloo-muscle/data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5 \
+  --config hf://nvidia/Open-H-RF/waterloo-muscle/pipeline.yaml \
   --n-frames 1 \
   --save-as png
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/waterloo-muscle/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/waterloo-muscle/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 Swap `--n-frames 1 --save-as png` for `--save-as gif` to get the cine loop. In the script, `ZEA_FILE` and `FRAME` at the top select what is reconstructed.
 
@@ -112,7 +112,7 @@ All `coordinates` arrays are per-pixel Cartesian positions in metres, last axis 
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 1,248 HDF5 files; 576.19 GB (576,186,417,152 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 1,248 HDF5 files; 576.19 GB (576,186,417,152 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 Data was collected from 39 participants, each with 32 unique images spanning calf/bicep/quad, axis and muscle state. For each imaging location, 15 frames were made per limb under minimal contact and with pressure. Given that each frame consisted of 31 steered plane waves, our protocol yielded a total of 15 repeats × 31 transmits × 8 views × 2 sides × 2 pressure settings = 14,880 frame-transmits per participant, i.e. 480 stored frames per participant. In total the dataset contains 18,720 stored frames and 580,320 frame-transmits (see the table below).
 

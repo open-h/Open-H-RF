@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the resolvestroke/clinical datasets of OpenH-RF.
+"""Example reconstruction script for the resolvestroke/clinical datasets of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/resolvestroke/clinical
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/resolvestroke/clinical
 
 B-mode reconstruction of a matrix-probe diverging-wave clinical CEUS flow acquisition.
 All 20 clinical acquisitions (``SP01``-``SP10``, Left/Right) share the same probe,
@@ -40,7 +40,7 @@ from zea import Config, File, Pipeline
 from zea.beamform.pixelgrid import polar_pixel_grid
 
 HERE = Path(__file__).parent
-CONFIG = "hf://nvidia/OpenH-RF/resolvestroke/clinical/pipeline.yaml"
+CONFIG = "hf://nvidia/Open-H-RF/resolvestroke/clinical/pipeline.yaml"
 TGC_DB_PER_CM = 1.5  # display-only linear TGC (dB gain per cm of depth)
 
 # --- Inputs -----------------------------------------------------------------
@@ -48,7 +48,7 @@ TGC_DB_PER_CM = 1.5  # display-only linear TGC (dB gain per cm of depth)
 # subdirectory / file stem on the Hub, e.g. "SP07-Right"). Defaults stream straight
 # from the published corpus. Swap ZEA_FILE for a local path to run against your own copy.
 SUBJECT = "SP02-Left-2"
-ZEA_FILE = f"hf://nvidia/OpenH-RF/resolvestroke/clinical/{SUBJECT}/{SUBJECT}.hdf5"
+ZEA_FILE = f"hf://nvidia/Open-H-RF/resolvestroke/clinical/{SUBJECT}/{SUBJECT}.hdf5"
 FRAME = 0
 OUT = HERE / "assets" / f"{SUBJECT}_bmode.png"
 

@@ -8,7 +8,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - carotid
   - in-vivo
 language:
@@ -20,7 +20,7 @@ language:
 
 ![Longitudinal view of a carotid bifurcation](assets/5_long_bifur_R_0000.gif)
 
-*One cardiac cycle of a longitudinal bifurcation scan, [`data/5_long_bifur_R_0000.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tue-carotid/data/5_long_bifur_R_0000.hdf5).*
+*One cardiac cycle of a longitudinal bifurcation scan, [`data/5_long_bifur_R_0000.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tue-carotid/data/5_long_bifur_R_0000.hdf5).*
 
 
 ## Dataset Description
@@ -76,11 +76,11 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/tue-carotid/data/5_long_bifur_R_0000.hdf5 \
-  --config hf://nvidia/OpenH-RF/tue-carotid/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/tue-carotid/data/5_long_bifur_R_0000.hdf5 \
+  --config hf://nvidia/Open-H-RF/tue-carotid/pipeline.yaml
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/tue-carotid/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/tue-carotid/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 ## Dataset Format
 
@@ -88,7 +88,7 @@ Alternatively, you can use the `reconstruct.py` [script](https://github.com/open
 
 ## Dataset Quantification
 
-**OpenH-RF release:** 80 HDF5 files; 435.40 GB (435,403,030,528 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Open-H-RF release:** 80 HDF5 files; 435.40 GB (435,403,030,528 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Samples / frames / acquisitions:** 80 acquisitions (one HDF5 file each) from 10 subjects, 150 frames per acquisition — 12,000 frames total.
 - **Transmit events per frame:** 149 — 128 focused lines interleaved with 21 plane waves.

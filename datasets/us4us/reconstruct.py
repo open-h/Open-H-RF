@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the us4us dataset of OpenH-RF.
+"""Example reconstruction script for the us4us dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/us4us
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/us4us
 
 Transmission-mode attenuation reconstruction (filtered backprojection) of
 ring-array USCT data.
@@ -59,7 +59,7 @@ PROBE_RADIUS = 13e-2  # m; matches us4us's reconstruction_example.py and the mea
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/us4us/data/s1_l.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/us4us/data/s1_l.hdf5"
 FRAME = 8  # slice index within the acquisition (10 slices, 9 mm apart)
 APERTURE_OFFSET_2 = APERTURE_OFFSET
 PROBE_RADIUS_2 = PROBE_RADIUS  # ring radius in metres
@@ -67,7 +67,7 @@ SMOOTH_SIGMA = 1.0  # post-FBP Gaussian smoothing
 
 
 # These ops are defined here, not in zea: a pipeline.yaml naming them resolves
-# only once this module is imported. See https://github.com/open-h/OpenH-RF
+# only once this module is imported. See https://github.com/open-h/Open-H-RF
 @ops_registry("transmission_attenuation")
 class TransmissionAttenuation(Operation):
     """Windowed peak RF amplitude per (tx, rx) pair, converted to attenuation via

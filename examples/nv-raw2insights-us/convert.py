@@ -1,11 +1,11 @@
 # SPDX-License-Identifier: Apache-2.0
 """Stream one sample from the public NV-Raw2Insights-US dataset and convert
-to openh-rf HDF5 via File.create.
+to open-h-rf HDF5 via File.create.
 
 Source: https://huggingface.co/datasets/nvidia/NV-Raw2Insights-US
 
 This is an *example* helper: it shows how the published HF dataset maps onto the
-openh-rf (zea) file format. A submission's required files are the .hdf5 data,
+open-h-rf (zea) file format. A submission's required files are the .hdf5 data,
 reconstruct.py, pipeline.yaml, README.md and LICENSE; this converter is not part
 of that set. It is reproducible without a local copy -- `datasets` streams a
 single example from the remote parquet shards.
@@ -50,9 +50,9 @@ def bmode_to_uint8(bmode: np.ndarray, dynamic_range_db: float = 60.0) -> np.ndar
 def coords_from_extent(
     ext: np.ndarray, scale: float, grid_size_z: int, grid_size_x: int
 ) -> np.ndarray:
-    """Source extent -> per-pixel Cartesian coordinates for the openh-rf spec.
+    """Source extent -> per-pixel Cartesian coordinates for the open-h-rf spec.
 
-    The openh-rf (zea) Map spec stores per-pixel positions, not a bounding box:
+    The open-h-rf (zea) Map spec stores per-pixel positions, not a bounding box:
     `coordinates` of shape (grid_size_z, grid_size_x, 3) in metres, last axis
     [x, y, z]. The source extent is `[x_min, x_max, z_max, z_min]` in `scale`
     units (mm for B-modes, m for the SoS map); `scale` converts it to metres.

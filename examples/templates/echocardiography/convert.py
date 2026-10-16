@@ -1,7 +1,7 @@
 """Convert: create a synthetic echocardiography dataset and save as a zea HDF5 file.
 
 Demonstrates how to store raw RF data alongside a strain map, ECG signal,
-probe orientation, and rich clinical metadata in the openh-rf format.
+probe orientation, and rich clinical metadata in the open-h-rf format.
 
 All data is synthetic (random noise). Replace the arrays with real acquisitions
 to use this script with actual scanner output.

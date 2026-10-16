@@ -6,7 +6,7 @@ Reads the reference maps from `custom/computed_references/` in the zea HDF5 file
 `coordinates`) and renders, for each map, two orthogonal maximum-intensity
 projections (x-z and y-z) on the true Cartesian geometry.
 
-    uv run --project /path/to/OpenH-RF python display_references.py
+    uv run --project /path/to/Open-H-RF python display_references.py
 """
 
 import argparse
@@ -24,7 +24,7 @@ from zea import File
 
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus; override with --input.
-DEFAULT_INPUT = "hf://nvidia/OpenH-RF/resolvestroke/phantom_flow/phantom_flow.hdf5"
+DEFAULT_INPUT = "hf://nvidia/Open-H-RF/resolvestroke/phantom_flow/phantom_flow.hdf5"
 
 # name, colormap, contrast limits (None = auto), signed (diverging max-|.| MIP)
 # Columns left -> right; mask first.

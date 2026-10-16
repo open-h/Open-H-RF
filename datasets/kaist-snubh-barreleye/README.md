@@ -8,7 +8,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - breast
   - in-vivo
   - plane-wave
@@ -23,7 +23,7 @@ size_categories:
 
 ![DAS B-mode reconstruction of a biopsy-proven invasive ductal carcinoma (S01_D1)](assets/main.png)
 
-*Delay-and-sum reconstruction of a biopsy-proven invasive ductal carcinoma, [`data/S01_D1.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/kaist-snubh-barreleye/data/S01_D1.hdf5).*
+*Delay-and-sum reconstruction of a biopsy-proven invasive ductal carcinoma, [`data/S01_D1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/kaist-snubh-barreleye/data/S01_D1.hdf5).*
 
 ## Dataset Description
 
@@ -70,13 +70,13 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/kaist-snubh-barreleye/data/S01_D1.hdf5 \
-  --config hf://nvidia/OpenH-RF/kaist-snubh-barreleye/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/kaist-snubh-barreleye/data/S01_D1.hdf5 \
+  --config hf://nvidia/Open-H-RF/kaist-snubh-barreleye/pipeline.yaml \
   --n-frames 1 \
   --save-as png
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/kaist-snubh-barreleye/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/kaist-snubh-barreleye/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 This is a single-frame acquisition, so `zea process` outputs a `.png` rather than a `.gif` — this requires a `zea` build newer than the currently pinned 0.1.6 (single-frame PNG output landed after that release).
 
@@ -84,7 +84,7 @@ This is a single-frame acquisition, so `zea process` outputs a `.png` rather tha
 
 [zea v0.1.6](https://github.com/tue-bmd/zea)
 
-All data is delivered in the **zea HDF5** format (OpenH-RF spec). One HDF5 file per acquisition; one image track per file.
+All data is delivered in the **zea HDF5** format (Open-H-RF spec). One HDF5 file per acquisition; one image track per file.
 
 ```
 hdf5/
@@ -94,12 +94,12 @@ hdf5/
 ```
 
 **`original/` — raw RF channel data.**
-- **Channel reordering** of the scanner's raw export into the OpenH-RF convention `(n_frames=1, n_tx=9, n_ax=Ns, n_el=192, n_ch=1)`.
+- **Channel reordering** of the scanner's raw export into the Open-H-RF convention `(n_frames=1, n_tx=9, n_ax=Ns, n_el=192, n_ch=1)`.
 - No demodulation, decimation, band-pass filtering, or value clipping — `raw_data` is bit-faithful to the scanner export.
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 70 HDF5 files; 802.10 MB (802,095,104 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 70 HDF5 files; 802.10 MB (802,095,104 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Subjects:** 35 (S01–S37 with S11 and S29 unused, all female; age groups in *Subject Metadata*).
 - **Acquisitions:** 70 (2 repeat acquisitions per subject, named `<patient>_D1` / `<patient>_D2`).

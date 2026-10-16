@@ -5,7 +5,7 @@ license: cc-by-4.0
 task_categories:
   - image-to-image
 tags:
-  - openh-rf
+  - open-h-rf
   - zea
   - ultrasound
   - rf
@@ -23,7 +23,7 @@ size_categories:
 
 ![Example reconstruction](./assets/module_A.png)
 
-*Scan-converted scanline B-mode of a CIRS 039 liver fibrosis phantom, reconstructed from the synthetic channel data in [`acquisitions/`](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/ubc/module_A/acquisitions).*
+*Scan-converted scanline B-mode of a CIRS 039 liver fibrosis phantom, reconstructed from the synthetic channel data in [`acquisitions/`](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/ubc/module_A/acquisitions).*
 
 ## Dataset Description
 
@@ -96,13 +96,13 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/ubc/module_A/acquisitions/case_1.83/ubc_swave_cirs_1.83_p10_f13.hdf5 \
-  --config hf://nvidia/OpenH-RF/ubc/module_A/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/ubc/module_A/acquisitions/case_1.83/ubc_swave_cirs_1.83_p10_f13.hdf5 \
+  --config hf://nvidia/Open-H-RF/ubc/module_A/pipeline.yaml
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/ubc/module_A/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/ubc/module_A/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
-`reconstruct.py` reconstructs one frame (default `case_1.83/ubc_swave_cirs_1.83_p10_f13.hdf5`); [`reconstruct_multiframe.py`](https://github.com/open-h/OpenH-RF/blob/main/datasets/ubc/module_A/reconstruct_multiframe.py) reconstructs the temporal sequence at one motor plane (`CASE_ID`, `PLANE`, `N_FRAMES`) into an animated GIF.
+`reconstruct.py` reconstructs one frame (default `case_1.83/ubc_swave_cirs_1.83_p10_f13.hdf5`); [`reconstruct_multiframe.py`](https://github.com/open-h/Open-H-RF/blob/main/datasets/ubc/module_A/reconstruct_multiframe.py) reconstructs the temporal sequence at one motor plane (`CASE_ID`, `PLANE`, `N_FRAMES`) into an animated GIF.
 
 ## Dataset Format
 

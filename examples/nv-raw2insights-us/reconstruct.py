@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Beamform an openh-rf HDF5 sample produced by convert.py.
+"""Beamform an open-h-rf HDF5 sample produced by convert.py.
 
 Shows how to go from raw channel data to a B-mode entirely in code with zea:
 build the acquisition parameters and the DAS -> envelope -> normalize ->
@@ -41,7 +41,7 @@ DEFAULT_PIPELINE = HERE / "pipeline.yaml"
 
 
 def coords_to_imshow_mm(coords):
-    """openh-rf per-pixel coordinates (z, x, 3), last axis [x, y, z] in metres
+    """open-h-rf per-pixel coordinates (z, x, 3), last axis [x, y, z] in metres
     -> mpl imshow extent [left, right, bottom, top] in mm."""
     x = coords[..., 0]
     z = coords[..., 2]
@@ -198,7 +198,7 @@ def main():
     axes[6].set_xlabel("Lateral [mm]")
     axes[6].set_ylabel("Depth [mm]")
 
-    fig.suptitle(f"openh-rf sample (phase error: {phase_err[0]:.2f} rad)", fontsize=14, y=1.02)
+    fig.suptitle(f"open-h-rf sample (phase error: {phase_err[0]:.2f} rad)", fontsize=14, y=1.02)
     plt.tight_layout()
     plt.savefig(args.output, dpi=150, bbox_inches="tight")
     print(f"Saved {args.output}")

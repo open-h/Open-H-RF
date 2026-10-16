@@ -3,14 +3,14 @@ name: tel-aviv
 license: cc-by-4.0
 pretty_name: Ilovitsh Lab Mice Tumors
 task_categories: [image-segmentation]
-tags: [ultrasound, rf, openh-rf]
+tags: [ultrasound, rf, open-h-rf]
 ---
 
 # Ilovitsh Lab Mice Tumors & Water-Bead Phantoms
 
 ![Reconstructed cineloop from 01-scan-3.hdf5](assets/01-scan-3.gif)
 
-*Cine loop of the rotational sweep through a mouse tumor, [`mouse_tumor/seg/01-scan-3.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/tel-aviv/mouse_tumor/seg/01-scan-3.hdf5), reconstructed from the raw channel data with `mouse_tumor/pipeline.yaml`.*
+*Cine loop of the rotational sweep through a mouse tumor, [`mouse_tumor/seg/01-scan-3.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/tel-aviv/mouse_tumor/seg/01-scan-3.hdf5), reconstructed from the raw channel data with `mouse_tumor/pipeline.yaml`.*
 
 ## Dataset Description
 
@@ -45,7 +45,7 @@ Segmentation of tumors in mice and water-bead phantoms.
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/tel-aviv/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definitions in `mouse_tumor/` and `phantom/` and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub and overlays the stored segmentation on the reconstructed B-mode.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/tel-aviv/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definitions in `mouse_tumor/` and `phantom/` and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub and overlays the stored segmentation on the reconstructed B-mode.
 
 ## Dataset Format
 
@@ -53,7 +53,7 @@ The acquisitions can be processed with the `reconstruct.py` [script](https://git
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 22 HDF5 files; 4.36 GB (4,357,947,392 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 22 HDF5 files; 4.36 GB (4,357,947,392 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Samples / frames:** 22 total `.hdf5` acquisitions. Each acquisition contains 144 angular frames covering a 180° rotation (1.25° increments) of 5 plane waves.
 - **Train / val / test split:** N/A

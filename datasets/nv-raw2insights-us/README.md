@@ -8,7 +8,7 @@ tags:
   - ultrasound
   - rf
   - iq
-  - openh-rf
+  - open-h-rf
   - beamforming
   - sound-speed-estimation
   - phase-aberration
@@ -24,7 +24,7 @@ size_categories:
 
 ![DBUA B-mode reconstruction and estimated sound speed using NV-Raw2Insights-US data](assets/dbua-reconstruction.gif)
 
-*DBUA results using synthetic validation sample [`data/nv_r2i_us_validation_0084.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/nv-raw2insights-us/data/nv_r2i_us_validation_0084.hdf5): B-mode (left) and estimated sound speed (right). Bulk-speed calibration is followed by 400 spatial-refinement iterations, with fixed display scales. These are DBUA reconstructions, not predictions from an NV-Raw2Insights-US model.*
+*DBUA results using synthetic validation sample [`data/nv_r2i_us_validation_0084.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/nv-raw2insights-us/data/nv_r2i_us_validation_0084.hdf5): B-mode (left) and estimated sound speed (right). Bulk-speed calibration is followed by 400 spatial-refinement iterations, with fixed display scales. These are DBUA reconstructions, not predictions from an NV-Raw2Insights-US model.*
 
 <!-- assets/main.png is the unlabelled final B-mode panel from this run, for the dataset collage. -->
 
@@ -34,7 +34,7 @@ NV-Raw2Insights-US is a **simulated full-synthetic-aperture (FSA)** ultrasound d
 
 Each sample is a single-frame FSA acquisition from a **180-element linear array** simulated with **k-Wave** over a heterogeneous tissue phantom containing cysts. Every acquisition provides raw baseband **IQ channel data** alongside co-registered ground truth: a **speed-of-sound map**, a **binary cyst segmentation mask**, a **DAS B-mode** and a **focused-transmit B-mode**, and a per-sample **phase-aberration** value. All data are **synthetic**; no human or animal subjects are involved.
 
-This is the **zea-format (OpenH-RF) release**; the same simulations are also published in a Hugging Face `datasets`/Arrow build at [`nvidia/NV-Raw2Insights-US`](https://huggingface.co/datasets/nvidia/NV-Raw2Insights-US).
+This is the **zea-format (Open-H-RF) release**; the same simulations are also published in a Hugging Face `datasets`/Arrow build at [`nvidia/NV-Raw2Insights-US`](https://huggingface.co/datasets/nvidia/NV-Raw2Insights-US).
 
 ## Dataset Contributor(s)
 
@@ -60,7 +60,7 @@ Developing and benchmarking methods that operate on raw ultrasound channel data:
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/nv-raw2insights-us/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), which uses the [zea library](https://github.com/tue-bmd/zea) and streams the data from the Hugging Face Hub. It reconstructs both a plain DAS B-mode (the `pipeline.yaml` in this folder) and a sound-speed-corrected B-mode using the ground-truth `sos_map`.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/nv-raw2insights-us/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), which uses the [zea library](https://github.com/tue-bmd/zea) and streams the data from the Hugging Face Hub. It reconstructs both a plain DAS B-mode (the `pipeline.yaml` in this folder) and a sound-speed-corrected B-mode using the ground-truth `sos_map`.
 
 ## Dataset Format
 
@@ -87,7 +87,7 @@ Per-file contents:
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 923 HDF5 files; 214.13 GB (214,133,178,368 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 923 HDF5 files; 214.13 GB (214,133,178,368 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **923 samples (830 train / 93 validation)**, one HDF5 per sample, all in `data/`; the split is carried in the filename.
 - Each sample is a single-frame FSA acquisition (frame index always 0).

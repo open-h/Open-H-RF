@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - 3d
   - matrix-probe
   - phantom
@@ -21,7 +21,7 @@ size_categories:
 
 ![Reference B-mode (two perpendicular sectors)](../assets/phantom_mp_bmode.png)
 
-*B-mode of one frame, x-z and y-z sectors, reconstructed from [`phantom_mp.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/resolvestroke/phantom_mp/phantom_mp.hdf5).*
+*B-mode of one frame, x-z and y-z sectors, reconstructed from [`phantom_mp.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/resolvestroke/phantom_mp/phantom_mp.hdf5).*
 
 ## Dataset Description
 
@@ -56,10 +56,10 @@ Beamforming and reconstruction research (RFP task group 6.1, Generalized Reconst
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/resolvestroke/phantom_mp/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/resolvestroke/phantom_mp/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 ```bash
-uv run --project /path/to/OpenH-RF python reconstruct.py
+uv run --project /path/to/Open-H-RF python reconstruct.py
 ```
 
 The Python scripts carry their own `SPDX-License-Identifier: Apache-2.0` header; the dataset itself is CC BY 4.0.
@@ -72,7 +72,7 @@ Single zea HDF5 file (`phantom_mp.hdf5`), one track holding the raw channel data
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 1 HDF5 file; 33.75 MB (33,751,040 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 1 HDF5 file; 33.75 MB (33,751,040 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - Frames: 1000 (single acquisition)
 - Train / val / test split: N/A

@@ -1,4 +1,4 @@
-"""Per-file metadata extraction for the OpenH-RF dataset.
+"""Per-file metadata extraction for the Open-H-RF dataset.
 
 Everything here reads HDF5 metadata plus the scan arrays (focus distances, delays,
 apodizations), so a file is characterised without reading the (often multi-GB)

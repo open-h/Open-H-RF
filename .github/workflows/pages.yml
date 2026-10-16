@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "site/**"
-      - "plots/openh_rf_datasets.py"
+      - "plots/open_h_rf_datasets.py"
       - "scripts/authors.csv"
       - "scripts/compile_authors.py"
       - ".github/workflows/pages.yml"
@@ -13,7 +13,7 @@ on:
     branches: [main]
     paths:
       - "site/**"
-      - "plots/openh_rf_datasets.py"
+      - "plots/open_h_rf_datasets.py"
       - "scripts/authors.csv"
       - "scripts/compile_authors.py"
       - ".github/workflows/pages.yml"

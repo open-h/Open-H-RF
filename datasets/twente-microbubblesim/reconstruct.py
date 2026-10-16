@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the twente-microbubblesim dataset of OpenH-RF.
+"""Example reconstruction script for the twente-microbubblesim dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/twente-microbubblesim
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/twente-microbubblesim
 
 B-mode reconstruction of simulated plane-wave microbubble channel data.
 
@@ -42,11 +42,11 @@ PULSE_NAMES += ("REF", "S1.7", "S2.5", "S3.4", "SDC", "SUC")
 # local path to run against your own copy.
 PULSE = "REF"  # transmit pulse to reconstruct; one of PULSE_NAMES
 TRACK = PULSE_NAMES.index(PULSE)
-ZEA_FILE = "hf://nvidia/OpenH-RF/twente-microbubblesim/data/Monodispers/RFDATA00002.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/twente-microbubblesim/data/Monodispers/RFDATA00002.hdf5"
 CONFIG = HERE / "pipeline" / f"pipeline_track_{TRACK}_{PULSE}.yaml"
 FRAME = 0
 OUT = HERE / "assets" / f"{Path(ZEA_FILE).parent.name}_{PULSE}.png"
-HF_CONFIG = f"hf://nvidia/OpenH-RF/twente-microbubblesim/pipeline/{CONFIG.name}"
+HF_CONFIG = f"hf://nvidia/Open-H-RF/twente-microbubblesim/pipeline/{CONFIG.name}"
 
 
 def main():

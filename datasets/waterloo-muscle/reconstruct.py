@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the waterloo-muscle dataset of OpenH-RF.
+"""Example reconstruction script for the waterloo-muscle dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/waterloo-muscle
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/waterloo-muscle
 
 B-mode reconstruction of plane-wave muscle channel data (UW-MuscleRF).
 
@@ -41,10 +41,10 @@ HERE = Path(__file__).parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/waterloo-muscle/data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/waterloo-muscle/data/Acq_p35_Calf_left_calf_lateral_longitudinal_relaxed_pressure.hdf5"
 CONFIG = HERE / "pipeline.yaml"
 OUT = HERE / "assets" / "reconstruct_output.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/waterloo-muscle/pipeline.yaml"
+HF_CONFIG = "hf://nvidia/Open-H-RF/waterloo-muscle/pipeline.yaml"
 FRAME = 9
 
 # The reconstruction grid matches the stored B-mode so the two line up. Kept here

@@ -8,7 +8,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - synthetic
   - field-ii
 language:
@@ -21,11 +21,11 @@ size_categories:
 
 ![B-mode reconstructions of the five SynthUS-FSA phantom classes](assets/classes.png)
 
-*The five phantom classes (anechoic, hypoechoic, hyperechoic, diverse, point-target), one capture per column: [`image_0012`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/concordia/data/image_0012.hdf5), [`image_0410`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/concordia/data/image_0410.hdf5), [`image_0733`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/concordia/data/image_0733.hdf5), [`image_0753`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/concordia/data/image_0753.hdf5), [`image_1808`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/concordia/data/image_1808.hdf5). Rows show the reference B-mode (`data/image`), the simulated scatterer cloud (`data/scatterers`) and the label map (`data/segmentation` for the lesion classes, `data/diverse_source_image` for diverse; point-target captures store none).*
+*The five phantom classes (anechoic, hypoechoic, hyperechoic, diverse, point-target), one capture per column: [`image_0012`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/concordia/data/image_0012.hdf5), [`image_0410`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/concordia/data/image_0410.hdf5), [`image_0733`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/concordia/data/image_0733.hdf5), [`image_0753`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/concordia/data/image_0753.hdf5), [`image_1808`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/concordia/data/image_1808.hdf5). Rows show the reference B-mode (`data/image`), the simulated scatterer cloud (`data/scatterers`) and the label map (`data/segmentation` for the lesion classes, `data/diverse_source_image` for diverse; point-target captures store none).*
 
 ## Dataset Description
 
-SynthUS-FSA is a fully synthetic corpus of pre-beamformed full-synthetic-aperture (FSA) ultrasound channel-data captures, generated with the Field II simulator to model a 128-element L11-5v linear array. Each capture fires one transmit event per element (128 transmits, receive on all 128 elements), so every element-to-element combination is retained and any receive/transmit beamforming scheme (focused B-mode, multi-angle plane-wave compounding, diverging-wave, adaptive/compressive schemes) can be retrospectively synthesized from the same channel data. The dataset is packaged in [zea](https://zea.readthedocs.io) format — the OpenH-RF reference Python library for ultrasound file I/O and beamforming — which every `.hdf5` file and `reconstruct.py` depend on. The dataset targets three OpenH-RF task categories: (1) generalized reconstruction (FSA channel data paired with a synthesized full synthetic-aperture B-mode as ground truth), (2) compressed sensing / adaptive transmit (retrospective sub-selection of the 128 transmit events — derived from the same captures, no additional files), and (3) segmentation (binary echogenicity masks on a subset of phantoms). All data is simulated — no clinical, phantom-hardware, or animal acquisition is involved.
+SynthUS-FSA is a fully synthetic corpus of pre-beamformed full-synthetic-aperture (FSA) ultrasound channel-data captures, generated with the Field II simulator to model a 128-element L11-5v linear array. Each capture fires one transmit event per element (128 transmits, receive on all 128 elements), so every element-to-element combination is retained and any receive/transmit beamforming scheme (focused B-mode, multi-angle plane-wave compounding, diverging-wave, adaptive/compressive schemes) can be retrospectively synthesized from the same channel data. The dataset is packaged in [zea](https://zea.readthedocs.io) format — the Open-H-RF reference Python library for ultrasound file I/O and beamforming — which every `.hdf5` file and `reconstruct.py` depend on. The dataset targets three Open-H-RF task categories: (1) generalized reconstruction (FSA channel data paired with a synthesized full synthetic-aperture B-mode as ground truth), (2) compressed sensing / adaptive transmit (retrospective sub-selection of the 128 transmit events — derived from the same captures, no additional files), and (3) segmentation (binary echogenicity masks on a subset of phantoms). All data is simulated — no clinical, phantom-hardware, or animal acquisition is involved.
 
 A similar data-generation approach was used in Sharifzadeh et al. (2024). Users of this dataset are kindly requested to cite that work:
 
@@ -82,13 +82,13 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/concordia/data/image_0005.hdf5 \
-  --config hf://nvidia/OpenH-RF/concordia/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/concordia/data/image_0005.hdf5 \
+  --config hf://nvidia/Open-H-RF/concordia/pipeline.yaml \
   --n-frames 1 \
   --save-as png
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/concordia/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/concordia/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 ## Dataset Format
 
@@ -107,7 +107,7 @@ Pre-processing applied before packaging: anti-alias FIR decimation (factor 5, 10
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 2,000 HDF5 files; 82.39 GB (82,390,286,336 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 2,000 HDF5 files; 82.39 GB (82,390,286,336 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 This dataset comprises 2,000 FSA captures across five echogenicity classes:
 

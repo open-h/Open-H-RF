@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the resolvestroke/saddle dataset of OpenH-RF.
+"""Example reconstruction script for the resolvestroke/saddle dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/resolvestroke/saddle
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/resolvestroke/saddle
 
 B-mode reconstruction of a matrix-probe diverging-wave acquisition.
 
@@ -33,8 +33,8 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 from zea import Config, File, Pipeline
 
 HERE = Path(__file__).parent
-CONFIG = "hf://nvidia/OpenH-RF/resolvestroke/saddle/pipeline.yaml"
-HF_DIR = "hf://nvidia/OpenH-RF/resolvestroke/saddle/data"
+CONFIG = "hf://nvidia/Open-H-RF/resolvestroke/saddle/pipeline.yaml"
+HF_DIR = "hf://nvidia/Open-H-RF/resolvestroke/saddle/data"
 
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Any of the 21 files works:

@@ -9,7 +9,7 @@ tags:
   - rf
   - microbubbles
   - synthetic-data
-  - openh-rf
+  - open-h-rf
 language:
   - en
 size_categories:
@@ -56,7 +56,7 @@ The dataset is intended for studying the effect of transmit waveforms on deep-le
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/twente-microbubblesim/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the pipeline definitions in `pipeline/` and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/twente-microbubblesim/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the pipeline definitions in `pipeline/` and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 Every pulse track has its own verified pipeline file, `pipeline/pipeline_track_<index>_<label>.yaml`, all defining the same chain:
 
@@ -66,8 +66,8 @@ Each pipeline's `parameters:` block carries that pulse's beamforming peak-time r
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/twente-microbubblesim/data/Monodispers/RFDATA00002.hdf5 \
-  --config hf://nvidia/OpenH-RF/twente-microbubblesim/pipeline/pipeline_track_6_REF.yaml \
+  --dataset hf://nvidia/Open-H-RF/twente-microbubblesim/data/Monodispers/RFDATA00002.hdf5 \
+  --config hf://nvidia/Open-H-RF/twente-microbubblesim/pipeline/pipeline_track_6_REF.yaml \
   --track 6
 ```
 
@@ -110,7 +110,7 @@ The meanings and waveform values below are from Table I of Zorgdrager et al. (20
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 500 HDF5 files; 17.03 GB (17,029,267,456 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 500 HDF5 files; 17.03 GB (17,029,267,456 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Acquisition files:** 500 files, each with 12 one-frame pulse tracks (6,000 track acquisitions total).
 - **Organization:** Two bubble populations × 250 files × 12 pulse tracks.

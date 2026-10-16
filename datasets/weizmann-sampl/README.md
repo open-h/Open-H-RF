@@ -19,7 +19,7 @@ language:
 
 ![Reconstructed cineloop from 30_1.hdf5](assets/30_1.gif)
 
-*Cine loop of a thyroid scan, [`data/30_1.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/weizmann-sampl/data/30_1.hdf5), reconstructed from the raw channel data with the `pipeline.yaml` in this folder.*
+*Cine loop of a thyroid scan, [`data/30_1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/weizmann-sampl/data/30_1.hdf5), reconstructed from the raw channel data with the `pipeline.yaml` in this folder.*
 
 ## Dataset Description
 
@@ -51,7 +51,7 @@ General-purpose ultrasound channel-data foundation model pretraining and evaluat
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/weizmann-sampl/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/weizmann-sampl/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 Set `ZEA_FILE` and `FRAME` at the top of the script to pick a scan and frame; setting `ZEA_FILE = None` switches to the grid modes that sample several scans (see the script docstring).
 
@@ -63,7 +63,7 @@ zea file format, one acquisition HDF5 file per subject. Before packaging, the fr
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 30 HDF5 files; 232.57 GB (232,573,960,192 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 30 HDF5 files; 232.57 GB (232,573,960,192 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - Number of samples / acquisitions / channels: ~1600 / 128 / 128
 - Number of frames:  average 250 (dependent on subject)

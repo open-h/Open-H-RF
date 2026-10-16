@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the unc-openpros dataset of OpenH-RF.
+"""Example reconstruction script for the unc-openpros dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/unc-openpros
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/unc-openpros
 
 Speed-of-sound reconstruction of limited-view prostate waveform data with a
 pretrained InversionNet.
@@ -45,8 +45,8 @@ MAIN_OUTPUT = HERE / "assets" / "main.png"
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/unc-openpros/data/3_01_P_prostate_00.hdf5"
-CONFIG = "hf://nvidia/OpenH-RF/unc-openpros/pipeline.yaml"
+ZEA_FILE = "hf://nvidia/Open-H-RF/unc-openpros/data/3_01_P_prostate_00.hdf5"
+CONFIG = "hf://nvidia/Open-H-RF/unc-openpros/pipeline.yaml"
 # The file holds 1140 acquisitions; the figure shows the first.
 SAMPLES = 1  # acquisitions to run through the network
 

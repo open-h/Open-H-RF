@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - tracked-ultrasound
   - robot-tracked
   - probe-pose
@@ -29,7 +29,7 @@ size_categories:
   <img src="assets/reference_bmode.png" alt="BoneSRF B-mode of phantom 2, whole-bone sweep" width="200">
 </p>
 
-*B-mode of a fractured-femur phantom, frame 45 of [`data/phantom2_wholebone.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/strasbourg-basel/BoneSRF/data/phantom2_wholebone.hdf5), beamformed from the recovered channel data.*
+*B-mode of a fractured-femur phantom, frame 45 of [`data/phantom2_wholebone.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/strasbourg-basel/BoneSRF/data/phantom2_wholebone.hdf5), beamformed from the recovered channel data.*
 
 ## Dataset Description
 
@@ -37,7 +37,7 @@ size_categories:
   <img src="assets/bonesrf_logo.png" alt="BoneSRF" width="200">
 </p>
 
-**BoneSRF** (Bone Surface Reflection) is an ultrasound channel-data dataset for bone-surface and fracture-reflection research. It contains three 3D-printed, fractured femur phantoms, scanned with a handheld point-of-care probe, inverted back to pre-beamformed RF and packaged in the OpenH-RF `zea` format.
+**BoneSRF** (Bone Surface Reflection) is an ultrasound channel-data dataset for bone-surface and fracture-reflection research. It contains three 3D-printed, fractured femur phantoms, scanned with a handheld point-of-care probe, inverted back to pre-beamformed RF and packaged in the Open-H-RF `zea` format.
 
 Each phantom was swept three times (`distal`, `proximal`, `wholebone`), giving nine `zea` HDF5 files. Every scan is robot-tracked: the probe was mounted on a robotic arm and its pose recorded separately. Each file also carries that phantom's CT scan and multi-label segmentation.
 
@@ -49,7 +49,7 @@ This is phantom data, not simulated, clinical or in-vivo. It is intended for ful
 
 1. **Acquisition.** Each phantom was scanned with a Clarius L20HD3 linear array, producing the probe's own beamformed RF output. This is the physically acquired data, not simulated.
 2. **Inversion.** The beamformed RF is inverted back into pre-beamformed, per-element channel data with [`das-inverse` (`clarius` branch)](https://github.com/sankethvedula/das-inverse/tree/clarius), a CGLS solver over a `zea.inverse.DASOperator` forward model of the probe's focused, walking-sub-aperture transmit sequence (`invert_clarius_beamformed.py`). The result is not sensor-captured, but numerically consistent with the real beamformed acquisition it was inverted from.
-3. **Packaging.** The inverted channel data, transmit-sequence metadata, probe geometry, per-frame probe pose, and the phantom's CT + segmentation are written out as one `zea` HDF5 file per scan, matching the OpenH-RF format spec.
+3. **Packaging.** The inverted channel data, transmit-sequence metadata, probe geometry, per-frame probe pose, and the phantom's CT + segmentation are written out as one `zea` HDF5 file per scan, matching the Open-H-RF format spec.
 
 ### Probe tracking
 
@@ -91,7 +91,7 @@ The CT and segmentation data inside the files are released under the same CC BY 
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/strasbourg-basel/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/strasbourg-basel/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 The script loads the saved `zea.Pipeline` from `pipeline.yaml`, runs it on one frame of one scan, and writes `assets/<scan>.png`.
 
@@ -105,7 +105,7 @@ The constants at the top of the script select what is reconstructed:
 These values reconstruct `phantom2_wholebone` at its reference frame (45) on the CPU:
 
 ```python
-SCAN = "hf://nvidia/OpenH-RF/strasbourg-basel/BoneSRF/data/phantom2_wholebone.hdf5"
+SCAN = "hf://nvidia/Open-H-RF/strasbourg-basel/BoneSRF/data/phantom2_wholebone.hdf5"
 FRAME = None
 DEVICE = "cpu"
 ```
@@ -226,7 +226,7 @@ The CT is reference imaging of the physical phantom in scanner (LPS) space. It i
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 9 HDF5 files; 200.75 GB (200,745,025,536 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 9 HDF5 files; 200.75 GB (200,745,025,536 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 Nine acquisitions, one continuous sweep each; 1,427 frames in total. No train / val / test split (each file is a single reference acquisition). Every scan has one tracked probe pose per frame.
 

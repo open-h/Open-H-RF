@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the vanderbilt dataset of OpenH-RF.
+"""Example reconstruction script for the vanderbilt dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/vanderbilt
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/vanderbilt
 
 B-mode reconstruction of focused-transmit echocardiography channel data
 (fundamental and harmonic) and the CIRS validation phantom.
@@ -42,7 +42,7 @@ from zea.ops import (
 
 HERE = Path(__file__).parent
 CONFIG = HERE / "pipeline.yaml"  # written by write_config(); this is what the run loads
-HF_CONFIG = "hf://nvidia/OpenH-RF/vanderbilt/pipeline.yaml"  # where CONFIG is published
+HF_CONFIG = "hf://nvidia/Open-H-RF/vanderbilt/pipeline.yaml"  # where CONFIG is published
 
 # P4-2v is a phased array (sector scan), so beamform on a polar grid and
 # scan convert to Cartesian for display, rather than beamforming directly
@@ -62,7 +62,7 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/vanderbilt/data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/vanderbilt/data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5"
 N_FRAMES = 1
 DEVICE = None  # CUDA device ID (e.g. 'cuda:0', 'auto:1', or 'cpu')
 

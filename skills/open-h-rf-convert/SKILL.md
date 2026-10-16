@@ -1,13 +1,13 @@
 ---
-name: openh-rf-convert
-description: Convert a source ultrasound dataset (HDF5, Verasonics .mat, .npz, raw .bin + .json sidecars, a Hugging Face dataset) into the OpenH-RF (zea) file format. Inspects a sample, proposes a source->zea field mapping for the contributor to confirm, then generates and verifies convert.py + a reconstruction against the openh-rf-latest spec. Does NOT write the data card.
+name: open-h-rf-convert
+description: Convert a source ultrasound dataset (HDF5, Verasonics .mat, .npz, raw .bin + .json sidecars, a Hugging Face dataset) into the Open-H-RF (zea) file format. Inspects a sample, proposes a source->zea field mapping for the contributor to confirm, then generates and verifies convert.py + a reconstruction against the openh-rf-latest spec. Does NOT write the data card.
 ---
 
-# OpenH-RF convert
+# Open-H-RF convert
 
 The **convert** half of a two-skill workflow: produce a verified `convert.py`,
 a saved reconstruction pipeline, and a B-mode sanity check against the
-`openh-rf-latest` zea spec. The **evaluate** half is `openh-rf-submission-eval`,
+`openh-rf-latest` zea spec. The **evaluate** half is `open-h-rf-submission-eval`,
 run after the data card is written.
 
 ## Persona
@@ -24,14 +24,14 @@ units. Record every unit conversion. Do **not** write the data card.
 | [`references/source-inspection.md`](references/source-inspection.md) | how to read the `inspect_source.py` inventory per source type |
 | [`references/sources/<format>.md`](references/sources/) | per-format source→zea table + tips. **Use the matching one first.** Currently: `uff.md` (USTB UFF). Fallback: `_default.md`. |
 | `zea.data.spec.{DataSpec, ScanSpec, ProbeSpec, MetadataSpec}` + <https://zea.readthedocs.io/en/openh-rf-latest/> | authoritative target spec (shape / dtype / required) |
-| [`../openh-rf-shared/pipeline_template.py`](../openh-rf-shared/pipeline_template.py) | adapt into `pipeline.yaml` + `reconstruct.py` at scaffold |
-| [`../openh-rf-shared/validate_zea_spec.py`](../openh-rf-shared/validate_zea_spec.py) | verify gate — `compliant: true` is the single pass criterion |
-| [`../openh-rf-shared/data-card-template.md`](../openh-rf-shared/data-card-template.md) | point the contributor here at handoff; you don't fill it in |
+| [`../open-h-rf-shared/pipeline_template.py`](../open-h-rf-shared/pipeline_template.py) | adapt into `pipeline.yaml` + `reconstruct.py` at scaffold |
+| [`../open-h-rf-shared/validate_zea_spec.py`](../open-h-rf-shared/validate_zea_spec.py) | verify gate — `compliant: true` is the single pass criterion |
+| [`../open-h-rf-shared/data-card-template.md`](../open-h-rf-shared/data-card-template.md) | point the contributor here at handoff; you don't fill it in |
 
 ## Hard requirements
 
-- **Check the environment first.** Confirm zea is installed: `python -c "import zea; print(zea.__version__)"`. The OpenH-RF acceptance floor is **v0.1.0a3** (this skill works against it), but **v0.1.0 is preferred** — older alphas have API drift that surfaces as cryptic errors later. Install latest if missing or below the floor.
-- **OpenH-RF submissions require `/data/raw_data`** (pre-beamformed channel data). The convert skill itself can run on any source, but if the source only has beamformed/scan-converted pixels, the resulting zea file **won't pass `openh-rf-submission-eval`** as a valid submission. Surface this to the contributor early and ask whether a raw export exists before generating code.
+- **Check the environment first.** Confirm zea is installed: `python -c "import zea; print(zea.__version__)"`. The Open-H-RF acceptance floor is **v0.1.0a3** (this skill works against it), but **v0.1.0 is preferred** — older alphas have API drift that surfaces as cryptic errors later. Install latest if missing or below the floor.
+- **Open-H-RF submissions require `/data/raw_data`** (pre-beamformed channel data). The convert skill itself can run on any source, but if the source only has beamformed/scan-converted pixels, the resulting zea file **won't pass `open-h-rf-submission-eval`** as a valid submission. Surface this to the contributor early and ask whether a raw export exists before generating code.
 
 ## Workflow
 
@@ -44,9 +44,9 @@ units. Record every unit conversion. Do **not** write the data card.
 
 > Your conversion is verified against the openh-rf-latest zea spec (`compliant: true`, reference B-mode at `<path>`).
 >
-> **Next: author your data card (`README.md`) yourself** — see [`data-card-template.md`](../openh-rf-shared/data-card-template.md) for the required fields and YAML frontmatter. The contributor is the only one who knows the acquisition context, IRB / consent status, subject details, and intended downstream tasks; those go in the data card and must not be inferred or auto-generated.
+> **Next: author your data card (`README.md`) yourself** — see [`data-card-template.md`](../open-h-rf-shared/data-card-template.md) for the required fields and YAML frontmatter. The contributor is the only one who knows the acquisition context, IRB / consent status, subject details, and intended downstream tasks; those go in the data card and must not be inferred or auto-generated.
 >
-> When the data card is ready, run the **`openh-rf-submission-eval`** skill on the full submission folder for the graded intake report.
+> When the data card is ready, run the **`open-h-rf-submission-eval`** skill on the full submission folder for the graded intake report.
 
 ## Unit cheat sheet
 

@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - prostate
   - usct
   - speed-of-sound
@@ -26,7 +26,7 @@ size_categories:
 
 <!-- ![Speed-of-sound map of a prostate slice, predicted by InversionNet](assets/main.png) -->
 
-*Speed of sound predicted from the limited-view waveform data of the first acquisition in [`data/3_01_P_prostate_00.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/unc-openpros/data/3_01_P_prostate_00.hdf5) with the pretrained OpenPros InversionNet.*
+*Speed of sound predicted from the limited-view waveform data of the first acquisition in [`data/3_01_P_prostate_00.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/unc-openpros/data/3_01_P_prostate_00.hdf5) with the pretrained OpenPros InversionNet.*
 
 ## Dataset Description
 
@@ -83,7 +83,7 @@ The original license was [Creative Commons Attribution-NonCommercial-ShareAlike 
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/unc-openpros/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/unc-openpros/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 The reconstruction script checks the input shapes and writes two files: `pred_sos.png`, a side-by-side comparison of the predicted and ground-truth SOS maps, and [`assets/main.png`](assets/main.png), a clean, unlabeled hero image of just the prediction.
 
@@ -106,7 +106,7 @@ The file also stores source positions, probe geometry, scan parameters, subject 
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 248 HDF5 files; 6.03 TB (6,031,699,279,872 bytes) stored; root `zea_version` **0.1.5**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 248 HDF5 files; 6.03 TB (6,031,699,279,872 bytes) stored; root `zea_version` **0.1.5**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 The original OpenPros source documentation reports 280,000 paired samples (approximately 6.8 TB) with an official split of 224,000 training, 28,000 validation, and 28,000 test samples. It is derived from four patient-level clinical anatomies and 62 ex vivo prostate specimens. Each published HDF5 file here holds 1,140 acquisitions.
 
@@ -122,7 +122,7 @@ The converted release identifies its content as a simulation and stores composit
 
 ## Data Validation
 
-`reconstruct.py` loads [`pipeline.yaml`](pipeline.yaml) (also published on the Hub at [`hf://nvidia/OpenH-RF/unc-openpros/pipeline.yaml`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/unc-openpros/pipeline.yaml)), a `zea.Pipeline` that reproduces the OpenPros InversionNet preprocessing and postprocessing:
+`reconstruct.py` loads [`pipeline.yaml`](pipeline.yaml) (also published on the Hub at [`hf://nvidia/Open-H-RF/unc-openpros/pipeline.yaml`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/unc-openpros/pipeline.yaml)), a `zea.Pipeline` that reproduces the OpenPros InversionNet preprocessing and postprocessing:
 
 1. Restore the original acquisition-block order: body/body, body/rectum, rectum/rectum, and rectum/body.
 2. Apply the sign-preserving logarithmic transform `sign(x) * log1p(abs(1e5 * x))`.

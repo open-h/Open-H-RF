@@ -8,7 +8,7 @@ task_categories:
 tags:
 - ultrasound
 - rf
-- openh-rf
+- open-h-rf
 - beamforming
 - sound-speed-estimation
 - aberration-correction
@@ -25,7 +25,7 @@ size_categories:
 
 ![B-mode reconstructions of a rat liver and the ATS 549 phantom](assets/hero.png)
 
-*Frame 0 reconstructed with `reconstruct.py` (L12-3v, 60 dB). Top: the exposed liver of [Rat3](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/stanford-murine/data/RatExperiments/VerasonicsAcq/Rat3/ExposedLiver/DATA_Tracks_20190319_115804.hdf5), `multifocal` track. Bottom: the ATS 549 phantom's [lesions](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/stanford-murine/data/SoSExperiments/august13_2020/L12_3v/ATS_phantom/lesion/DATA_Tracks_20200813_164505.hdf5) and [point targets](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/stanford-murine/data/SoSExperiments/august13_2020/L12_3v/ATS_phantom/point_target/DATA_Tracks_20200813_164745.hdf5), `hadamard` track. The point targets curve into arcs because the phantom is beamformed at 1540 m/s while its own sound speed is lower — the mismatch this dataset is built to estimate and correct.*
+*Frame 0 reconstructed with `reconstruct.py` (L12-3v, 60 dB). Top: the exposed liver of [Rat3](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/stanford-murine/data/RatExperiments/VerasonicsAcq/Rat3/ExposedLiver/DATA_Tracks_20190319_115804.hdf5), `multifocal` track. Bottom: the ATS 549 phantom's [lesions](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/stanford-murine/data/SoSExperiments/august13_2020/L12_3v/ATS_phantom/lesion/DATA_Tracks_20200813_164505.hdf5) and [point targets](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/stanford-murine/data/SoSExperiments/august13_2020/L12_3v/ATS_phantom/point_target/DATA_Tracks_20200813_164745.hdf5), `hadamard` track. The point targets curve into arcs because the phantom is beamformed at 1540 m/s while its own sound speed is lower — the mismatch this dataset is built to estimate and correct.*
 
 ## Dataset Description
 
@@ -38,7 +38,7 @@ The source data are available from Figshare:
 
 The original Figshare releases were published under Apache 2.0; this converted release is CC BY 4.0.
 
-The converted dataset is hosted at [nvidia/OpenH-RF/stanford-murine](https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/stanford-murine).
+The converted dataset is hosted at [nvidia/Open-H-RF/stanford-murine](https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/stanford-murine).
 
 ## Dataset Contributor(s)
 
@@ -109,13 +109,13 @@ The acquisitions can be processed with the `pipeline_multifocal.yaml`, `pipeline
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/stanford-murine/data/RatExperiments/VerasonicsAcq/Rat3/ExposedLiver/DATA_Tracks_20190319_115804.hdf5 \
-  --config hf://nvidia/OpenH-RF/stanford-murine/pipeline_synthetic_aperture.yaml \
+  --dataset hf://nvidia/Open-H-RF/stanford-murine/data/RatExperiments/VerasonicsAcq/Rat3/ExposedLiver/DATA_Tracks_20190319_115804.hdf5 \
+  --config hf://nvidia/Open-H-RF/stanford-murine/pipeline_synthetic_aperture.yaml \
   --track synthetic_aperture \
   --n-frames 1
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/stanford-murine/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF). It reconstructs the first frame of every track in `ZEA_FILE` with the same pipelines and writes one image per track to `assets/`. On top of the YAML, the script inserts a baseband FIR low-pass after demodulation, with its cutoff at half the probe bandwidth (4.0 MHz for L12-3v, 3.0 MHz for L12-5, 1.3 MHz for C5-2v). The cutoff depends on the probe, so it is not part of the pipeline YAMLs and `zea process` runs without it; the difference is small on the rat acquisitions and clearly visible at depth on the phantoms.
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/stanford-murine/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF). It reconstructs the first frame of every track in `ZEA_FILE` with the same pipelines and writes one image per track to `assets/`. On top of the YAML, the script inserts a baseband FIR low-pass after demodulation, with its cutoff at half the probe bandwidth (4.0 MHz for L12-3v, 3.0 MHz for L12-5, 1.3 MHz for C5-2v). The cutoff depends on the probe, so it is not part of the pipeline YAMLs and `zea process` runs without it; the difference is small on the rat acquisitions and clearly visible at depth on the phantoms.
 
 ## Dataset Format
 
@@ -141,7 +141,7 @@ Reconstructed B-mode images and segmentation masks are not stored in the convert
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 245 HDF5 files; 328.99 GB (328,985,804,800 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 245 HDF5 files; 328.99 GB (328,985,804,800 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 The original four-file demo (not the complete HF release summarized above) contains four HDF5 acquisition bundles: one Rat9 bundle and one phantom bundle for each of C5-2v, L12-3v, and L12-5. Each bundle has three sequence tracks, and each track retains every frame in its source MAT file. That demo has 12 tracks and 64 frames and occupies approximately 5.5 GiB; HDF5 writer and compression versions may change the exact byte count.
 

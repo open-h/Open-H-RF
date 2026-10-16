@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""Multi-frame reconstruction for the ubc/module_A dataset of OpenH-RF.
+"""Multi-frame reconstruction for the ubc/module_A dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/ubc/module_A
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/ubc/module_A
 
 Reconstructs one temporal sequence -- the frames acquired at a single motor
 plane -- with the same pipeline as ``reconstruct.py`` and writes the result as
@@ -32,7 +32,7 @@ HERE = Path(__file__).resolve().parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ACQUISITIONS = "hf://nvidia/OpenH-RF/ubc/module_A/acquisitions"
+ACQUISITIONS = "hf://nvidia/Open-H-RF/ubc/module_A/acquisitions"
 CASE_ID = "1.83"
 PLANE = 10
 N_FRAMES = 25

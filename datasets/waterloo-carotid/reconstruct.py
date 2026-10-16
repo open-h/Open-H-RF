@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the waterloo-carotid dataset of OpenH-RF.
+"""Example reconstruction script for the waterloo-carotid dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/waterloo-carotid
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/waterloo-carotid
 
 B-mode reconstruction of steered plane-wave carotid channel data (UW-CarotidRF).
 
@@ -63,10 +63,10 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/waterloo-carotid/data/Acq1.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/waterloo-carotid/data/Acq1.hdf5"
 CONFIG = HERE / "pipeline.yaml"
 OUT = HERE / "assets" / "reconstruct_output.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/waterloo-carotid/pipeline.yaml"
+HF_CONFIG = "hf://nvidia/Open-H-RF/waterloo-carotid/pipeline.yaml"
 FRAME = 250
 POWER_THRESHOLD = 55.0  # Power Doppler mask threshold (dB)
 

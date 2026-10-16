@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - medical-imaging
   - in-vivo
   - femoral-vein
@@ -25,7 +25,7 @@ size_categories:
 
 ![Vector flow cineloop from Acq0.hdf5](assets/Acq0.gif)
 
-*Cine loop of [`data/Acq0.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/waterloo-femoralvein/data/Acq0.hdf5), rendered from provided velocity fields.*
+*Cine loop of [`data/Acq0.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/waterloo-femoralvein/data/Acq0.hdf5), rendered from provided velocity fields.*
 
 ## Dataset Description
 
@@ -67,13 +67,13 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/waterloo-femoralvein/data/Acq0.hdf5 \
-  --config hf://nvidia/OpenH-RF/waterloo-femoralvein/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/waterloo-femoralvein/data/Acq0.hdf5 \
+  --config hf://nvidia/Open-H-RF/waterloo-femoralvein/pipeline.yaml \
   --n-frames 1 \
   --save-as png
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/waterloo-femoralvein/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/waterloo-femoralvein/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 Swap `--n-frames 1 --save-as png` for `--save-as gif` to get the cine loop. In the script, `ZEA_FILE`, `FRAME`, `POWER_THRESHOLD` (the power-Doppler mask threshold, in dB), `VMAX` (velocity colour-scale maximum) and `NO_DEALIAS` at the top select what is reconstructed and overlaid.
 
@@ -115,7 +115,7 @@ All `coordinates` arrays are per-pixel Cartesian positions in meters, last axis 
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 15 HDF5 files; 941.96 GB (941,958,804,227 bytes) stored; root `zea_version` **0.1.5**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 15 HDF5 files; 941.96 GB (941,958,804,227 bytes) stored; root `zea_version` **0.1.5**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 Data was collected from 15 participants and consists of 15 acquisitions (one per participant), containing 12,000 frames of raw RF data per acquisition. Each participant performed isometric plantarflexion contractions at 8 Kg under head up tilt of 40 degrees. Each femoral vein acquisition comprises 2 steered plane-wave transmits (`n_tx = 2`), 2048/3072 axial samples, and 192 receive channels. 
 

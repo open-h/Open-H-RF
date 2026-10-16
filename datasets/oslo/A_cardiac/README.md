@@ -9,7 +9,7 @@ language:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - cardiac
   - in-vivo
 size_categories:
@@ -20,7 +20,7 @@ size_categories:
 
 ![Cine loop of a parasternal long-axis view](assets/hero.gif)
 
-*All 50 frames of [`Verasonics_P2-4_parasternal_long_subject_1.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5), reconstructed from the raw channel data with `reconstruct.py`.*
+*All 50 frames of [`Verasonics_P2-4_parasternal_long_subject_1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5), reconstructed from the raw channel data with `reconstruct.py`.*
 
 ## Dataset Description
 
@@ -46,7 +46,7 @@ In-vivo human cardiac channel-capture data acquired with a Verasonics Vantage 25
 
 ## Intended Usage
 
-Generalized reconstruction and adaptive beamforming of cardiac ultrasound (RFP task 6.1). Suitable for B-mode reconstruction, aperture-domain processing, and deep-learning beamforming research on in-vivo cardiac data. (OpenH-RF RFP task 6.1 Generalized Reconstruction).
+Generalized reconstruction and adaptive beamforming of cardiac ultrasound (RFP task 6.1). Suitable for B-mode reconstruction, aperture-domain processing, and deep-learning beamforming research on in-vivo cardiac data. (Open-H-RF RFP task 6.1 Generalized Reconstruction).
 
 ## Dataset Characterization
 
@@ -62,11 +62,11 @@ The example acquisition can be processed with the `pipeline.yaml` definition in 
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5 \
-  --config hf://nvidia/OpenH-RF/oslo/A_cardiac/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5 \
+  --config hf://nvidia/Open-H-RF/oslo/A_cardiac/pipeline.yaml
 ```
 
-This `pipeline.yaml` holds the pipeline, display window and sector limits of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/oslo/reconstruct.py) at the root of this collection, as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)).
+This `pipeline.yaml` holds the pipeline, display window and sector limits of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/oslo/reconstruct.py) at the root of this collection, as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` definitions at the collection root and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub; `parameters.yaml` picks the pipeline, display window and dynamic range per acquisition (see the [collection card](../README.md#processing-the-dataset)).
 
 ## Dataset Format
 
@@ -76,7 +76,7 @@ All acquisitions are stored in the **zea** HDF5 file format. Each `.hdf5` file i
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 2 HDF5 files; 3.53 GB (3,533,897,728 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 2 HDF5 files; 3.53 GB (3,533,897,728 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Number of acquisitions:** 2
 - **Total channel-capture frames:** 75

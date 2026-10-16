@@ -1,4 +1,4 @@
-"""Compile the OpenH-RF author list into a LaTeX ``\\author`` block.
+"""Compile the Open-H-RF author list into a LaTeX ``\\author`` block.
 
 The roster lives in Google Sheets and changes as datasets are accepted.
 
@@ -51,7 +51,7 @@ SENIOR_AUTHOR_MARK = r"\dag"
 CORE_TEAM_MARK = r"\S"
 
 THANKS = (
-    "\\thanks{The steering committee of the OpenH-RF consortium consists of "
+    "\\thanks{The steering committee of the Open-H-RF consortium consists of "
     "NVIDIA, Eindhoven University of Technology (TU/e) and Stanford University. "
     "\\authorcontributions}"
 )

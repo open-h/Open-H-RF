@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - 3d
   - matrix-probe
   - contrast-enhanced
@@ -23,7 +23,7 @@ size_categories:
 
 ![Power-Doppler 3D MIP montage with reference mvi](../assets/phantom_flow_PD_montage.png)
 
-*Power Doppler of the five clips (x-z and y-z maximum-intensity projections), with the reference `mvi` in the last column, reconstructed from [`phantom_flow.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/resolvestroke/phantom_flow/phantom_flow.hdf5).*
+*Power Doppler of the five clips (x-z and y-z maximum-intensity projections), with the reference `mvi` in the last column, reconstructed from [`phantom_flow.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/resolvestroke/phantom_flow/phantom_flow.hdf5).*
 
 ## Dataset Description
 
@@ -68,10 +68,10 @@ Contrast-enhanced ultrasound flow quantification, microbubble detection and trac
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/resolvestroke/phantom_flow/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/resolvestroke/phantom_flow/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 ```bash
-uv run --project /path/to/OpenH-RF python reconstruct.py
+uv run --project /path/to/Open-H-RF python reconstruct.py
 ```
 
 `reconstruct_PD_3d.py` (with `pipeline_PD_3d.yaml`) renders the power-Doppler reconstruction and `display_references.py` the computed reference maps; both are described below.
@@ -90,7 +90,7 @@ The file is in the zea HDF5 format, root `zea_version` 0.1.6, validated `complia
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 1 HDF5 file; 5.25 GB (5,250,744,320 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 1 HDF5 file; 5.25 GB (5,250,744,320 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - Frames: 20000 (5 clips × 4000 frames)
 - Frame rate: 4000 Hz (within each clip)
@@ -136,7 +136,7 @@ The resulting montage is shown at the top of this card.
 Run (a GPU is strongly recommended: about 14 min per acquisition with `uv sync --extra gpu`, hours with the CPU-only JAX of the plain `uv sync`):
 
 ```bash
-uv run --project /path/to/OpenH-RF python reconstruct_PD_3d.py
+uv run --project /path/to/Open-H-RF python reconstruct_PD_3d.py
 ```
 
 ## Computed References
@@ -162,7 +162,7 @@ Notes:
 
 ![Computed reference maps montage](../assets/phantom_flow_references_montage.png)
 
-Run: `uv run --project /path/to/OpenH-RF python display_references.py`
+Run: `uv run --project /path/to/Open-H-RF python display_references.py`
 
 ## Known Issues
 

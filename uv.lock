@@ -2215,7 +2215,7 @@ wheels = [
 ]
 
 [[package]]
-name = "openh-rf"
+name = "open-h-rf"
 version = "0.0.1"
 source = { editable = "." }
 dependencies = [

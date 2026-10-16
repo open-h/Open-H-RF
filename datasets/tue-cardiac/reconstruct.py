@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the tue-cardiac dataset of OpenH-RF.
+"""Example reconstruction script for the tue-cardiac dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/tue-cardiac
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/tue-cardiac
 
 B-mode reconstruction of one track and frame of multi-transmit cardiac channel data.
 
@@ -50,10 +50,10 @@ TRACKS = tuple(PIPELINE_FOR_TRACK)
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/tue-cardiac/data/subject-012.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/tue-cardiac/data/subject-012.hdf5"
 TRACK = "focused_fund"  # one of TRACKS; must match CONFIG below
 FRAME = 0
-CONFIG = "hf://nvidia/OpenH-RF/tue-cardiac/pipelines/pipeline.yaml"
+CONFIG = "hf://nvidia/Open-H-RF/tue-cardiac/pipelines/pipeline.yaml"
 OUT = HERE / "assets" / f"{Path(ZEA_FILE).stem}_{TRACK}_frame-{FRAME:03d}.png"
 DEVICE = None  # e.g. cpu, cuda:0, auto:1
 

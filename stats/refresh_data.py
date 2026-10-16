@@ -1,6 +1,6 @@
 """Refresh the cached scan of the dataset.
 
-Re-lists ``nvidia/OpenH-RF``, records the revision it listed, and streams the
+Re-lists ``nvidia/Open-H-RF``, records the revision it listed, and streams the
 HDF5 metadata for every file that needs it. ``site/update.py`` runs it.
 
 The tip of the repo is checked first, and a repo that has not moved ends the
@@ -28,7 +28,7 @@ SCAN = scan_files.OUT
 
 
 def recorded_revision() -> str | None:
-    """The ``nvidia/OpenH-RF`` commit the cached scan was taken from."""
+    """The ``nvidia/Open-H-RF`` commit the cached scan was taken from."""
     if not fetch_tree.PROVENANCE_OUT.exists():
         return None
     return json.loads(fetch_tree.PROVENANCE_OUT.read_text()).get("commit_sha")

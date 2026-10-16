@@ -1,8 +1,8 @@
-# OpenH-RF RFP summary
+# Open-H-RF RFP summary
 
 Condensed reference for evaluators. Full RFP is the authoritative source — pull it up if a corner case arises.
 
-## What OpenH-RF is
+## What Open-H-RF is
 
 A collaborative dataset initiative (Stanford, TU Eindhoven, NVIDIA) targeting ≥20,000 pre-beamformed ultrasound channel-capture measurements with task labels, released CC BY 4.0 on Hugging Face. Goal: enable end-to-end foundation models for ultrasound.
 

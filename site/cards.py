@@ -1,6 +1,6 @@
 """Read the data cards into ``site/hub/cards.json``, with a figure for each.
 
-The cards come from ``huggingface/OpenH-RF``, the clone of the Hub repo's documents (see
+The cards come from ``huggingface/Open-H-RF``, the clone of the Hub repo's documents (see
 ``huggingface/README.md``).
 Every folder with a README.md and no deeper one is a dataset, and that README is its data
 card. From each card this keeps the frontmatter (pretty name, license, tags) and the card
@@ -26,12 +26,12 @@ from huggingface_hub import hf_hub_download
 from PIL import Image
 
 SITE = Path(__file__).resolve().parent
-DOCS = SITE.parent / "huggingface" / "OpenH-RF"
+DOCS = SITE.parent / "huggingface" / "Open-H-RF"
 CARDS = SITE / "hub" / "cards.json"
 IMAGES = SITE / "hub" / "images"
 FIGURES = SITE / "figures"
 CATALOG = SITE / "catalog.yaml"
-REPO = "nvidia/OpenH-RF"
+REPO = "nvidia/Open-H-RF"
 
 IMAGE_SUFFIXES = (".png", ".jpg", ".jpeg", ".gif", ".webp")
 # Thumbnails are square crops, sharp on a high-density screen in the widest gallery tile.

@@ -9,7 +9,7 @@ language:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - beamforming
   - channel-data
 size_categories:
@@ -20,11 +20,11 @@ size_categories:
 
 ![B-modes from five of the six sub-datasets: in-vivo cardiac, in-vivo carotid, Verasonics and Alpinion phantoms, and simulation](assets/hero.png)
 
-*First frames reconstructed from the raw channel data with `reconstruct.py`. Top: [`A_cardiac/Verasonics_P2-4_parasternal_long_subject_1`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5), [`A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1.hdf5), [`C_verasonics_phantom/FI_P4_cysts_center`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/C_verasonics_phantom/FI_P4_cysts_center.hdf5). Bottom: [`B_carotid/L7_FI_carotid_cross_1`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/B_carotid/L7_FI_carotid_cross_1.hdf5), [`C_verasonics_phantom/L7_FI_Verasonics_CIRS`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/C_verasonics_phantom/L7_FI_Verasonics_CIRS.hdf5), [`D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5), [`E_simulation/PICMUS_numerical_calib_v2`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/oslo/E_simulation/PICMUS_numerical_calib_v2.hdf5). Panels are scaled to a common height per row, not to a common physical scale.*
+*First frames reconstructed from the raw channel data with `reconstruct.py`. Top: [`A_cardiac/Verasonics_P2-4_parasternal_long_subject_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5), [`A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1.hdf5), [`C_verasonics_phantom/FI_P4_cysts_center`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/C_verasonics_phantom/FI_P4_cysts_center.hdf5). Bottom: [`B_carotid/L7_FI_carotid_cross_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/B_carotid/L7_FI_carotid_cross_1.hdf5), [`C_verasonics_phantom/L7_FI_Verasonics_CIRS`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/C_verasonics_phantom/L7_FI_Verasonics_CIRS.hdf5), [`D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5), [`E_simulation/PICMUS_numerical_calib_v2`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/E_simulation/PICMUS_numerical_calib_v2.hdf5). Panels are scaled to a common height per row, not to a common physical scale.*
 
 ## Dataset Description
 
-Contributed by the **University of Oslo (UiO), Department of Informatics** (the USTB team) to the [OpenH-RF](https://github.com/open-h/OpenH-RF) initiative. All data is pre-beamformed (raw channel-capture) ultrasound stored in the **zea** HDF5 format and released under **CC BY 4.0**.
+Contributed by the **University of Oslo (UiO), Department of Informatics** (the USTB team) to the [Open-H-RF](https://github.com/open-h/Open-H-RF) initiative. All data is pre-beamformed (raw channel-capture) ultrasound stored in the **zea** HDF5 format and released under **CC BY 4.0**.
 
 39 acquisitions packaged into six application sub-datasets. Each sub-dataset folder contains its zea `.hdf5` files, a Hugging Face–style `README.md` data card, and one reference B-mode PNG per acquisition. The **`reconstruct.py`, `pipeline.yaml`, and the CC BY 4.0 `LICENCE` live once at the submission root** — the reconstruction reconstructs every sub-dataset (the pipeline is identical across folders), and the single LICENCE covers the whole collection (each data card also declares `license: cc-by-4.0` in its YAML frontmatter).
 
@@ -57,7 +57,7 @@ Total: **39 acquisitions**, 8.61 GB of stored HDF5 data.
 
 ## Processing the Dataset
 
-Every acquisition is reconstructable from the file alone — all acquisition parameters live in the zea `/scan` and `/probe` groups. The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/oslo/reconstruct.py), as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline*.yaml` and `parameters.yaml` definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub: set `PATHS` to the acquisition to reconstruct (default: the apical four-chamber cardiac scan above) and `REFOCUS = True` to also emit the REFoCUS variant. See [Reconstruction Details](#reconstruction-details) for how each acquisition's pipeline is chosen. Each sub-dataset folder also holds a `pipeline.yaml` for its example acquisition, so it can be rendered with a single `zea process` command (see the sub-dataset cards).
+Every acquisition is reconstructable from the file alone — all acquisition parameters live in the zea `/scan` and `/probe` groups. The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/oslo/reconstruct.py), as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` and `parameters.yaml` definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub: set `PATHS` to the acquisition to reconstruct (default: the apical four-chamber cardiac scan above) and `REFOCUS = True` to also emit the REFoCUS variant. See [Reconstruction Details](#reconstruction-details) for how each acquisition's pipeline is chosen. Each sub-dataset folder also holds a `pipeline.yaml` for its example acquisition, so it can be rendered with a single `zea process` command (see the sub-dataset cards).
 
 ## Dataset Format
 
@@ -65,7 +65,7 @@ Every acquisition is reconstructable from the file alone — all acquisition par
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 39 HDF5 files; 8.61 GB (8,613,593,088 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 39 HDF5 files; 8.61 GB (8,613,593,088 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 ## Reconstruction Details
 

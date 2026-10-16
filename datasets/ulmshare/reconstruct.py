@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the ulmshare dataset of OpenH-RF.
+"""Example reconstruction script for the ulmshare dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/ulmshare
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/ulmshare
 
 B-mode, power-Doppler and ULM reconstruction of transcranial plane-wave IQ
 channel data.
@@ -142,7 +142,7 @@ ULM_SUPER_RES = 4  # density-map pixels per BF pixel per axis (6.25 um)
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/ulmshare/data/mouse_10_acquisition_1_zea.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/ulmshare/data/mouse_10_acquisition_1_zea.hdf5"
 OUT_DIR = Path(__file__).parent  # Directory for all outputs (default: next to this script)
 FRAME = 0  # B-mode frame index (default: 0)
 # mouse_10/acquisition_1 is ~178 GB / 160000 frames; `None` means all of them,

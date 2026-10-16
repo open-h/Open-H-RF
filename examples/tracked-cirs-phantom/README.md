@@ -1,12 +1,12 @@
 ---
-pretty_name: "OpenH-RF — Tracked CIRS Phantom Simulation (lateral sweep)"
+pretty_name: "Open-H-RF — Tracked CIRS Phantom Simulation (lateral sweep)"
 license: cc-by-4.0
 task_categories:
   - other
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - tracked-ultrasound
   - freehand
   - probe-pose
@@ -19,11 +19,11 @@ size_categories:
   - n<1K
 ---
 
-# Tracked CIRS Simulation -> OpenH-RF
+# Tracked CIRS Simulation -> Open-H-RF
 
 A worked example: convert one tracked CIRS phantom acquisition from
 [`Felixdu11/tracked_CIRS_simulated`](https://huggingface.co/datasets/Felixdu11/tracked_CIRS_simulated)
-into the OpenH-RF (`zea`) file format, then reconstruct a B-mode image,
+into the Open-H-RF (`zea`) file format, then reconstruct a B-mode image,
 visualize the tracked probe trajectory, and optionally mosaic the
 laterally-swept frames (max-compounded where they overlap) into a wide field of
 view.
@@ -56,7 +56,7 @@ uv run python examples/tracked-cirs-phantom/reconstruct_3d.py --live
 ## Dataset Description
 
 This example packages a single tracked phantom ultrasound acquisition into the
-OpenH-RF format. The source data consists of raw RF image frames stored in
+Open-H-RF format. The source data consists of raw RF image frames stored in
 `raw/cirs_imaging.hdf5` plus a separate `raw/cirs_tracking.ts` stream of
 timestamped 4x4 probe poses. [`convert.py`](convert.py)
 copies the RF and scan metadata into a `zea` HDF5 file, converts the tracked
@@ -89,7 +89,7 @@ The data is cleared for this license (synthetic data, no patient information).
 
 ## Intended Usage
 
-Serve as an example of how to convert a tracked ultrasound dataset into the OpenH-RF format, and how to use the stored probe pose metadata for tracked reconstruction and visualization.
+Serve as an example of how to convert a tracked ultrasound dataset into the Open-H-RF format, and how to use the stored probe pose metadata for tracked reconstruction and visualization.
 
 ## Dataset Characterization
 

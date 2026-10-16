@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the dartmouth-uct dataset of OpenH-RF.
+"""Example reconstruction script for the dartmouth-uct dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/dartmouth-uct
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/dartmouth-uct
 
 Delay-and-sum reflectivity reconstruction of ring-array USCT channel data.
 
@@ -64,7 +64,7 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/dartmouth-uct/data/2d/phantom_179604449_z200.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/dartmouth-uct/data/2d/phantom_179604449_z200.hdf5"
 FOV = None  # square field of view [m] (default: the ground-truth map footprint)
 NUM_PIXELS = None  # output image is num_pixels x num_pixels (default: ground-truth resolution)
 SOS_MAP = False  # use the ground-truth sound-speed map for straight-ray corrected delays

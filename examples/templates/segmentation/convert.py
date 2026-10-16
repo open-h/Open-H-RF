@@ -1,7 +1,7 @@
 """Convert: create a synthetic segmentation dataset and save as a zea HDF5 file.
 
 Demonstrates how to store raw RF data alongside a per-class segmentation mask
-(with named labels) in the openh-rf format using zea.File.create.
+(with named labels) in the open-h-rf format using zea.File.create.
 
 All data is synthetic (random noise). Replace the arrays with real acquisitions
 to use this script with actual scanner output.

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the wpi dataset of OpenH-RF.
+"""Example reconstruction script for the wpi dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/wpi
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/wpi
 
 B-mode reconstruction of one rotation frame of eSAF rotational 3D channel data.
 
@@ -41,9 +41,9 @@ CONFIG = HERE / "pipeline.yaml"
 # measured-phantom scans, which show real reflector/reverberation texture --
 # a more representative first look than the mostly-empty simulated point
 # targets (see the probe x target grid in this dataset's README for those).
-ZEA_FILE = "hf://nvidia/OpenH-RF/wpi/data/experiment__acq_exp_30mm.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/wpi/data/experiment__acq_exp_30mm.hdf5"
 OUT = HERE / "assets" / "bmode.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/wpi/pipeline.yaml"
+HF_CONFIG = "hf://nvidia/Open-H-RF/wpi/pipeline.yaml"
 FRAME = None  # rotation frame to beamform (default: closest to +-90 deg rotation)
 
 
@@ -110,7 +110,7 @@ def main():
     axes[1].grid(True, color="0.85", linewidth=0.8)
     axes[1].legend(loc="upper left", fontsize=8, frameon=False)
 
-    fig.suptitle(f"OpenH-RF eSAF rotational 3D US — {Path(ZEA_FILE).name}", y=0.98)
+    fig.suptitle(f"Open-H-RF eSAF rotational 3D US — {Path(ZEA_FILE).name}", y=0.98)
     plt.tight_layout()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(str(OUT), bbox_inches="tight", dpi=150)

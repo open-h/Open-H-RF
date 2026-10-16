@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - medical-imaging
   - in-vivo
   - carotid-artery
@@ -24,7 +24,7 @@ size_categories:
 
 ![Reconstructed cineloop from Acq1.hdf5](assets/Acq1.gif)
 
-*Cine loop of [`data/Acq1.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/waterloo-carotid/data/Acq1.hdf5), rendered using provided velocity fields.*
+*Cine loop of [`data/Acq1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/waterloo-carotid/data/Acq1.hdf5), rendered using provided velocity fields.*
 
 ## Dataset Description
 
@@ -65,13 +65,13 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/waterloo-carotid/data/Acq1.hdf5 \
-  --config hf://nvidia/OpenH-RF/waterloo-carotid/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/waterloo-carotid/data/Acq1.hdf5 \
+  --config hf://nvidia/Open-H-RF/waterloo-carotid/pipeline.yaml \
   --n-frames 1 \
   --save-as png
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/waterloo-carotid/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/waterloo-carotid/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 Swap `--n-frames 1 --save-as png` for `--save-as gif` to get the cine loop. In the script, `ZEA_FILE`, `FRAME` and `POWER_THRESHOLD` (the power-Doppler mask threshold, in dB) at the top select what is reconstructed and overlaid.
 
@@ -108,7 +108,7 @@ All `coordinates` arrays are per-pixel Cartesian positions in meters, last axis 
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 93 HDF5 files; 6.90 TB (6,902,089,770,179 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 93 HDF5 files; 6.90 TB (6,902,089,770,179 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 Data was collected from 8 participants, spanning carotid arteries (Common Carotid Artery and Internal Carotid Artery) in both longitudinal and cross-sectional views. In total, the dataset consists of 93 acquisitions, containing 30,000 or 36,000 frames of raw RF data per acquisition (47 acquisitions of 30,000 frames and 46 of 36,000 frames). 
 Each common carotid artery frame comprises 2 steered plane-wave transmits (`n_tx = 2`), 2048 axial samples, and 128 receive channels. Each internal carotid artery frame comprises 1 steered plane-wave transmits (`n_tx = 1`), 1536 axial samples, and 128 receive channels.

@@ -1,7 +1,7 @@
 """
-B-mode reconstruction pipeline template for OpenH-RF submissions.
+B-mode reconstruction pipeline template for Open-H-RF submissions.
 
-Used by the openh-rf-submission-eval skill when a submission is missing
+Used by the open-h-rf-submission-eval skill when a submission is missing
 its reconstruction script. Fill in / adjust the operations as needed, then
 run against the submission's zea file.
 
@@ -24,7 +24,7 @@ log-compressed B-mode image. Submitters supply one pipeline.yaml per track in
 their file (in practice, most submissions are single-track and have exactly one).
 
 Minimum required zea version: v0.1.0a3 (stored as ``zea_version`` in the HDF5
-file). Files written with v0.1.0a2 or earlier are not eligible for OpenH-RF.
+file). Files written with v0.1.0a2 or earlier are not eligible for Open-H-RF.
 
 The working pattern is:
 

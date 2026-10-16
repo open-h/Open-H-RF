@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - usct
   - sound-speed-estimation
   - attenuation
@@ -23,7 +23,7 @@ size_categories:
 
 ![Ring-array USCT reflectivity reconstruction of a digital breast phantom, next to its ground-truth sound-speed and attenuation maps](assets/phantom_179604449_z200.png)
 
-*A 2D-sim breast cross-section, [`data/2d/phantom_179604449_z200.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/dartmouth-uct/data/2d/phantom_179604449_z200.hdf5), reconstructed as a reflectivity image beside the ground-truth sound-speed and attenuation maps stored in the file.*
+*A 2D-sim breast cross-section, [`data/2d/phantom_179604449_z200.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/dartmouth-uct/data/2d/phantom_179604449_z200.hdf5), reconstructed as a reflectivity image beside the ground-truth sound-speed and attenuation maps stored in the file.*
 
 ## Dataset Description
 
@@ -96,7 +96,7 @@ Both collections are generated from the **same underlying digital breast phantom
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/dartmouth-uct/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/dartmouth-uct/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 Set `ZEA_FILE` at the top of the script and run `python reconstruct.py`; the figure at the top of this card is its output. `SOS_MAP = True` swaps the constant-sound-speed delays for a straight-ray integral through the ground-truth map.
 
@@ -115,7 +115,7 @@ All data are packaged in the **`zea` HDF5 file format** (one `.hdf5` file per ac
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 2,625 HDF5 files; 257.62 GB (257,619,787,776 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 2,625 HDF5 files; 257.62 GB (257,619,787,776 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Number of acquisitions:** **2,149 (2D-sim)** (1,859 dense + 290 fatty) + **476 (3D-sim)** = **2,625 acquisitions**.
 - **Single-Tx channel-capture frames:** 2,149 × 256 (2D-sim) + 476 × 64 (3D-sim) ≈ **5.8 × 10⁵ frames**.

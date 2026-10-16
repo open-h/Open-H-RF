@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - echocardiography
   - cardiac
   - harmonic-imaging
@@ -22,7 +22,7 @@ size_categories:
 
 ![Cineloop of the left atrial appendage](assets/118420_1_Focused_Uncoded_TX.gif)
 
-*One cineloop of a fundamental focused-transmit acquisition, [`data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/vanderbilt/data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5).*
+*One cineloop of a fundamental focused-transmit acquisition, [`data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/vanderbilt/data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5).*
 
 ## Dataset Description
 
@@ -66,12 +66,12 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/vanderbilt/data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5 \
-  --config hf://nvidia/OpenH-RF/vanderbilt/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/vanderbilt/data/Fundamental/118420_1_Focused_Uncoded_TX.hdf5 \
+  --config hf://nvidia/Open-H-RF/vanderbilt/pipeline.yaml \
   --n-frames 10
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/vanderbilt/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/vanderbilt/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 Set `ZEA_FILE` and `N_FRAMES` at the top of the script to pick a file and how many frames to beamform.
 
@@ -102,7 +102,7 @@ The current release uses the migrated schema; inspect each file's root `zea_vers
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 165 HDF5 files; 185.58 GB (185,584,517,120 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 165 HDF5 files; 185.58 GB (185,584,517,120 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Samples:** 82 cineloops (32 frames each) from 30 patients — 2,624 fundamental frames
 - Plus a matching set of 2,624 harmonic frames (same cineloops, harmonic sequence)

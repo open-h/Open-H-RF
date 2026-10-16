@@ -8,7 +8,7 @@ Reference (read if needed for edge cases):
 
 **Important framing.** Safe Harbor is a *rules-based checklist*, not a guarantee. A dataset that passes Safe Harbor can still be re-identifiable in small populations or when linked with external data. The HHS standard also requires that the covered entity have *no actual knowledge* that the remaining information could identify an individual. Treat that as a separate question after the 18-item scan.
 
-For OpenH-RF, public release means we apply Safe Harbor strictly. If a contributor wants to retain something Safe Harbor removes (e.g., month of service), that requires the Expert Determination pathway, which is out of scope for automated evaluation — flag for steering-group review.
+For Open-H-RF, public release means we apply Safe Harbor strictly. If a contributor wants to retain something Safe Harbor removes (e.g., month of service), that requires the Expert Determination pathway, which is out of scope for automated evaluation — flag for steering-group review.
 
 ## The 18 identifiers
 
@@ -32,7 +32,7 @@ Scan everywhere strings or numbers appear — data card prose, zea file attribut
 | 14 | **URLs** | Web addresses, especially patient-portal URLs or links containing tokens. |
 | 15 | **IP addresses** | IPv4/IPv6 in any embedded metadata. |
 | 16 | **Biometric identifiers** | Fingerprints, voice prints, retinal scans. *Includes voice recordings that could be voice-printed.* |
-| 17 | **Full-face photographs and comparable images** | Any image that could identify the subject by face. Relevant to OpenH-RF only if image-of-acquisition material is bundled — channel data itself is fine. |
+| 17 | **Full-face photographs and comparable images** | Any image that could identify the subject by face. Relevant to Open-H-RF only if image-of-acquisition material is bundled — channel data itself is fine. |
 | 18 | **Any other unique identifying number, characteristic, or code** | The catch-all. Custom study codes, internal tokens, novel ID schemes. *When in doubt, treat conservatively.* |
 
 ## Things that frequently appear in zea files and warrant attention

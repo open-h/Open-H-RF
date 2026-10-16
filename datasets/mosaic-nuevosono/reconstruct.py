@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the mosaic-nuevosono dataset of OpenH-RF.
+"""Example reconstruction script for the mosaic-nuevosono dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/mosaic-nuevosono
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/mosaic-nuevosono
 
 B-mode reconstruction of rotational in-vivo IVUS channel data.
 
@@ -55,8 +55,8 @@ FRAME_COLORS = plt.get_cmap("tab10").colors
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/mosaic-nuevosono/data/22_12_10_52.hdf5"
-CONFIG = "hf://nvidia/OpenH-RF/mosaic-nuevosono/pipeline.yaml"
+ZEA_FILE = "hf://nvidia/Open-H-RF/mosaic-nuevosono/data/22_12_10_52.hdf5"
+CONFIG = "hf://nvidia/Open-H-RF/mosaic-nuevosono/pipeline.yaml"
 NUM_FRAMES = 5  # Number of frames to overlay, spaced evenly across the pullback
 FRAMES = None  # Explicit frame indices to overlay (overrides NUM_FRAMES)
 OUT = None

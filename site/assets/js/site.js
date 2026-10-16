@@ -1,4 +1,4 @@
-/* OpenH-RF site: renders data/datasets.json, written by build.py. Routes: # (overview),
+/* Open-H-RF site: renders data/datasets.json, written by build.py. Routes: # (overview),
    #explorer?<filters>, #stats/<section> and #dataset/<name>, which opens a drawer over the view
    behind it.
    Each dataset's "measured" object is what the scan read from its HDF5 files; the other
@@ -145,9 +145,9 @@
     state.page === "explorer" ? `#explorer${explorerQuery({ ...state.filters, [key]: new Map(ids.map((v) => [v, "include"])) })}` : explorerHref(key, ids);
 
   // zea streams a file from the Hub: only the bytes read are fetched.
-  const HF = "hf://nvidia/OpenH-RF";
+  const HF = "hf://nvidia/Open-H-RF";
   const multiTrack = (d) => d.measured.tracks !== d.measured.files;
-  const copyCommand = (folder = "") => `$ zea data copy ${HF}${folder && "/"}${folder} ./OpenH-RF${folder && "/"}${folder} --key all`;
+  const copyCommand = (folder = "") => `$ zea data copy ${HF}${folder && "/"}${folder} ./Open-H-RF${folder && "/"}${folder} --key all`;
   // Copied code gets plain spaces in place of the formatters' non-breaking ones.
   const code = (lines) => lines.join("\n").replaceAll(NBSP, " ");
   // The app lists a folder's files itself, so no file name has to be known.
@@ -260,12 +260,12 @@
     return [...out];
   }
 
-  // A folder named after the selection, such as openhrf_invivohuman_carotid.
+  // A folder named after the selection, such as open_h_rf_invivohuman_carotid.
   function folderName() {
     const slug = (text) => text.toLowerCase().replace(/[^a-z0-9-]+/g, "");
     const parts = GROUPS.flatMap((g) => [...state.filters[g.key]].map(([v, mode]) => (mode === "exclude" ? "no" : "") + slug(v)));
-    const name = ["openhrf", ...parts, ...state.terms.map(slug)].filter(Boolean).join("_");
-    return name.length <= 60 ? name : "openhrf_selection";
+    const name = ["open_h_rf", ...parts, ...state.terms.map(slug)].filter(Boolean).join("_");
+    return name.length <= 60 ? name : "open_h_rf_selection";
   }
 
   // A Python script that downloads, or streams, the files that match the selection.
@@ -773,7 +773,7 @@
         chips.push(chip(`${g.label}: ${mode === "exclude" ? "not " : ""}${labelOf(g.key, v)}`, mode === "exclude", () => state.filters[g.key].delete(v)));
       }
     }
-    $("#x-active").replaceChildren(chips.length ? el("div", { class: "chips" }, chips) : el("span", { class: "muted", text: "No filters: every dataset in OpenH-RF." }));
+    $("#x-active").replaceChildren(chips.length ? el("div", { class: "chips" }, chips) : el("span", { class: "muted", text: "No filters: every dataset in Open-H-RF." }));
   }
 
   const chips = (d, key, link) => [d[key]].flat().map((v) => el(link ? "a" : "span", { class: `chip ${key}`, href: link && filterHash(key, [v]) }, labelOf(key, v)));
@@ -1340,7 +1340,7 @@
           ]
         : [el("h2", { id: "drawer-title", text: "Dataset not found" })]),
     );
-    document.title = `${d ? d.title : "Not found"} | OpenH-RF`;
+    document.title = `${d ? d.title : "Not found"} | Open-H-RF`;
     if (!drawer.open) drawer.showModal();
     drawer.scrollTop = 0;
   }
@@ -1367,7 +1367,7 @@
       if (a.dataset.nav === name) a.setAttribute("aria-current", "page");
       else a.removeAttribute("aria-current");
     }
-    document.title = { home: "OpenH-RF | Open ultrasound channel data", explorer: "Explore datasets | OpenH-RF", stats: "Statistics | OpenH-RF" }[name];
+    document.title = { home: "Open-H-RF | Open ultrasound channel data", explorer: "Explore datasets | Open-H-RF", stats: "Statistics | Open-H-RF" }[name];
   }
 
   function parseHash() {

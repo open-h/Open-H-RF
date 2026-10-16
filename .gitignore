@@ -20,7 +20,7 @@ examples/tracked-cirs-phantom/3d_views/
 
 # The Hub repo's documents, cloned by huggingface/setup.sh. Not a submodule: a checkout
 # that setup.sh does not guard would pull ~39 TB of LFS payload.
-huggingface/OpenH-RF/
+huggingface/Open-H-RF/
 
 # The website build (site/build.py); site/figures/ holds a card figure that is not on the Hub.
 site/_site/

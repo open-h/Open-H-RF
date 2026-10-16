@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - medical-imaging
   - beamforming
   - fascicle tracking
@@ -21,7 +21,7 @@ size_categories:
 
 ![Reconstructed cineloop from PAT02_w1.hdf5](assets/PAT02_w1.gif)
 
-*Cine loop of treadmill walking at 2 km/h, [`data/PAT02/PAT02_w1.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/politorino/data/PAT02/PAT02_w1.hdf5), reconstructed from the raw channel data with the `pipeline.yaml` in this folder.*
+*Cine loop of treadmill walking at 2 km/h, [`data/PAT02/PAT02_w1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/politorino/data/PAT02/PAT02_w1.hdf5), reconstructed from the raw channel data with the `pipeline.yaml` in this folder.*
 
 ## Dataset Description
 
@@ -62,7 +62,7 @@ This data was employed for an initial study evaluating fascicle tracking algorit
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/politorino/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/politorino/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 The script reconstructs a B-mode from the raw channel data and overlays the stored fascicle tracking on it, writing a `.png`. The constants at the top of the script select what is drawn:
 
@@ -89,7 +89,7 @@ Per-sample contents of the HDF5:
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 30 HDF5 files; 169.95 GB (169,950,314,496 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 30 HDF5 files; 169.95 GB (169,950,314,496 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - 30 files - 6 acquisitions of 9.6s at 500 fps for each of the 5 subjects
 - **Stored HDF5 size:** 169.95 GB (169,950,314,496 bytes); 5.67 GB per file on average. Individual file sizes vary.

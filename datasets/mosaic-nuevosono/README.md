@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - rf
-  - openh-rf
+  - open-h-rf
   - IVUS
   - tracked-ultrasound
 language:
@@ -18,7 +18,7 @@ language:
 
 ![IVUS pullback: B-mode, segmentation overlay and pullback trajectory](assets/pullback.gif)
 
-*Pullback through [`data/22_12_10_52.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/mosaic-nuevosono/data/22_12_10_52.hdf5), reconstructed from the raw channel data. Left to right: B-mode, the same frame with the lumen and intima-media segmentation, and the linear-encoder pullback position with the current frame marked.*
+*Pullback through [`data/22_12_10_52.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/mosaic-nuevosono/data/22_12_10_52.hdf5), reconstructed from the raw channel data. Left to right: B-mode, the same frame with the lumen and intima-media segmentation, and the linear-encoder pullback position with the current frame marked.*
 
 ## Dataset Description
 
@@ -52,7 +52,7 @@ Intended for IVUS tracking and segmentation applications, including lesion detec
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/mosaic-intelligence/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/mosaic-intelligence/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline.yaml` definition in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub.
 
 The script overlays the segmentation masks on frames spread evenly across the pullback:
 
@@ -139,6 +139,6 @@ A `zea.Pipeline` reconstructs the IVUS B-mode from the raw channel data (RF → 
 
 ## Ethical Considerations
 
-Porcine animal study data only; contains no human subjects or PHI. Collected and released in compliance with applicable institutional animal care approvals and OpenH-RF governance and data-sharing policies.
+Porcine animal study data only; contains no human subjects or PHI. Collected and released in compliance with applicable institutional animal care approvals and Open-H-RF governance and data-sharing policies.
 
 All contributed data, labels and metadata are released by Mosaic Intelligence Labs and NuevoSono; pre-existing hardware, software, simulation and platform intellectual property remains the property of the respective owners. The license is also recorded in each file's `metadata/credit` field.

@@ -1,4 +1,4 @@
-# OpenH-RF data card template (canonical)
+# Open-H-RF data card template (canonical)
 
 Copy of the contributor-facing template. Use this as the ground truth when checking dimension 4.
 
@@ -10,14 +10,14 @@ The `README.md` must open with a YAML block between `---` fences. HF parses this
 
 ```yaml
 ---
-pretty_name: "OpenH-RF — <contributor / dataset name>"
+pretty_name: "Open-H-RF — <contributor / dataset name>"
 license: cc-by-4.0
 task_categories:
   - <hf-task>            # e.g. image-segmentation, image-classification
 tags:
   - ultrasound
   - rf                   # or iq, depending on data_type
-  - openh-rf
+  - open-h-rf
   # optional modality override: 3d, audio, geospatial, image, tabular, text, timeseries, video
   - 3d
 language:
@@ -43,7 +43,7 @@ Contributing organization and primary point of contact.
 MM/DD/YYYY.
 
 ## License / Terms of Use
-OpenH-RF requires **CC BY 4.0**. Confirm that the contributed data is cleared for this license (IP, patient consent, institutional review).
+Open-H-RF requires **CC BY 4.0**. Confirm that the contributed data is cleared for this license (IP, patient consent, institutional review).
 
 ## Intended Usage
 Briefly describe the application or task — e.g., sound speed estimation, advanced beamforming, segmentation, aberration correction.

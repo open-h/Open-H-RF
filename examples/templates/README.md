@@ -3,7 +3,7 @@
 The examples in this directory are **templates**, intended to provide a starting point for writing your own `convert.py`, and `reconstruct.py` scripts, along with a `pipeline.yaml` defining a beamforming pipeline and associated parameters. The templates show:
 
 - how to structure scan parameters, probe geometry, and metadata for a given modality;
-- which fields are required versus optional in the openh-rf format;
+- which fields are required versus optional in the open-h-rf format;
 - how to call `zea.File.create` and verify the result.
 
 For most templates, we have included dummy data to indicate the correct data types and tensor shapes for the variables supported by the `zea` data format. In the Verasonics template, we have included real Verasonics data saved in

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the oslo dataset of OpenH-RF.
+"""Example reconstruction script for the oslo dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/oslo
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/oslo
 
 B-mode reconstruction for every acquisition in the USTB channel-capture collection.
 
@@ -59,7 +59,7 @@ PIPELINE_YAML = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-PATHS = "hf://nvidia/OpenH-RF/oslo/A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1.hdf5"
+PATHS = "hf://nvidia/Open-H-RF/oslo/A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1.hdf5"
 REFOCUS = False  # Also emit the secondary REFoCUS reconstruction where flagged for it
 
 

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the colorado-boulder dataset of OpenH-RF.
+"""Example reconstruction script for the colorado-boulder dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/colorado-boulder
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/colorado-boulder
 
 B-mode reconstruction of tracked swept synthetic aperture phantom channel data.
 
@@ -51,10 +51,10 @@ HERE = Path(__file__).parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/colorado-boulder/Sub-dataset-1/sub-phantom2d_01_tracked-ssa.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/colorado-boulder/Sub-dataset-1/sub-phantom2d_01_tracked-ssa.hdf5"
 CONFIG = HERE / "pipeline.yaml"  # written by build_pipeline() below; this is what the run loads
 OUT = HERE / "ssa_bmode.png"
-HF_CONFIG = "hf://nvidia/OpenH-RF/colorado-boulder/pipeline.yaml"  # where CONFIG is published
+HF_CONFIG = "hf://nvidia/Open-H-RF/colorado-boulder/pipeline.yaml"  # where CONFIG is published
 FRAME_SPACING = 1e-3  # select tracked frames every 1 mm along the sweep
 
 

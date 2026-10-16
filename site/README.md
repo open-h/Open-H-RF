@@ -1,8 +1,8 @@
-# OpenH-RF website
+# Open-H-RF website
 
 A static site (plain HTML, CSS and JS) with statistics of the whole dataset and an explorer
 that filters datasets by their data cards and file contents. Everything it shows comes from
-the Hub repo [nvidia/OpenH-RF](https://huggingface.co/datasets/nvidia/OpenH-RF).
+the Hub repo [nvidia/Open-H-RF](https://huggingface.co/datasets/nvidia/Open-H-RF).
 
 ## Updating after a pull request is merged on the Hub
 
@@ -15,7 +15,7 @@ into the Hub repo:
    uv run --extra site python site/update.py
    ```
 
-   This moves `huggingface/OpenH-RF`, a clone of the Hub repo's documents (see
+   This moves `huggingface/Open-H-RF`, a clone of the Hub repo's documents (see
    `huggingface/README.md`), to the Hub's main branch, lists the files at that revision
    from the clone's git, and scans the HDF5 files that are new or changed into
    `stats/data/`. It then turns the data cards and the scan into `site/hub/`, builds the
@@ -28,7 +28,7 @@ into the Hub repo:
    statistics without them instead). A Hugging Face token in `HF_TOKEN` raises the Hub's
    rate limits, which helps most for `--full`, a scan of every file.
 2. (Only when a dataset was added.) Give it a short name: an entry in `DATASETS` in
-   `plots/openh_rf_datasets.py`, keyed by the name the page shows and links it by, with its
+   `plots/open_h_rf_datasets.py`, keyed by the name the page shows and links it by, with its
    Hub folder. Without one the build warns and shows the folder.
    If it is from an institution the site does not list yet, the build fails and names it:
    add a row for it to `institution_filters.csv`, with an empty `affiliation`. If the card
@@ -40,8 +40,8 @@ into the Hub repo:
 
    ```bash
    git add stats/data site/hub site/catalog.yaml site/institution_filters.csv \
-     plots/openh_rf_datasets.py site/figures
-   git commit -m "Update the website to OpenH-RF <revision>"
+     plots/open_h_rf_datasets.py site/figures
+   git commit -m "Update the website to Open-H-RF <revision>"
    ```
 
 After a change to what the scan records (`stats/extract.py`), rescan every file instead:
@@ -149,4 +149,4 @@ port 8000 (all interfaces). `--check` only validates `catalog.yaml`.
 
 `.github/workflows/pages.yml` builds the site on pull requests to `main` and on pushes to
 `main` that touch its inputs (`site/`, `scripts/authors.csv`, `scripts/compile_authors.py`,
-`plots/openh_rf_datasets.py`), and deploys it to GitHub Pages after a push (or on demand).
+`plots/open_h_rf_datasets.py`), and deploys it to GitHub Pages after a push (or on demand).

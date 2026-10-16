@@ -1,4 +1,4 @@
-"""Build the OpenH-RF website into a static directory.
+"""Build the Open-H-RF website into a static directory.
 
 The site is plain HTML/CSS/JS (``site/index.html`` + ``site/assets/``) that renders
 ``data/datasets.json`` client-side. This script writes that JSON from
@@ -11,7 +11,7 @@ The site is plain HTML/CSS/JS (``site/index.html`` + ``site/assets/``) that rend
   derived here that are wrong;
 * ``site/zea_keys.json``: the zea file-format key tree, from ``zea_keys.py``;
 * ``site/citation_suggestions.bib``: the citations in the data cards;
-* ``plots/openh_rf_datasets.py``: each dataset's short name, which the page shows and
+* ``plots/open_h_rf_datasets.py``: each dataset's short name, which the page shows and
   links it by.
 
 It writes the author list into the page from ``scripts/authors.csv``, marked as
@@ -51,7 +51,7 @@ SITE = Path(__file__).resolve().parent
 HUB = SITE / "hub"
 CATALOG = SITE / "catalog.yaml"
 ZEA_KEYS = SITE / "zea_keys.json"
-DATASET_NAMES = SITE.parent / "plots" / "openh_rf_datasets.py"
+DATASET_NAMES = SITE.parent / "plots" / "open_h_rf_datasets.py"
 COMPILE_AUTHORS = SITE.parent / "scripts" / "compile_authors.py"
 AUTHOR_WEBSITES = SITE / "author_websites.csv"
 INSTITUTION_FILTERS = SITE / "institution_filters.csv"
@@ -59,7 +59,7 @@ CITATIONS = SITE / "citation_suggestions.bib"
 # Where index.html takes the author list.
 AUTHORS_MARK = "<!-- authors -->"
 
-HF_REPO = "nvidia/OpenH-RF"
+HF_REPO = "nvidia/Open-H-RF"
 HF_URL = f"https://huggingface.co/datasets/{HF_REPO}"
 
 
@@ -78,7 +78,7 @@ def load(path: Path) -> dict:
 
 def dataset_names() -> dict[str, str]:
     """The short name of each dataset, by its folder in the Hub repo."""
-    spec = importlib.util.spec_from_file_location("openh_rf_datasets", DATASET_NAMES)
+    spec = importlib.util.spec_from_file_location("open_h_rf_datasets", DATASET_NAMES)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     root = module.HF_ROOT + "/"

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the technion/cardiac dataset of OpenH-RF.
+"""Example reconstruction script for the technion/cardiac dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/technion/cardiac
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/technion/cardiac
 
 B-mode reconstruction of in-vivo cardiac channel data on a polar scanline grid.
 
@@ -32,8 +32,8 @@ HERE = Path(__file__).parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/technion/cardiac/data/c1.hdf5"
-CONFIG = "hf://nvidia/OpenH-RF/technion/cardiac/pipeline.yaml"
+ZEA_FILE = "hf://nvidia/Open-H-RF/technion/cardiac/data/c1.hdf5"
+CONFIG = "hf://nvidia/Open-H-RF/technion/cardiac/pipeline.yaml"
 FRAME = 8
 OUT = HERE / "assets" / "bmode.png"
 

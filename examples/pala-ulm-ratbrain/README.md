@@ -1,5 +1,5 @@
 ---
-pretty_name: "OpenH-RF — PALA In Vivo Rat Brain ULM"
+pretty_name: "Open-H-RF — PALA In Vivo Rat Brain ULM"
 license: cc-by-4.0
 task_categories:
   - image-feature-extraction
@@ -8,7 +8,7 @@ tags:
   - ultrasound
   - rf
   - iq
-  - openh-rf
+  - open-h-rf
   - ultrasound-localization-microscopy
   - in-vivo
   - rat-brain
@@ -49,7 +49,7 @@ Microbubble localization and tracking, ULM super-resolution vascular mapping, an
 ## Dataset Format
 
 Submitted in the [`zea` file format](https://zea.readthedocs.io/en/v0.1.0a3/data-acquisition.html)
-(one HDF5 file per acquisition). The source Verasonics BS100BW samples are de-interleaved into a complex IQ representation (I and Q stored as the final channel dimension) during conversion (`convert.py`). The packaged sample is a single acquisition file (`RF_002`) of the full ~200,000-frame dataset. This used as an example script for ULM submissions to OpenH-RF.
+(one HDF5 file per acquisition). The source Verasonics BS100BW samples are de-interleaved into a complex IQ representation (I and Q stored as the final channel dimension) during conversion (`convert.py`). The packaged sample is a single acquisition file (`RF_002`) of the full ~200,000-frame dataset. This used as an example script for ULM submissions to Open-H-RF.
 
 ## Dataset Quantification
 

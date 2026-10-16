@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - beamforming
   - bladder
   - 3d
@@ -21,7 +21,7 @@ size_categories:
 
 ![Transverse suprapubic view of the bladder, one 10-frame cine loop](assets/cine.gif)
 
-*Transverse suprapubic view: one cine loop (10 frames) from [`data/a1.hdf5`](https://huggingface.co/datasets/nvidia/OpenH-RF/blob/main/technion/bladder/data/a1.hdf5).*
+*Transverse suprapubic view: one cine loop (10 frames) from [`data/a1.hdf5`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/technion/bladder/data/a1.hdf5).*
 
 ## Dataset Description
 
@@ -37,7 +37,7 @@ Real, **in-vivo human** pre-beamformed ultrasound **channel data** for bladder i
 
 ## Dataset Creation Date
 
-Source data 2018; converted to the OpenH-RF (zea) format 07/16/2026.
+Source data 2018; converted to the Open-H-RF (zea) format 07/16/2026.
 
 ## License / Terms of Use
 
@@ -61,12 +61,12 @@ The acquisitions can be processed with the `pipeline.yaml` definition in this fo
 
 ```bash
 zea process \
-  --dataset hf://nvidia/OpenH-RF/technion/bladder/data/a1.hdf5 \
-  --config hf://nvidia/OpenH-RF/technion/bladder/pipeline.yaml \
+  --dataset hf://nvidia/Open-H-RF/technion/bladder/data/a1.hdf5 \
+  --config hf://nvidia/Open-H-RF/technion/bladder/pipeline.yaml \
   --n-frames 10
 ```
 
-Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/technion/bladder/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF).
+Alternatively, you can use the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/technion/bladder/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF).
 
 ## Dataset Format
 
@@ -76,7 +76,7 @@ zea file format, one HDF5 file per sweep (`data/<subject>.hdf5`, e.g. `a1.hdf5`,
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 14 HDF5 files; 83.71 GB (83,713,785,856 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 14 HDF5 files; 83.71 GB (83,713,785,856 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Frames / sweeps / subjects:** 1,508 frames · 14 sweeps · 7 subjects.
 - **Train / val / test split:** N/A (contributor to define).

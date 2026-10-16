@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the twente-vortexflow dataset of OpenH-RF.
+"""Example reconstruction script for the twente-vortexflow dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/twente-vortexflow
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/twente-vortexflow
 
 B-mode reconstruction of single plane-wave flow-phantom channel data.
 
@@ -49,7 +49,7 @@ PARAMETERS = {
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/twente-vortexflow/data/AcqData_PVoltage80_TVoltage3.4.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/twente-vortexflow/data/AcqData_PVoltage80_TVoltage3.4.hdf5"
 CONFIGS = {  # track label -> pipeline YAML, written by write_config()
     "short imaging pulse": HERE / "pipeline_short_imaging_pulse.yaml",
     "chirp": HERE / "pipeline_chirp.yaml",
@@ -57,7 +57,7 @@ CONFIGS = {  # track label -> pipeline YAML, written by write_config()
 FRAME = 10
 OUT = HERE / "assets" / "reference_bmode.png"
 OUT_MAPPING = HERE / "assets" / "reference_mapping.png"  # B-mode + camera image
-HF_CONFIGS = "hf://nvidia/OpenH-RF/twente-vortexflow/"  # where CONFIGS are published
+HF_CONFIGS = "hf://nvidia/Open-H-RF/twente-vortexflow/"  # where CONFIGS are published
 
 
 def build_pipeline() -> Pipeline:

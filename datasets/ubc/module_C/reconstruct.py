@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""Example reconstruction script for the ubc/module_C dataset of OpenH-RF.
+"""Example reconstruction script for the ubc/module_C dataset of Open-H-RF.
 
-Dataset link: https://huggingface.co/datasets/nvidia/OpenH-RF/tree/main/ubc/module_C
+Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/ubc/module_C
 
 B-mode reconstruction and scan conversion of one frame of synthetic channel data.
 
@@ -43,7 +43,7 @@ HERE = Path(__file__).resolve().parent
 # --- Inputs -----------------------------------------------------------------
 # Defaults stream straight from the published corpus. Swap any of these for a
 # local path to run against your own copy.
-ZEA_FILE = "hf://nvidia/OpenH-RF/ubc/module_C/acquisitions/session_01/session_01_f1306.hdf5"
+ZEA_FILE = "hf://nvidia/Open-H-RF/ubc/module_C/acquisitions/session_01/session_01_f1306.hdf5"
 OUT = HERE / "assets" / "reconstruct_f1306_bk_scanconverted.png"
 FRAME = 0
 
