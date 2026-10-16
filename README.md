@@ -170,8 +170,11 @@ Set the matching `KERAS_BACKEND` (`jax`, `torch`, or `tensorflow`) before runnin
 
 ## Citation
 
+<!-- The BibTeX below is copied from CITATION.bib: edit it there, then run `uv run python site/build.py --readme`. -->
+
 If you use Open-H-RF in your research, please cite the [Open-H-RF paper](https://arxiv.org/abs/2610.13616):
 
+<!-- bibtex stevens2026openhrf -->
 ```bibtex
 @misc{stevens2026openhrf,
   title = {{Open-H-RF}: A Large-Scale Ultrasound Raw Channel Dataset Initiative},
@@ -217,9 +220,11 @@ If you use Open-H-RF in your research, please cite the [Open-H-RF paper](https:/
   url = {https://arxiv.org/abs/2610.13616}
 }
 ```
+<!-- /bibtex -->
 
 If you use [`zea`](https://github.com/tue-bmd/zea) to access or process the data, please also cite the [`zea` paper](https://doi.org/10.21105/joss.09881):
 
+<!-- bibtex stevens2026zea -->
 ```bibtex
 @article{stevens2026zea,
   title = {{zea}: A Toolbox for Cognitive Ultrasound Imaging},
@@ -237,6 +242,7 @@ If you use [`zea`](https://github.com/tue-bmd/zea) to access or process the data
   url = {https://doi.org/10.21105/joss.09881}
 }
 ```
+<!-- /bibtex -->
 
 If you use a specific sub-dataset, please also check whether it has its own citation. Open the [dataset explorer](https://open-h.github.io/Open-H-RF/#explorer), click the dataset's card and see its Citation section.
 

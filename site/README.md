@@ -124,6 +124,14 @@ port 8000 (all interfaces). `--check` only validates `catalog.yaml`.
   details: the card's BibTeX, else an entry written from the citation it suggests. A
   `% dataset:` line names the dataset (or collection) the entries below it are for. The
   build warns about a card that asks to be cited and has no entry.
+- `CITATION.bib` (at the repository root): the BibTeX for citing Open-H-RF and zea, the one
+  place to change it. The build writes each entry into the page where `index.html` has
+  `<!-- bibtex <key> -->`, and fails unless the README's `<!-- bibtex <key> -->` blocks match
+  it. After editing it, copy it into the README:
+
+  ```bash
+  uv run python site/build.py --readme
+  ```
 - `metadata_fixes.md`: where the site corrects the metadata on the Hub (probe names, probe
   types, transmit schemes, institutions), and the fix at the source for each.
 - `assets/img/examples*` (the banner: the paper's collages as webp, and the tile frames the

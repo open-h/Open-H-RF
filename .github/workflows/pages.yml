@@ -8,6 +8,8 @@ on:
       - "plots/open_h_rf_datasets.py"
       - "scripts/authors.csv"
       - "scripts/compile_authors.py"
+      - "CITATION.bib"
+      - "README.md"
       - ".github/workflows/pages.yml"
   pull_request:
     branches: [main]
@@ -16,6 +18,8 @@ on:
       - "plots/open_h_rf_datasets.py"
       - "scripts/authors.csv"
       - "scripts/compile_authors.py"
+      - "CITATION.bib"
+      - "README.md"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 

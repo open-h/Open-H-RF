@@ -20,12 +20,18 @@ It writes the author list into the page from ``scripts/authors.csv``, marked as
 institution, as ``site/institution_filters.csv`` names it. That file also lists the
 institutions datasets are from that are no author's affiliation.
 
+The BibTeX for citing Open-H-RF and zea is ``CITATION.bib``, at the repository root. The
+build writes each entry into the page where ``index.html`` has ``<!-- bibtex <key> -->``,
+and fails unless the README has the same entries between its ``<!-- bibtex <key> -->`` and
+``<!-- /bibtex -->`` lines; ``--readme`` copies them there.
+
 ``update.py`` refreshes the ``site/hub/`` files and then runs this. The build
 itself needs only PyYAML, and no network. Usage (from the repository root)::
 
     uv run python site/build.py            # build into site/_site
     uv run python site/build.py --serve    # build, then serve on port 8000
     uv run python site/build.py --check    # only validate catalog.yaml
+    uv run python site/build.py --readme   # copy CITATION.bib into README.md
 """
 
 from __future__ import annotations
@@ -56,6 +62,10 @@ COMPILE_AUTHORS = SITE.parent / "scripts" / "compile_authors.py"
 AUTHOR_WEBSITES = SITE / "author_websites.csv"
 INSTITUTION_FILTERS = SITE / "institution_filters.csv"
 CITATIONS = SITE / "citation_suggestions.bib"
+CITE = SITE.parent / "CITATION.bib"
+README = SITE.parent / "README.md"
+# Where index.html and the README take an entry of CITATION.bib.
+BIBTEX_MARK = re.compile(r"<!-- bibtex (\S+) -->")
 # Where index.html takes the author list.
 AUTHORS_MARK = "<!-- authors -->"
 
@@ -262,6 +272,60 @@ def latex(text: str) -> str:
     if "\\" in text:
         raise SystemExit(f"{CITATIONS.name}: add the LaTeX in {text!r} to build.latex()")
     return text
+
+
+def cite_entries() -> dict[str, str]:
+    """The entries of CITATION.bib by key."""
+    entries = re.split(r"^(?=@)", CITE.read_text(encoding="utf-8"), flags=re.M)[1:]
+    return {re.match(r"@\w+\{([^,]+),", e)[1]: e.strip() for e in entries}
+
+
+def cite_html(page: str) -> str:
+    """The page with each ``<!-- bibtex <key> -->`` replaced by that entry, to copy."""
+    entries = cite_entries()
+
+    def block(m: re.Match) -> str:
+        if m[1] not in entries:
+            raise SystemExit(f"index.html asks for {m[1]!r}, which is not in {CITE.name}")
+        return (
+            '<div class="code-block"><button type="button" class="copy-btn">Copy</button>'
+            f"<pre><code>{highlight_bibtex(entries[m[1]])}</code></pre></div>"
+        )
+
+    return BIBTEX_MARK.sub(block, page)
+
+
+# The entry type, the field names and the values, coloured as site.js colours its snippets.
+BIBTEX_TOKENS = re.compile(
+    r"(?P<keyword>^@\w+)|(?P<flag>\b\w+(?= = ))|(?P<string>(?<= = )\{.*?\}(?=,?\n))",
+    re.M | re.S,
+)
+
+
+def highlight_bibtex(entry: str) -> str:
+    """A BibTeX entry as HTML, with the site's ``tok-`` classes on its tokens."""
+    parts, end = [], 0
+    for m in BIBTEX_TOKENS.finditer(entry + "\n"):
+        token = html.escape(m[0])
+        parts += [
+            html.escape(entry[end : m.start()]),
+            f'<span class="tok-{m.lastgroup}">{token}</span>',
+        ]
+        end = m.end()
+    return "".join(parts) + html.escape(entry[end:])
+
+
+def readme_with_citations() -> str:
+    """README.md with each ``<!-- bibtex <key> -->`` block set to that entry."""
+    entries = cite_entries()
+    text = README.read_text(encoding="utf-8")
+
+    def block(m: re.Match) -> str:
+        if m[2] not in entries:
+            raise SystemExit(f"{README.name} asks for {m[2]!r}, which is not in {CITE.name}")
+        return f"{m[1]}```bibtex\n{entries[m[2]]}\n```\n<!-- /bibtex -->"
+
+    return re.sub(r"(<!-- bibtex (\S+) -->\n).*?<!-- /bibtex -->", block, text, flags=re.S)
 
 
 def validate(catalog: dict) -> list[str]:
@@ -520,6 +584,11 @@ def build(out: Path) -> dict:
         raise SystemExit(f"index.html has no {AUTHORS_MARK} for the author list")
     institutions = {i for r in records for i in r["institutions"]}
     page = page.replace(AUTHORS_MARK, authors_html(institutions))
+    page = cite_html(page)
+    if readme_with_citations() != README.read_text(encoding="utf-8"):
+        raise SystemExit(
+            f"{README.name} cites differently from {CITE.name}; run site/build.py --readme"
+        )
     (out / "index.html").write_text(page, encoding="utf-8")
     shutil.copytree(SITE / "assets", out / "assets")
     shutil.copytree(HUB / "images", out / "images")
@@ -584,6 +653,9 @@ def main() -> None:
     parser.add_argument("--out", type=Path, default=SITE / "_site", help="output directory")
     parser.add_argument("--check", action="store_true", help="validate catalog.yaml and exit")
     parser.add_argument("--serve", action="store_true", help="serve the build afterwards")
+    parser.add_argument(
+        "--readme", action="store_true", help="copy CITATION.bib into README.md and exit"
+    )
     parser.add_argument("--port", type=int, default=8000)
     args = parser.parse_args()
 
@@ -591,6 +663,11 @@ def main() -> None:
         problems = validate(load(CATALOG))
         print("\n".join(problems) or "catalog.yaml is valid")
         raise SystemExit(1 if problems else 0)
+
+    if args.readme:
+        README.write_text(readme_with_citations(), encoding="utf-8")
+        print(f"Copied {CITE.name} into {README.name}")
+        return
 
     index = build(args.out.resolve())
     print(f"Built {index['dataset_count']} datasets into {args.out}")
