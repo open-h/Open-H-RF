@@ -7,7 +7,7 @@ task_categories:
 tags:
   - ultrasound
   - iq
-  - openh-rf
+  - open-h-rf
   - ulm
   - super-resolution
   - microbubbles
@@ -22,10 +22,15 @@ size_categories:
 
 # ULMShare — in vivo mouse transcranial ULM
 
-<img width="100%" align="center" src="assets/hero.gif"
-  alt="Ultrasound localization microscopy of the mouse brain."/>
-
-*Ultrasound localization microscopy (ULM) super-resolution reconstruction of a mouse brain from the ULMShare dataset.*
+<p align="center">
+  <img width="500"
+    src="https://huggingface.co/datasets/nvidia/Open-H-RF/resolve/main/ulmshare/assets/hero.gif"
+    alt="Ultrasound localization microscopy of the mouse brain." />
+  <em style="color: #888;">
+    ULM super-resolution reconstruction of a mouse brain.
+    Mouse 10, acquisition 1, from the ULMShare dataset.
+  </em>
+</p>
 
 ## Dataset Description
 
@@ -54,10 +59,6 @@ This is **in vivo animal data**, not phantom or simulated. It is a conversion of
 - Abbas F. Sadikot
 - Jean Provost
 
-**zea conversion and reconstruction (this submission):**
-
-- Oisín Nolan <o.i.nolan@tue.nl> (Eindhoven University of Technology)
-
 ## Dataset Creation Date
 
 08/21/2026 (zea conversion). The underlying acquisitions were recorded between March 2022 and March 2025.
@@ -78,7 +79,7 @@ Ultrasound localization microscopy: microbubble detection and localization, fram
 
 ## Processing the Dataset
 
-The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/OpenH-RF/blob/main/datasets/ulmshare/reconstruct.py) as provided in the [OpenH-RF GitHub repository](https://github.com/open-h/OpenH-RF), together with the `pipeline_bmode.yaml` and `pipeline_tissue_suppression.yaml` definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub and writes a B-mode, a power-Doppler image and movie, and a ULM density map (the ULM steps live in [`ulm.py`](https://github.com/open-h/OpenH-RF/blob/main/datasets/ulmshare/ulm.py): per 400-frame buffer, buffers with tissue motion are skipped, microbubbles are localized against a per-depth noise floor, linked into tracks with a Hungarian tracker, and the tracks are drawn into a super-resolved density map).
+The acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/ulmshare/reconstruct.py) as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline_bmode.yaml` and `pipeline_tissue_suppression.yaml` definitions in this folder and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub and writes a B-mode, a power-Doppler image and movie, and a ULM density map (the ULM steps live in [`ulm.py`](https://github.com/open-h/Open-H-RF/blob/main/datasets/ulmshare/ulm.py): per 400-frame buffer, buffers with tissue motion are skipped, microbubbles are localized against a per-depth noise floor, linked into tracks with a Hungarian tracker, and the tracks are drawn into a super-resolved density map).
 
 ## Dataset Format
 
@@ -136,7 +137,7 @@ Acquisition context with no zea spec field, stored as strings exactly as recorde
 
 ## Dataset Quantification
 
-**Current OpenH-RF release:** 103 HDF5 files; 20.74 TB (20,735,658,275,478 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 103 HDF5 files; 20.74 TB (20,735,658,275,478 bytes) stored; root `zea_version` **0.1.4**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 - **Acquisitions:** 99, from 61 mice — one zea HDF5 file per acquisition.
 - **Stored HDF5 size:** 20.74 TB (20,735,658,275,478 bytes).
@@ -164,6 +165,7 @@ Aggregate only; the subjects are mice, so no PHI applies. Subject attributes are
 - The metadata of mice 55 56 and 57 should not mark them as air puff. Only mice 58, and 59 acq 1 and 3 have should be marked air puff.
 - The metadata should include a `brain` anatomy label.
 - `zea` version for the files is not up-to-date.
+- Some of the acquisitions are missing a subset of the channels for the first 400 transmits or so. This is also present in the original ULMShare dataset and does not significantly affect results.
 
 ## Ethical Considerations
 
