@@ -6,12 +6,10 @@ Dataset link: https://huggingface.co/datasets/nvidia/Open-H-RF/tree/main/oslo
 B-mode reconstruction for every acquisition in the USTB channel-capture collection.
 
 A single, geometry-agnostic script covers every acquisition in every
-sub-dataset folder, including sub-dataset D, which is stored in
-``../jhu-pulselab/D_alpinion_phantom`` because Johns Hopkins University owns it. How
-each one is reconstructed lives entirely in ``parameters.yaml``: the
-``pipeline`` field picks the ``zea.Pipeline`` YAML and the rest gives the
-display window and dynamic range, with no per-file logic here. ``pipeline``
-values:
+sub-dataset folder. How each one is reconstructed lives entirely in
+``parameters.yaml``: the ``pipeline`` field picks the ``zea.Pipeline`` YAML and
+the rest gives the display window and dynamic range, with no per-file logic
+here. ``pipeline`` values:
 
   * ``scanline`` -- focused linear (FI) scans (line-by-line beamforming).
   * ``sector``   -- phased-array / steered focused sector scans (polar + scan convert).
@@ -48,11 +46,6 @@ import numpy as np
 import zea
 
 HERE = Path(__file__).parent
-# Sub-dataset folders: the ones in this folder, plus D, which lives under jhu-pulselab/.
-SUBDATASETS = [
-    *sorted(p for p in HERE.iterdir() if p.is_dir()),
-    HERE.parent / "jhu-pulselab" / "D_alpinion_phantom",
-]
 PARAMETERS = zea.Config.from_path(str(HERE / "parameters.yaml"))
 PIPELINE_YAML = {
     "scanline": "pipeline_scanline.yaml",
@@ -139,10 +132,7 @@ def reconstruct(
 
 def main():
     zea.init_device()
-    if PATHS:
-        paths = [str(PATHS)]
-    else:
-        paths = [str(p) for folder in SUBDATASETS for p in sorted(folder.glob("*.hdf5"))]
+    paths = [str(PATHS)] if PATHS else [str(p) for p in sorted(HERE.glob("*/*.hdf5"))]
     for path in paths:
         reconstruct(path)
         # Optional second reconstruction with REFoCUS transmit-encoding recovery

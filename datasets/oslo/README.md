@@ -26,7 +26,7 @@ size_categories:
 
 Contributed by the **University of Oslo (UiO), Department of Informatics** (the USTB team) to the [Open-H-RF](https://github.com/open-h/Open-H-RF) initiative. All data is pre-beamformed (raw channel-capture) ultrasound stored in the **zea** HDF5 format and released under **CC BY 4.0**.
 
-35 acquisitions packaged into five application sub-datasets. Each sub-dataset folder contains its zea `.hdf5` files, a Hugging Face–style `README.md` data card, and one reference B-mode PNG per acquisition. The **`reconstruct.py`, `pipeline.yaml`, and the CC BY 4.0 `LICENCE` live once at the submission root** — the reconstruction reconstructs every sub-dataset (the pipeline is identical across folders), and the single LICENCE covers the whole collection (each data card also declares `license: cc-by-4.0` in its YAML frontmatter). See [`jhu-pulselab/D_alpinion_phantom`](../jhu-pulselab/D_alpinion_phantom/README.md) to access additional data from this USTB Channel Capture Collection.
+35 acquisitions packaged into five application sub-datasets. Each sub-dataset folder contains its zea `.hdf5` files, a Hugging Face–style `README.md` data card, and one reference B-mode PNG per acquisition. The **`reconstruct.py`, `pipeline.yaml`, and the CC BY 4.0 `LICENCE` live once at the submission root** — the reconstruction reconstructs every sub-dataset (the pipeline is identical across folders), and the single LICENCE covers the whole collection (each data card also declares `license: cc-by-4.0` in its YAML frontmatter). See [`jhu-pulselab/alpinion_phantom`](../jhu-pulselab/alpinion_phantom/README.md) to access additional data from this USTB Channel Capture Collection.
 
 | Folder | Sub-dataset | Tier | RFP task | Acq. |
 |---|---|---|---|---|
@@ -95,4 +95,4 @@ Please cite the UltraSound ToolBox (USTB) proceedings paper:
 
 A. Rodriguez-Molares, O. M. H. Rindal, O. Bernard, A. Nair, M. A. Lediju Bell, H. Liebgott, A. Austeng and L. Løvstakken, "The UltraSound ToolBox," in *2017 IEEE International Ultrasonics Symposium (IUS)*, 2017, pp. 1–4. doi:[10.1109/ULTSYM.2017.8092389](https://doi.org/10.1109/ULTSYM.2017.8092389)
 
-`PICMUS_numerical_calib_v2` (group E) was created **in collaboration with our group** as part of the PICMUS effort and is included on that basis. The seemingly missing sub-dataset D can be found under [`jhu-pulselab/D_alpinion_phantom`](../jhu-pulselab/D_alpinion_phantom/README.md).
+`PICMUS_numerical_calib_v2` (group E) was created **in collaboration with our group** as part of the PICMUS effort and is included on that basis. The seemingly missing group D, the Alpinion phantom data, is now [`jhu-pulselab/alpinion_phantom`](../jhu-pulselab/alpinion_phantom/README.md).

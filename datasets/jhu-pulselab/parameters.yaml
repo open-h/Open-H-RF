@@ -1,0 +1,32 @@
+# Per-acquisition reconstruction parameters, used by reconstruct.py. For each acquisition:
+#   pipeline      -- which reconstruction to use:
+#                    scanline (focused linear FI, per-beam, pipeline_scanline.yaml),
+#                    compound (plane-wave CPWC, pipeline.yaml).
+#   zlims/xlims   -- display window in mm (framing only).
+#   dynamic_range -- display dynamic range in dB (default [-60, 0]).
+#   refocus       -- if true, also emit a REFoCUS variant (<name>_zea_refocus_bmode.png,
+#                    pipeline_refocus.yaml). REFoCUS (Bottenus 2018) inverts the
+#                    transmit-encoding matrix to recover the multistatic dataset before DAS.
+
+# alpinion_phantom
+JHU_Alpinion_L3-8_CPWC_hyperechoic_scatterers:
+  pipeline: compound
+  refocus: true
+  zlims: [3, 55]
+  xlims: [-19, 19]
+JHU_Alpinion_L3-8_CPWC_hypoechoic:
+  pipeline: compound
+  refocus: true
+  zlims: [5, 50]
+  xlims: [-19, 19]
+JHU_Alpinion_L3-8_FI_hyperechoic_scatterers:
+  pipeline: scanline
+  refocus: true
+  zlims: [3, 55]
+  xlims: [-19, 19]
+JHU_Alpinion_L3-8_FI_hypoechoic:
+  pipeline: scanline
+  refocus: true
+  zlims: [0, 60]
+  xlims: [-19, 19]
+  dynamic_range: [-50, 0]

@@ -13,7 +13,7 @@ DATASETS = {
     "colorado-boulder": {"hf": f"{HF_ROOT}/colorado-boulder"},
     "concordia": {"hf": f"{HF_ROOT}/concordia"},
     "dartmouth-uct": {"hf": f"{HF_ROOT}/dartmouth-uct"},
-    "jhu-pulselab-alpinion-phantom": {"hf": f"{HF_ROOT}/jhu-pulselab/D_alpinion_phantom"},
+    "jhu-pulselab-alpinion-phantom": {"hf": f"{HF_ROOT}/jhu-pulselab/alpinion_phantom"},
     "kaist-snubh-barreleye": {"hf": f"{HF_ROOT}/kaist-snubh-barreleye"},
     "mosaic-nuevosono": {"hf": f"{HF_ROOT}/mosaic-nuevosono"},
     "nv-raw2insights-us": {"hf": f"{HF_ROOT}/nv-raw2insights-us"},

@@ -1,0 +1,26 @@
+# Scanline (line-by-line) B-mode for focused linear (FI) scans: each focused
+# transmit forms one image line (no cross-transmit compounding).
+
+parameters:
+  f_number: 1.75
+  dynamic_range: [-60, 0]
+  enable_scanline: true
+  grid_type: cartesian
+  selected_transmits: all
+  grid_size_z: 700
+
+pipeline:
+  operations:
+    - name: keras.ops.cast
+      params:
+        dtype: float32
+    - name: apply_window
+    - name: demodulate
+    - name: beamform
+      params:
+        beamformer: delay_and_sum
+        enable_aligned_apodization: true
+        enable_pfield: false
+    - name: envelope_detect
+    - name: normalize
+    - name: log_compress

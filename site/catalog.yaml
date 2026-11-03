@@ -101,7 +101,7 @@ datasets:
   # both kinds, must be in institution_filters.csv, as an author's affiliation or in a row
   # without one; build.py fails otherwise.
   # JHU owns the data; the card also names the University of Oslo, which converted it.
-  jhu-pulselab/D_alpinion_phantom: {institution: Johns Hopkins University}
+  jhu-pulselab/alpinion_phantom: {institution: Johns Hopkins University}
   kaist-snubh-barreleye: {institution: KAIST & Barreleye Inc. & Seoul National University Bundang Hospital}
   mosaic-nuevosono: {institution: Mosaic Intelligence Labs, collaborating_institutions: [NuevoSono]}
   politorino: {institution: Politecnico di Torino, collaborating_institutions: [Ruhr University Bochum]}

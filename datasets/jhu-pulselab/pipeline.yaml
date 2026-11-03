@@ -1,0 +1,28 @@
+# B-mode pipeline for the plane-wave compounding (CPWC) acquisitions. Plane
+# waves insonify the whole field of view, so pressure-field weighting is
+# disabled (equal coherent compounding).
+#
+# apply_window tapers/zeros the start of each RF line to suppress the transmit
+# near-field ringdown and receive sidelobes.
+
+parameters:
+  f_number: 1.75
+  grid_size_x: 400
+  grid_size_z: 600
+  dynamic_range: [-60, 0]
+  selected_transmits: all
+
+pipeline:
+  operations:
+    - name: keras.ops.cast
+      params:
+        dtype: float32
+    - name: apply_window
+    - name: demodulate
+    - name: beamform
+      params:
+        beamformer: delay_and_sum
+        enable_pfield: false
+    - name: envelope_detect
+    - name: normalize
+    - name: log_compress

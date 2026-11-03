@@ -1,5 +1,5 @@
 ---
-name: jhu-pulselab-d-alpinion-phantom
+name: jhu-pulselab-alpinion-phantom
 pretty_name: "USTB - Phantom (Alpinion L3-8, PULSE Lab, Johns Hopkins University)"
 license: cc-by-4.0
 task_categories:
@@ -21,7 +21,7 @@ size_categories:
 
 ![B-modes of all four acquisitions: plane-wave and focused imaging of a hypoechoic cyst and of hyperechoic scatterers](assets/hero.png)
 
-*First frames of all four acquisitions, reconstructed from the raw channel data with `reconstruct.py`. Top: [`JHU_Alpinion_L3-8_CPWC_hypoechoic`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/D_alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hypoechoic.hdf5), [`JHU_Alpinion_L3-8_FI_hypoechoic`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/D_alpinion_phantom/JHU_Alpinion_L3-8_FI_hypoechoic.hdf5). Bottom: [`JHU_Alpinion_L3-8_CPWC_hyperechoic_scatterers`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/D_alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hyperechoic_scatterers.hdf5), [`JHU_Alpinion_L3-8_FI_hyperechoic_scatterers`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/D_alpinion_phantom/JHU_Alpinion_L3-8_FI_hyperechoic_scatterers.hdf5). Panels are scaled to a common height per row, not to a common physical scale.*
+*First frames of all four acquisitions, reconstructed from the raw channel data with `reconstruct.py`. Top: [`JHU_Alpinion_L3-8_CPWC_hypoechoic`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hypoechoic.hdf5), [`JHU_Alpinion_L3-8_FI_hypoechoic`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/alpinion_phantom/JHU_Alpinion_L3-8_FI_hypoechoic.hdf5). Bottom: [`JHU_Alpinion_L3-8_CPWC_hyperechoic_scatterers`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hyperechoic_scatterers.hdf5), [`JHU_Alpinion_L3-8_FI_hyperechoic_scatterers`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/jhu-pulselab/alpinion_phantom/JHU_Alpinion_L3-8_FI_hyperechoic_scatterers.hdf5). Panels are scaled to a common height per row, not to a common physical scale.*
 
 ## Dataset Description
 
@@ -65,11 +65,11 @@ The example acquisition can be processed with the `pipeline.yaml` definition in 
 
 ```bash
 zea process \
-  --dataset hf://nvidia/Open-H-RF/jhu-pulselab/D_alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hypoechoic.hdf5 \
-  --config hf://nvidia/Open-H-RF/jhu-pulselab/D_alpinion_phantom/pipeline.yaml
+  --dataset hf://nvidia/Open-H-RF/jhu-pulselab/alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hypoechoic.hdf5 \
+  --config hf://nvidia/Open-H-RF/jhu-pulselab/alpinion_phantom/pipeline.yaml
 ```
 
-This `pipeline.yaml` holds the pipeline and display window of that acquisition. To process all four acquisitions, use the USTB collection's `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/oslo/reconstruct.py) from the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF) with the [zea library](https://github.com/tue-bmd/zea); it streams the data from the Hugging Face Hub. To avoid keeping two copies, the script and its `pipeline*.yaml` and `parameters.yaml` files live only in the USTB collection folder, [`oslo/`](../../oslo/README.md).
+This `pipeline.yaml` holds the pipeline and display window of that acquisition. Alternatively, all acquisitions can be processed with the `reconstruct.py` [script](https://github.com/open-h/Open-H-RF/blob/main/datasets/jhu-pulselab/reconstruct.py) at the root of this collection (`jhu-pulselab/`), as provided in the [Open-H-RF GitHub repository](https://github.com/open-h/Open-H-RF), together with the `pipeline*.yaml` and `parameters.yaml` definitions there and the [zea library](https://github.com/tue-bmd/zea). The script streams the data from the Hugging Face Hub (see the [PULSE Lab collection card](../README.md#processing-the-dataset)).
 
 ## Dataset Format
 
