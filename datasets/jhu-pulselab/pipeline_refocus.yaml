@@ -1,0 +1,42 @@
+# B-mode pipeline with REFoCUS transmit-encoding recovery, for non-focused
+# linear-array acquisitions that have many transmit events (CPWC and focused FI).
+#
+# REFoCUS (Bottenus 2018) inverts the transmit-encoding matrix in the frequency
+# domain to recover the multistatic (per-element / full-matrix-capture) dataset
+# from the encoded transmit sequence; that synthetic aperture is then beamformed
+# with pressure-field-weighted Delay-And-Sum. Compared with directly compounding
+# the encoded transmits (pipeline.yaml) this can sharpen lateral resolution and
+# contrast. The inversion needs enough transmit events to be well posed (>= 8),
+# so this pipeline is only applied to the many-angle acquisitions flagged with
+# `refocus: true` in parameters.yaml (the standard compound reconstruction is
+# still produced for those files as well).
+#
+# jit_compile is disabled on refocus to avoid a cuBLASLt autotuning failure on
+# the complex matmul under XLA on some GPUs.
+
+parameters:
+  f_number: 1.75
+  grid_size_x: 400
+  grid_size_z: 600
+  dynamic_range: [-60, 0]
+  selected_transmits: all
+
+pipeline:
+  operations:
+    - name: keras.ops.cast
+      params:
+        dtype: float32
+    - name: apply_window
+    - name: refocus
+      params:
+        method: adjoint
+        param: null
+        jit_compile: false
+    - name: demodulate
+    - name: beamform
+      params:
+        beamformer: delay_and_sum
+        enable_pfield: true
+    - name: envelope_detect
+    - name: normalize
+    - name: log_compress

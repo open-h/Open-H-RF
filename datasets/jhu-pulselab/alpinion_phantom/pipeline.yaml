@@ -1,4 +1,4 @@
-# zea pipeline for D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5, the example acquisition of this sub-dataset.
+# zea pipeline for alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hypoechoic.hdf5, the example acquisition of this sub-dataset.
 # The shared ../pipeline.yaml plus the per-acquisition settings that
 # ../reconstruct.py takes from ../parameters.yaml (display window in metres,
 # dynamic range), so `zea process` renders it standalone.

@@ -18,26 +18,25 @@ size_categories:
 
 # UltraSound ToolBox (USTB) Channel Capture Collection
 
-![B-modes from five of the six sub-datasets: in-vivo cardiac, in-vivo carotid, Verasonics and Alpinion phantoms, and simulation](assets/hero.png)
+![B-modes from four of the five sub-datasets: in-vivo cardiac, in-vivo carotid, Verasonics phantoms, and simulation](assets/hero.png)
 
-*First frames reconstructed from the raw channel data with `reconstruct.py`. Top: [`A_cardiac/Verasonics_P2-4_parasternal_long_subject_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5), [`A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1.hdf5), [`C_verasonics_phantom/FI_P4_cysts_center`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/C_verasonics_phantom/FI_P4_cysts_center.hdf5). Bottom: [`B_carotid/L7_FI_carotid_cross_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/B_carotid/L7_FI_carotid_cross_1.hdf5), [`C_verasonics_phantom/L7_FI_Verasonics_CIRS`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/C_verasonics_phantom/L7_FI_Verasonics_CIRS.hdf5), [`D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/D_alpinion_phantom/Alpinion_L3-8_CPWC_hypoechoic.hdf5), [`E_simulation/PICMUS_numerical_calib_v2`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/E_simulation/PICMUS_numerical_calib_v2.hdf5). Panels are scaled to a common height per row, not to a common physical scale.*
+*First frames reconstructed from the raw channel data with `reconstruct.py`. Top: [`A_cardiac/Verasonics_P2-4_parasternal_long_subject_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_parasternal_long_subject_1.hdf5), [`A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/A_cardiac/Verasonics_P2-4_apical_four_chamber_subject_1.hdf5), [`C_verasonics_phantom/FI_P4_cysts_center`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/C_verasonics_phantom/FI_P4_cysts_center.hdf5). Bottom: [`B_carotid/L7_FI_carotid_cross_1`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/B_carotid/L7_FI_carotid_cross_1.hdf5), [`C_verasonics_phantom/L7_FI_Verasonics_CIRS`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/C_verasonics_phantom/L7_FI_Verasonics_CIRS.hdf5), [`E_simulation/PICMUS_numerical_calib_v2`](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/main/oslo/E_simulation/PICMUS_numerical_calib_v2.hdf5). Panels are scaled to a common height per row, not to a common physical scale.*
 
 ## Dataset Description
 
 Contributed by the **University of Oslo (UiO), Department of Informatics** (the USTB team) to the [Open-H-RF](https://github.com/open-h/Open-H-RF) initiative. All data is pre-beamformed (raw channel-capture) ultrasound stored in the **zea** HDF5 format and released under **CC BY 4.0**.
 
-39 acquisitions packaged into six application sub-datasets. Each sub-dataset folder contains its zea `.hdf5` files, a Hugging Face–style `README.md` data card, and one reference B-mode PNG per acquisition. The **`reconstruct.py`, `pipeline.yaml`, and the CC BY 4.0 `LICENCE` live once at the submission root** — the reconstruction reconstructs every sub-dataset (the pipeline is identical across folders), and the single LICENCE covers the whole collection (each data card also declares `license: cc-by-4.0` in its YAML frontmatter).
+35 acquisitions packaged into five application sub-datasets. Each sub-dataset folder contains its zea `.hdf5` files, a Hugging Face–style `README.md` data card, and one reference B-mode PNG per acquisition. The **`reconstruct.py`, `pipeline.yaml`, and the CC BY 4.0 `LICENCE` live once at the submission root** — the reconstruction reconstructs every sub-dataset (the pipeline is identical across folders), and the single LICENCE covers the whole collection (each data card also declares `license: cc-by-4.0` in its YAML frontmatter). See [`jhu-pulselab/alpinion_phantom`](../jhu-pulselab/alpinion_phantom/README.md) to access additional data from this USTB Channel Capture Collection.
 
 | Folder | Sub-dataset | Tier | RFP task | Acq. |
 |---|---|---|---|---|
 | `A_cardiac/` | In-vivo cardiac (Verasonics P4-2) | in-vivo human (research) | 6.1 Generalized Reconstruction | 2 |
 | `B_carotid/` | In-vivo carotid (Verasonics L7-4) | in-vivo human (research) | 6.1 Generalized Reconstruction | 3 |
 | `C_verasonics_phantom/` | Phantom (Verasonics L7-4 / P4) | phantom | 6.1 Generalized Reconstruction | 15 |
-| `D_alpinion_phantom/` | Phantom (Alpinion L3-8) | phantom | 6.1 Generalized Reconstruction | 4 |
 | `E_simulation/` | Simulation (Field II) | simulation | 6.1 Generalized Reconstruction | 11 |
 | `F_motion/` | Motion estimation (SWE / ARFI, L7-4) | phantom | 6.4 Motion Estimation | 4 |
 
-Total: **39 acquisitions**, 8.61 GB of stored HDF5 data.
+Total: **35 acquisitions**, 8.15 GB of stored HDF5 data.
 
 ## Dataset Contributor(s)
 
@@ -65,7 +64,7 @@ Every acquisition is reconstructable from the file alone — all acquisition par
 
 ## Dataset Quantification
 
-**Current Open-H-RF release:** 39 HDF5 files; 8.61 GB (8,613,593,088 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
+**Current Open-H-RF release:** 35 HDF5 files; 8.15 GB (8,147,173,376 bytes) stored; root `zea_version` **0.1.6**. Sizes include all HDF5 contents and use decimal units (MB = 10^6 bytes, GB = 10^9 bytes, TB = 10^12 bytes), not decoded-array memory or original-source download sizes.
 
 ## Reconstruction Details
 
@@ -92,4 +91,8 @@ Each acquisition ships with:
 
 ## Citation
 
-Please cite the UltraSound ToolBox (USTB) Channel Capture Collection, University of Oslo (Zenodo record 20261898). `PICMUS_numerical_calib_v2` (group E) was created **in collaboration with our group** as part of the PICMUS effort and is included on that basis; the other PICMUS datasets are excluded.
+Please cite the UltraSound ToolBox (USTB) proceedings paper:
+
+A. Rodriguez-Molares, O. M. H. Rindal, O. Bernard, A. Nair, M. A. Lediju Bell, H. Liebgott, A. Austeng and L. Løvstakken, "The UltraSound ToolBox," in *2017 IEEE International Ultrasonics Symposium (IUS)*, 2017, pp. 1–4. doi:[10.1109/ULTSYM.2017.8092389](https://doi.org/10.1109/ULTSYM.2017.8092389)
+
+`PICMUS_numerical_calib_v2` (group E) was created **in collaboration with our group** as part of the PICMUS effort and is included on that basis. The seemingly missing group D, the Alpinion phantom data, is now [`jhu-pulselab/alpinion_phantom`](../jhu-pulselab/alpinion_phantom/README.md).
