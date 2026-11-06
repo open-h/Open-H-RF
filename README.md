@@ -254,4 +254,4 @@ If you use a specific sub-dataset, please also check whether it has its own cita
 
 ## License
 
-Code in this repository is licensed under the [Apache License 2.0](LICENSE). The Open-H-RF v1.0 dataset is licensed under [CC BY 4.0](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/v1.0/LICENSE).
+Code in this repository is licensed under the [Apache License 2.0](LICENSE). The Open-H-RF v1.1 dataset is licensed under [CC BY 4.0](https://huggingface.co/datasets/nvidia/Open-H-RF/blob/v1.1/LICENSE).
