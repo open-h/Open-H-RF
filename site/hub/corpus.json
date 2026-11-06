@@ -1,7 +1,7 @@
 {
  "source": {
-  "revision": "88730aa47007553da09ffea61b499002e8b552b1",
-  "date": "2026-10-04",
+  "revision": "4d1c88e8898a68f2d91e09c4b0259fc9638a72fc",
+  "date": "2026-11-05",
   "files_in_repo": 19336,
   "files_scanned": 19336
  },
@@ -552,8 +552,9 @@
    "Clinical ultrasound scanner (FDA-cleared)": 70,
    "Verasonics Vantage research ultrasound scanner with a 64-element Verasonics P4-2 phased-array transducer": 62,
    "GE Vivid S70": 40,
-   "Verasonics Vantage 256 / Alpinion E-Cube 12R / Field II simulation": 27,
-   "us4R": 18
+   "Verasonics Vantage 256 / Alpinion E-Cube 12R / Field II simulation": 23,
+   "us4R": 18,
+   "Alpinion E-Cube 12R": 4
   },
   "zea_version": {
    "0.1.6": 8735,
@@ -1109,7 +1110,7 @@
     "n_el": 128,
     "acquisitions": 4,
     "datasets": {
-     "oslo/D_alpinion_phantom": 4
+     "jhu-pulselab/alpinion_phantom": 4
     }
    },
    {
@@ -4158,6 +4159,653 @@
    "probe_models": {
     "ring_2D_256": 2149,
     "ring_3D_PURE_256": 476
+   }
+  },
+  "jhu-pulselab/alpinion_phantom": {
+   "files": 4,
+   "acquisitions": 4,
+   "tracks": 4,
+   "bytes": 466419712,
+   "raw_bytes": 1004273664,
+   "frames": 4,
+   "transmits": 554,
+   "samples": 251068416,
+   "subjects": 0,
+   "subjects_in_vivo": 0,
+   "medium": {
+    "phantom": 4
+   },
+   "medium_bytes": {
+    "phantom": 466419712
+   },
+   "species": {},
+   "scheme": {
+    "plane_wave": 2,
+    "focused": 2
+   },
+   "transmit_kinds": {
+    "plane_wave": 2,
+    "focused": 2
+   },
+   "probe_class": {
+    "linear": 4
+   },
+   "signal": {
+    "rf": 4,
+    "iq": 0
+   },
+   "signal_bytes": {
+    "rf": 466419712,
+    "iq": 0
+   },
+   "dtype": {
+    "float32": 4
+   },
+   "probes": {
+    "L3-8": 4
+   },
+   "scanners": {
+    "Alpinion E-Cube 12R": 4
+   },
+   "zea_version": {
+    "0.1.6": 4
+   },
+   "coverage": {
+    "description": 4,
+    "us_machine": 4,
+    "credit": 4,
+    "subject_id": 0,
+    "subject_type": 4,
+    "anatomy": 0,
+    "view": 4,
+    "label": 0,
+    "probe_name": 4,
+    "probe_type": 4,
+    "probe_fc": 4,
+    "text_report": 0,
+    "ecg": 0,
+    "probe_pose": 0,
+    "metrics": 0,
+    "track_schedule": 0
+   },
+   "range": {
+    "frames": {
+     "min": 1,
+     "median": 1,
+     "max": 1
+    },
+    "n_tx": {
+     "min": 21,
+     "median": 138.5,
+     "max": 256
+    },
+    "n_ax": {
+     "min": 3474,
+     "median": 3913,
+     "max": 4352
+    },
+    "n_el": {
+     "min": 128,
+     "median": 128,
+     "max": 128
+    },
+    "fc_mhz": {
+     "min": 6,
+     "median": 6,
+     "max": 6
+    },
+    "fs_mhz": {
+     "min": 40,
+     "median": 40,
+     "max": 40
+    },
+    "fs_over_fc": {
+     "min": 6.667,
+     "median": 6.667,
+     "max": 6.667
+    },
+    "prf": null,
+    "frame_rate": null,
+    "depth_cm": {
+     "min": 6.687,
+     "median": 7.533,
+     "max": 8.378
+    },
+    "compression": {
+     "min": 1.154,
+     "median": 1.778,
+     "max": 2.401
+    },
+    "file_bytes": {
+     "min": 40894464,
+     "median": 116588544,
+     "max": 192348160
+    }
+   },
+   "hist": {
+    "frames": [
+     4,
+     0,
+     0,
+     0
+    ],
+    "n_tx": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0,
+     2,
+     0,
+     0,
+     0
+    ],
+    "n_ax": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     2,
+     0,
+     0,
+     0,
+     0
+    ],
+    "n_el": [
+     0,
+     0,
+     0,
+     4,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fc_mhz": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fs_mhz": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "fs_over_fc": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "prf": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "frame_rate": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "depth_cm": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "compression": [
+     2,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "file_bytes": [
+     0,
+     2,
+     0,
+     2,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "layout": {
+    "tracks": [
+     1
+    ],
+    "attrs": {
+     "description": [
+      "JHU dataset JHU_Alpinion_L3-8_CPWC_hyperechoic_scatterers: CPWC hyperechoic scatterers (phantom).",
+      "JHU dataset JHU_Alpinion_L3-8_CPWC_hypoechoic: CPWC hypoechoic cyst (phantom).",
+      "JHU dataset JHU_Alpinion_L3-8_FI_hyperechoic_scatterers: focused hyperechoic scatterers (phantom)."
+     ],
+     "us_machine": [
+      "Alpinion E-Cube 12R"
+     ],
+     "zea_version": [
+      "0.1.6"
+     ]
+    },
+    "keys": {
+     "data/raw_data": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         1,
+         1,
+         1
+        ],
+        [
+         21,
+         138.5,
+         256
+        ],
+        [
+         3474,
+         3913,
+         4352
+        ],
+        [
+         128,
+         128,
+         128
+        ],
+        [
+         1,
+         1,
+         1
+        ]
+       ]
+      ]
+     },
+     "metadata/annotations/view": {
+      "dtype": "string",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "values": [
+       "CPWC hyperechoic scatterers",
+       "CPWC hypoechoic cyst",
+       "focused hyperechoic scatterers"
+      ],
+      "distinct": 4
+     },
+     "metadata/credit": {
+      "dtype": "string",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "values": [
+       "Acquired by M. A. Lediju Bell and O. M. H. Rindal at the PULSE Lab, Johns Hopkins University (JHU). Owned by JHU."
+      ],
+      "distinct": 1
+     },
+     "metadata/subject/type": {
+      "dtype": "string",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "values": [
+       "phantom"
+      ],
+      "distinct": 1
+     },
+     "probe/element_height": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "range": [
+       0.003,
+       0.003,
+       0.003
+      ]
+     },
+     "probe/element_width": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "range": [
+       0.00024,
+       0.00027,
+       0.0003
+      ]
+     },
+     "probe/name": {
+      "dtype": "string",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "values": [
+       "L3-8"
+      ],
+      "distinct": 1
+     },
+     "probe/probe_center_frequency": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "range": [
+       6000000,
+       6000000,
+       6000000
+      ]
+     },
+     "probe/probe_geometry": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         128,
+         128,
+         128
+        ],
+        [
+         3,
+         3,
+         3
+        ]
+       ]
+      ]
+     },
+     "probe/type": {
+      "dtype": "string",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "values": [
+       "linear"
+      ],
+      "distinct": 1
+     },
+     "scan/azimuth_angles": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         21,
+         138.5,
+         256
+        ]
+       ]
+      ]
+     },
+     "scan/center_frequency": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "range": [
+       6000000,
+       6000000,
+       6000000
+      ]
+     },
+     "scan/demodulation_frequency": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "range": [
+       6000000,
+       6000000,
+       6000000
+      ]
+     },
+     "scan/focus_distances": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         21,
+         138.5,
+         256
+        ]
+       ]
+      ]
+     },
+     "scan/initial_times": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         21,
+         138.5,
+         256
+        ]
+       ]
+      ]
+     },
+     "scan/polar_angles": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         21,
+         138.5,
+         256
+        ]
+       ]
+      ]
+     },
+     "scan/sampling_frequency": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "range": [
+       40000000,
+       40000000,
+       40000000
+      ]
+     },
+     "scan/sound_speed": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "range": [
+       1540,
+       1540,
+       1540
+      ]
+     },
+     "scan/t0_delays": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         21,
+         138.5,
+         256
+        ],
+        [
+         128,
+         128,
+         128
+        ]
+       ]
+      ]
+     },
+     "scan/transmit_origins": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         21,
+         138.5,
+         256
+        ],
+        [
+         3,
+         3,
+         3
+        ]
+       ]
+      ]
+     },
+     "scan/tx_apodizations": {
+      "dtype": "float32",
+      "in": 4,
+      "shapes": [
+       [
+        [
+         21,
+         138.5,
+         256
+        ],
+        [
+         128,
+         128,
+         128
+        ]
+       ]
+      ]
+     },
+     "transmit_only": {
+      "dtype": "bool",
+      "in": 4,
+      "shapes": [
+       []
+      ],
+      "values": [
+       false
+      ],
+      "distinct": 1
+     }
+    }
+   },
+   "folders": [
+    {
+     "path": "jhu-pulselab/alpinion_phantom",
+     "files": 4,
+     "bytes": 466419712
+    }
+   ],
+   "first_file": "jhu-pulselab/alpinion_phantom/JHU_Alpinion_L3-8_CPWC_hyperechoic_scatterers.hdf5",
+   "pipeline": true,
+   "probe_models": {
+    "L3-8": 4
    }
   },
   "kaist-snubh-barreleye": {
@@ -8458,653 +9106,6 @@
    "probe_models": {
     "L7-4": 12,
     "P4-2v": 3
-   }
-  },
-  "oslo/D_alpinion_phantom": {
-   "files": 4,
-   "acquisitions": 4,
-   "tracks": 4,
-   "bytes": 466419712,
-   "raw_bytes": 1004273664,
-   "frames": 4,
-   "transmits": 554,
-   "samples": 251068416,
-   "subjects": 0,
-   "subjects_in_vivo": 0,
-   "medium": {
-    "phantom": 4
-   },
-   "medium_bytes": {
-    "phantom": 466419712
-   },
-   "species": {},
-   "scheme": {
-    "plane_wave": 2,
-    "focused": 2
-   },
-   "transmit_kinds": {
-    "plane_wave": 2,
-    "focused": 2
-   },
-   "probe_class": {
-    "linear": 4
-   },
-   "signal": {
-    "rf": 4,
-    "iq": 0
-   },
-   "signal_bytes": {
-    "rf": 466419712,
-    "iq": 0
-   },
-   "dtype": {
-    "float32": 4
-   },
-   "probes": {
-    "L3-8": 4
-   },
-   "scanners": {
-    "Verasonics Vantage 256 / Alpinion E-Cube 12R / Field II simulation": 4
-   },
-   "zea_version": {
-    "0.1.6": 4
-   },
-   "coverage": {
-    "description": 4,
-    "us_machine": 4,
-    "credit": 4,
-    "subject_id": 0,
-    "subject_type": 4,
-    "anatomy": 0,
-    "view": 4,
-    "label": 0,
-    "probe_name": 4,
-    "probe_type": 4,
-    "probe_fc": 4,
-    "text_report": 0,
-    "ecg": 0,
-    "probe_pose": 0,
-    "metrics": 0,
-    "track_schedule": 0
-   },
-   "range": {
-    "frames": {
-     "min": 1,
-     "median": 1,
-     "max": 1
-    },
-    "n_tx": {
-     "min": 21,
-     "median": 138.5,
-     "max": 256
-    },
-    "n_ax": {
-     "min": 3474,
-     "median": 3913,
-     "max": 4352
-    },
-    "n_el": {
-     "min": 128,
-     "median": 128,
-     "max": 128
-    },
-    "fc_mhz": {
-     "min": 6,
-     "median": 6,
-     "max": 6
-    },
-    "fs_mhz": {
-     "min": 40,
-     "median": 40,
-     "max": 40
-    },
-    "fs_over_fc": {
-     "min": 6.667,
-     "median": 6.667,
-     "max": 6.667
-    },
-    "prf": null,
-    "frame_rate": null,
-    "depth_cm": {
-     "min": 6.687,
-     "median": 7.533,
-     "max": 8.378
-    },
-    "compression": {
-     "min": 1.154,
-     "median": 1.778,
-     "max": 2.401
-    },
-    "file_bytes": {
-     "min": 40894464,
-     "median": 116588544,
-     "max": 192348160
-    }
-   },
-   "hist": {
-    "frames": [
-     4,
-     0,
-     0,
-     0
-    ],
-    "n_tx": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     2,
-     0,
-     0,
-     0,
-     2,
-     0,
-     0,
-     0
-    ],
-    "n_ax": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     2,
-     2,
-     0,
-     0,
-     0,
-     0
-    ],
-    "n_el": [
-     0,
-     0,
-     0,
-     4,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "fc_mhz": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     4,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "fs_mhz": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     4,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "fs_over_fc": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     4,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "prf": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "frame_rate": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "depth_cm": [
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     2,
-     2,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "compression": [
-     2,
-     2,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0,
-     0
-    ],
-    "file_bytes": [
-     0,
-     2,
-     0,
-     2,
-     0,
-     0,
-     0,
-     0
-    ]
-   },
-   "layout": {
-    "tracks": [
-     1
-    ],
-    "attrs": {
-     "description": [
-      "USTB dataset Alpinion_L3-8_CPWC_hyperechoic_scatterers: CPWC hyperechoic scatterers (phantom).",
-      "USTB dataset Alpinion_L3-8_CPWC_hypoechoic: CPWC hypoechoic cyst (phantom).",
-      "USTB dataset Alpinion_L3-8_FI_hyperechoic_scatterers: focused hyperechoic scatterers (phantom)."
-     ],
-     "us_machine": [
-      "Verasonics Vantage 256 / Alpinion E-Cube 12R / Field II simulation"
-     ],
-     "zea_version": [
-      "0.1.6"
-     ]
-    },
-    "keys": {
-     "data/raw_data": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         1,
-         1,
-         1
-        ],
-        [
-         21,
-         138.5,
-         256
-        ],
-        [
-         3474,
-         3913,
-         4352
-        ],
-        [
-         128,
-         128,
-         128
-        ],
-        [
-         1,
-         1,
-         1
-        ]
-       ]
-      ]
-     },
-     "metadata/annotations/view": {
-      "dtype": "string",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "values": [
-       "CPWC hyperechoic scatterers",
-       "CPWC hypoechoic cyst",
-       "focused hyperechoic scatterers"
-      ],
-      "distinct": 4
-     },
-     "metadata/credit": {
-      "dtype": "string",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "values": [
-       "UltraSound ToolBox (USTB), University of Oslo. Zenodo record 20261898."
-      ],
-      "distinct": 1
-     },
-     "metadata/subject/type": {
-      "dtype": "string",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "values": [
-       "phantom"
-      ],
-      "distinct": 1
-     },
-     "probe/element_height": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "range": [
-       0.003,
-       0.003,
-       0.003
-      ]
-     },
-     "probe/element_width": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "range": [
-       0.00024,
-       0.00027,
-       0.0003
-      ]
-     },
-     "probe/name": {
-      "dtype": "string",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "values": [
-       "L3-8"
-      ],
-      "distinct": 1
-     },
-     "probe/probe_center_frequency": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "range": [
-       6000000,
-       6000000,
-       6000000
-      ]
-     },
-     "probe/probe_geometry": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         128,
-         128,
-         128
-        ],
-        [
-         3,
-         3,
-         3
-        ]
-       ]
-      ]
-     },
-     "probe/type": {
-      "dtype": "string",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "values": [
-       "linear"
-      ],
-      "distinct": 1
-     },
-     "scan/azimuth_angles": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         21,
-         138.5,
-         256
-        ]
-       ]
-      ]
-     },
-     "scan/center_frequency": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "range": [
-       6000000,
-       6000000,
-       6000000
-      ]
-     },
-     "scan/demodulation_frequency": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "range": [
-       6000000,
-       6000000,
-       6000000
-      ]
-     },
-     "scan/focus_distances": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         21,
-         138.5,
-         256
-        ]
-       ]
-      ]
-     },
-     "scan/initial_times": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         21,
-         138.5,
-         256
-        ]
-       ]
-      ]
-     },
-     "scan/polar_angles": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         21,
-         138.5,
-         256
-        ]
-       ]
-      ]
-     },
-     "scan/sampling_frequency": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "range": [
-       40000000,
-       40000000,
-       40000000
-      ]
-     },
-     "scan/sound_speed": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "range": [
-       1540,
-       1540,
-       1540
-      ]
-     },
-     "scan/t0_delays": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         21,
-         138.5,
-         256
-        ],
-        [
-         128,
-         128,
-         128
-        ]
-       ]
-      ]
-     },
-     "scan/transmit_origins": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         21,
-         138.5,
-         256
-        ],
-        [
-         3,
-         3,
-         3
-        ]
-       ]
-      ]
-     },
-     "scan/tx_apodizations": {
-      "dtype": "float32",
-      "in": 4,
-      "shapes": [
-       [
-        [
-         21,
-         138.5,
-         256
-        ],
-        [
-         128,
-         128,
-         128
-        ]
-       ]
-      ]
-     },
-     "transmit_only": {
-      "dtype": "bool",
-      "in": 4,
-      "shapes": [
-       []
-      ],
-      "values": [
-       false
-      ],
-      "distinct": 1
-     }
-    }
-   },
-   "folders": [
-    {
-     "path": "oslo/D_alpinion_phantom",
-     "files": 4,
-     "bytes": 466419712
-    }
-   ],
-   "first_file": "oslo/D_alpinion_phantom/Alpinion_L3-8_CPWC_hyperechoic_scatterers.hdf5",
-   "pipeline": true,
-   "probe_models": {
-    "L3-8": 4
    }
   },
   "oslo/E_simulation": {

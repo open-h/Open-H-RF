@@ -1,13 +1,14 @@
 {
- "revision": "88730aa47007553da09ffea61b499002e8b552b1",
- "date": "2026-10-04",
+ "revision": "4d1c88e8898a68f2d91e09c4b0259fc9638a72fc",
+ "date": "2026-11-05",
  "collections": {
+  "jhu-pulselab": "UltraSound ToolBox (USTB) Channel Capture Data, PULSE Lab, Johns Hopkins University",
   "oslo": "UltraSound ToolBox (USTB) Channel Capture Collection",
   "resolvestroke": "Resolve Stroke Transcranial CEUS, Flow and Imaging Phantom Channel Data"
  },
  "cards": {
   "colorado-boulder": {
-   "sha": "42b5aebd8d9a694dc51e2946f7a0f4f6de560e67",
+   "sha": "09ae5730f94d00eab87c8639d41306e66d051302",
    "collection": null,
    "pretty_name": "Tracked Swept Synthetic Aperture Ultrasound Datasets",
    "license": "cc-by-4.0",
@@ -48,7 +49,7 @@
    }
   },
   "concordia": {
-   "sha": "e53b6e21470b9dc62f2d3313bd534df48ca9d16b",
+   "sha": "ec7919ca8331e29cb6b104d4a3a2d8a59e3f88dc",
    "collection": null,
    "pretty_name": "SynthUS-FSA",
    "license": "cc-by-4.0",
@@ -112,7 +113,7 @@
    }
   },
   "dartmouth-uct": {
-   "sha": "14630c11bc77e366313038970c72abf37c8620d9",
+   "sha": "34052b4c731283a1675edc6a00f40181f624e8db",
    "collection": null,
    "pretty_name": "2D Ring-Array USCT Waveforms from 2D- and 3D-k-Wave Simulations",
    "license": "cc-by-4.0",
@@ -181,8 +182,65 @@
     ]
    }
   },
+  "jhu-pulselab/alpinion_phantom": {
+   "sha": "595711222e5025d7286b16fe6a83912f9a6490d8",
+   "collection": "jhu-pulselab",
+   "pretty_name": "USTB - Phantom (Alpinion L3-8, PULSE Lab, Johns Hopkins University)",
+   "license": "cc-by-4.0",
+   "tags": [
+    "ultrasound",
+    "rf",
+    "open-h-rf",
+    "phantom",
+    "alpinion",
+    "ustb"
+   ],
+   "summary": "Part of the UltraSound ToolBox (USTB) Channel Capture Collection (see the PULSE Lab collection card and the USTB collection card).",
+   "contributors": [
+    "Johns Hopkins University (JHU), data owner",
+    "Muyinatu A. Lediju Bell PULSE Lab, JHU (primary contact)",
+    "Ole Marius Hoel Rindal University of Oslo (UiO), Department of Informatics (data acquisition at the PULSE Lab; zea conversion)"
+   ],
+   "institutions": [
+    "Johns Hopkins University",
+    "Ole Marius Hoel Rindal University of Oslo"
+   ],
+   "created": "Acquired at the PULSE Lab, JHU, in 2017. Packaged in zea format on 06/23/2026.",
+   "cites": true,
+   "keys": [
+    "data/raw_data",
+    "metadata/credit",
+    "probe/probe_geometry",
+    "scan/center_frequency",
+    "scan/demodulation_frequency",
+    "scan/focus_distances",
+    "scan/initial_times",
+    "scan/polar_angles",
+    "scan/sampling_frequency",
+    "scan/sound_speed",
+    "scan/t0_delays",
+    "scan/transmit_origins",
+    "scan/tx_apodizations"
+   ],
+   "known_issues": "Mixed transmit schemes across files (CPWC / FI).",
+   "text": {
+    "description": "Part of the UltraSound ToolBox (USTB) Channel Capture Collection (see the PULSE Lab collection card and the USTB collection card).\n\nData owner: Johns Hopkins University (JHU). The data were acquired by Muyinatu A. Lediju Bell and Ole Marius Hoel Rindal at the Photoacoustic & Ultrasonic Systems Engineering (PULSE) Lab, JHU, on the PULSE Lab's Alpinion E-Cube 12R research scanner.\n\nPhantom channel-capture data of a CIRS General Purpose Ultrasound Phantom, acquired with an L3-8 linear-array probe. Hypoechoic and hyperechoic targets imaged with focused (FI) and coherent plane-wave compounding (CPWC) sequences.\n\nThese recordings have been publicly available through the UltraSound ToolBox (USTB) since 2017, with M. A. Lediju Bell and O. M. H. Rindal as authors. The University of Oslo (UiO) converted the data to the zea format and prepared it for Open-H-RF. Open-H-RF v1.0 published these four acquisitions as oslo/D_alpinion_phantom/; they now live under jhu-pulselab/, and each file credits JHU in its /metadata/credit and description fields.",
+    "intended_usage": "Generalized reconstruction and image-quality assessment on a second hardware platform (RFP task 6.1); cross-vendor robustness studies. (Open-H-RF RFP task 6.1 Generalized Reconstruction).",
+    "characterization": "- Data Collection Method: phantom\n- Labeling Method: Derived (known phantom target types).\n- Acquisition system: probe(s) L3-8; element positions stored in /probe/probe_geometry (meters); center frequency, sampling frequency and sound speed stored per acquisition in /scan (see per-sample feature table).",
+    "subject_metadata": "No human or animal subjects. Targets: hypoechoic/hyperechoic inclusions and point scatterers in a CIRS General Purpose Ultrasound Phantom. Scanner: Alpinion E-Cube 12R (PULSE Lab, JHU). Probe: L3-8 linear array (128 elements)."
+   },
+   "image": {
+    "source": "jhu-pulselab/alpinion_phantom/assets/main.png",
+    "thumb": "images/jhu-pulselab-alpinion-phantom-3bd6f60-ad6e.jpg",
+    "preview": "images/jhu-pulselab-alpinion-phantom-3bd6f60-preview.jpg",
+    "preview_size": [
+     760,
+     900
+    ]
+   }
+  },
   "kaist-snubh-barreleye": {
-   "sha": "47e75b70acfa9841d18cba793155caf0a663b6e3",
+   "sha": "63a93b4c81954f334019d1b897a57426c0729a38",
    "collection": null,
    "pretty_name": "KAIST–SNUBH In-vivo Breast Plane-Wave RF",
    "license": "cc-by-4.0",
@@ -229,7 +287,7 @@
    }
   },
   "mosaic-nuevosono": {
-   "sha": "43d67291dc61ebe8d06445f42458376ff82203a1",
+   "sha": "7b006824675a729d5f0e50540adb6cef6d2dc2a5",
    "collection": null,
    "pretty_name": "Mosaic Intelligence / NuevoSono IVUS",
    "license": "cc-by-4.0",
@@ -282,7 +340,7 @@
    }
   },
   "nv-raw2insights-us": {
-   "sha": "549d6be789ab93276404fd990dd3dd4b52b92db5",
+   "sha": "f3828fc9b5b23ce561da2c73dbfb7726db6db7f3",
    "collection": null,
    "pretty_name": "NV-Raw2Insights-US (simulated FSA, sound-speed / aberration / segmentation)",
    "license": "cc-by-4.0",
@@ -337,7 +395,7 @@
    }
   },
   "oslo/A_cardiac": {
-   "sha": "86348d2d8dc476190d7f9e5e0ec55cca7181a42e",
+   "sha": "32e32dbb775f4a793291d6634023b154d160d533",
    "collection": "oslo",
    "pretty_name": "USTB - In-vivo Cardiac (Verasonics P4-2)",
    "license": "cc-by-4.0",
@@ -393,7 +451,7 @@
    }
   },
   "oslo/B_carotid": {
-   "sha": "da265fd97570fdca6bc06fcc15a77faea61fb2b1",
+   "sha": "9a1603ded2675c38180a5da298e71c18f189711d",
    "collection": "oslo",
    "pretty_name": "USTB - In-vivo Carotid (Verasonics L7-4)",
    "license": "cc-by-4.0",
@@ -450,7 +508,7 @@
    }
   },
   "oslo/C_verasonics_phantom": {
-   "sha": "0a73e2cddb03ff1c4c07d7fb71f75be80b88393f",
+   "sha": "6455a319da9ac6ba2e83315d633ea773714b067e",
    "collection": "oslo",
    "pretty_name": "USTB - Phantom (Verasonics L7-4 / P4)",
    "license": "cc-by-4.0",
@@ -505,64 +563,8 @@
     ]
    }
   },
-  "oslo/D_alpinion_phantom": {
-   "sha": "9f47e6e0930431a0379a5c17d01517a2710ee404",
-   "collection": "oslo",
-   "pretty_name": "USTB - Phantom (Alpinion L3-8)",
-   "license": "cc-by-4.0",
-   "tags": [
-    "ultrasound",
-    "rf",
-    "open-h-rf",
-    "phantom",
-    "alpinion"
-   ],
-   "summary": "Part of the UltraSound ToolBox (USTB) Channel Capture Collection (see the collection card).",
-   "contributors": [
-    "Ole Marius Hoel Rindal (primary contact)",
-    "Yucel Karabiyik",
-    "Sven Peter Nasholm",
-    "Andreas Austeng",
-    "University of Oslo (UiO), Department of Informatics"
-   ],
-   "institutions": [
-    "University of Oslo"
-   ],
-   "created": "06/23/2026 (packaging date; original acquisitions/simulations were produced between 2016 and 2023).",
-   "cites": true,
-   "keys": [
-    "data/raw_data",
-    "probe/probe_geometry",
-    "scan/center_frequency",
-    "scan/demodulation_frequency",
-    "scan/focus_distances",
-    "scan/initial_times",
-    "scan/polar_angles",
-    "scan/sampling_frequency",
-    "scan/sound_speed",
-    "scan/t0_delays",
-    "scan/transmit_origins",
-    "scan/tx_apodizations"
-   ],
-   "known_issues": "Single-frame acquisitions; two transmit schemes (FI, CPWC).",
-   "text": {
-    "description": "Part of the UltraSound ToolBox (USTB) Channel Capture Collection (see the collection card).\n\nPhantom channel-capture data acquired on an Alpinion E-Cube 12R research scanner with an L3-8 linear-array probe. Hypoechoic and hyperechoic targets imaged with focused (FI) and coherent plane-wave compounding (CPWC) sequences.",
-    "intended_usage": "Generalized reconstruction and image-quality assessment on a second hardware platform (RFP task 6.1); cross-vendor robustness studies. (Open-H-RF RFP task 6.1 Generalized Reconstruction).",
-    "characterization": "- Data Collection Method: phantom\n- Labeling Method: Derived (known phantom target types).\n- Acquisition system: probe(s) L3-8; element positions stored in /probe/probe_geometry (meters); center frequency, sampling frequency and sound speed stored per acquisition in /scan (see per-sample feature table).",
-    "subject_metadata": "No human or animal subjects. Targets: hypoechoic/hyperechoic phantom inclusions. Scanner: Alpinion E-Cube 12R. Probe: L3-8 linear array (128 elements)."
-   },
-   "image": {
-    "source": "oslo/D_alpinion_phantom/assets/main.png",
-    "thumb": "images/oslo-d-alpinion-phantom-3bd6f60-ad6e.jpg",
-    "preview": "images/oslo-d-alpinion-phantom-3bd6f60-preview.jpg",
-    "preview_size": [
-     760,
-     900
-    ]
-   }
-  },
   "oslo/E_simulation": {
-   "sha": "0d671c2fa1227fbd8f5611046dbbac73d66cb30d",
+   "sha": "2b886d87498a752f728f688ab05868fc62953fa8",
    "collection": "oslo",
    "pretty_name": "USTB - Simulation (Field II)",
    "license": "cc-by-4.0",
@@ -601,9 +603,9 @@
     "scan/transmit_origins",
     "scan/tx_apodizations"
    ],
-   "known_issues": "PICMUS calibration: 'PICMUS_numerical_calib_v2' was created in collaboration with our group as part of the PICMUS (Plane-wave Imaging Challenge in Medical UltraSound, IEEE IUS 2016) effort, and is therefore included here. The other PICMUS acquisitions (in-vivo carotid, experimental and simulated resolution/contrast) are deliberately excluded from this submission. Simulation framework: Field II (Jensen et al.).",
+   "known_issues": "PICMUS calibration: 'PICMUS_numerical_calib_v2' was created in collaboration with our group as part of the PICMUS (Plane-wave Imaging Challenge in Medical UltraSound, IEEE IUS 2016) effort, and is therefore included here. Simulation framework: Field II (Jensen et al.).",
    "text": {
-    "description": "Part of the UltraSound ToolBox (USTB) Channel Capture Collection (see the collection card).\n\nPhysics-based synthetic channel-capture data generated with the Field II ultrasound simulation framework. The collection covers point scatterers, cysts, speckle, dynamic-range targets and blocked-array (aperture-apodized) configurations, using linear (L7-4-like) and phased (P4-like) virtual probes with CPWC, FI and STA sequences. Because the scattering medium is fully defined, exact ground-truth scatterer positions and medium parameters are known. One numerical calibration acquisition (PICMUS_numerical_calib_v2) was created in collaboration with our group as part of the PICMUS effort; it is included here while the other PICMUS datasets are excluded (see Known Issues).",
+    "description": "Part of the UltraSound ToolBox (USTB) Channel Capture Collection (see the collection card).\n\nPhysics-based synthetic channel-capture data generated with the Field II ultrasound simulation framework. The collection covers point scatterers, cysts, speckle, dynamic-range targets and blocked-array (aperture-apodized) configurations, using linear (L7-4-like) and phased (P4-like) virtual probes with CPWC, FI and STA sequences. Because the scattering medium is fully defined, exact ground-truth scatterer positions and medium parameters are known. One numerical calibration acquisition (PICMUS_numerical_calib_v2) was created in collaboration with our group as part of the PICMUS effort; it is included on that basis.",
     "intended_usage": "Generalized reconstruction, beamformer development and validation with known ground truth (RFP task 6.1); resolution/contrast/dynamic-range characterization; training/validation of learned reconstruction methods. (Open-H-RF RFP task 6.1 Generalized Reconstruction).",
     "characterization": "- Data Collection Method: synthetic\n- Labeling Method: Synthetic ground truth (known scatterer positions and medium parameters).\n- Acquisition system: probe(s) L7-4, P4-1; element positions stored in /probe/probe_geometry (meters); center frequency, sampling frequency and sound speed stored per acquisition in /scan (see per-sample feature table).",
     "subject_metadata": "No human or animal subjects. Synthetic media simulated with Field II. Virtual probes: L7-4-like linear and P4-like phased arrays."
@@ -619,7 +621,7 @@
    }
   },
   "oslo/F_motion": {
-   "sha": "dd2757d8e84dfebd5ffda495013d52bd369285f7",
+   "sha": "2c3788f8c977abec150b7439fca6c1c76a64e433",
    "collection": "oslo",
    "pretty_name": "USTB - Motion Estimation (SWE / ARFI, Verasonics L7-4)",
    "license": "cc-by-4.0",
@@ -676,7 +678,7 @@
    }
   },
   "politorino": {
-   "sha": "5be1344b260466a5a6d5dda9dbbe87acc7e01bd6",
+   "sha": "67a1b53cf4107d5bf0f793c4ff6169923c171de5",
    "collection": null,
    "pretty_name": "High Frame Rate Fascicle Tracking - PoliTO",
    "license": "cc-by-4.0",
@@ -728,7 +730,7 @@
    }
   },
   "resolvestroke/clinical": {
-   "sha": "0b24417ffa4dbf4963c43e5708bb471beb0b3c90",
+   "sha": "2690be3e43335c07a099ae0d439557f1fbf7d3c3",
    "collection": "resolvestroke",
    "pretty_name": "Resolve Stroke Clinical Transcranial CEUS (SCULPT, 20 acquisitions)",
    "license": "cc-by-4.0",
@@ -793,7 +795,7 @@
    }
   },
   "resolvestroke/phantom_flow": {
-   "sha": "2862eb8349ca3dbadb8ba9c4da4fcd2e47f8af3f",
+   "sha": "cd025e6e60357b84591b622e20f1bb6188752962",
    "collection": "resolvestroke",
    "pretty_name": "Resolve Stroke Flow Phantom (CIRS 769 + ATS523A) On/Off",
    "license": "cc-by-4.0",
@@ -855,7 +857,7 @@
    }
   },
   "resolvestroke/phantom_mp": {
-   "sha": "23aa4fc8128c3bbbb13cfe32c765f546178ee31d",
+   "sha": "54b931b167112f55103959bff79706cc246cc832",
    "collection": "resolvestroke",
    "pretty_name": "Resolve Stroke Multi-tissue Phantom (CIRS 040GSE)",
    "license": "cc-by-4.0",
@@ -913,7 +915,7 @@
    }
   },
   "resolvestroke/saddle": {
-   "sha": "2b8b9b42c74b8ddeae85ba3c65943a614a5a2c75",
+   "sha": "375156f06b301f508b803f1607ec9795d7be8c86",
    "collection": "resolvestroke",
    "pretty_name": "Resolve Stroke Saddle-Array Reference B-modes (Transcranial CEUS + Phantom)",
    "license": "cc-by-4.0",
@@ -974,7 +976,7 @@
    }
   },
   "siemens-healthineers": {
-   "sha": "ab47e6f973d121c12e844e1a756652a64cd3a508",
+   "sha": "106430c0437227a7b2fd5c5f09601fd95e4c0d87",
    "collection": null,
    "pretty_name": "Siemens In-Vivo Raw Ultrasound Channel Data",
    "license": "cc-by-4.0",
@@ -1036,7 +1038,7 @@
    }
   },
   "stanford-murine": {
-   "sha": "2da42922ec058d5afce6e71a95505d3dfc50abcc",
+   "sha": "572b22b00fcbb32413132b4e2a42b80a9ebd31db",
    "collection": null,
    "pretty_name": "Stanford Murine Liver and Sound-Speed Phantom Ultrasound",
    "license": "cc-by-4.0",
@@ -1104,7 +1106,7 @@
    }
   },
   "strasbourg-basel": {
-   "sha": "705f83937b077f08e6c8411b2db9db6e76a9b92d",
+   "sha": "a3929405b48c07d595576ccf7024eac2ef1ec5cf",
    "collection": null,
    "pretty_name": "BoneSRF Robot-Tracked Fractured-Femur Phantom Dataset",
    "license": "cc-by-4.0",
@@ -1159,7 +1161,7 @@
    }
   },
   "technion/bladder": {
-   "sha": "d36f9ec1f98c8f64ef498e4742e61dee6a79e29f",
+   "sha": "4d144d8418752776712d50bf1d9cfb6562355299",
    "collection": null,
    "pretty_name": "Technion Bladder Pre-Beamformed Channel Data",
    "license": "cc-by-4.0",
@@ -1211,7 +1213,7 @@
    }
   },
   "technion/cardiac": {
-   "sha": "1af40efd4833ef030d801d3ece9bd7a2eb86e423",
+   "sha": "e82e2b21711f0bea44379c3774828f46a21fc8fb",
    "collection": null,
    "pretty_name": "Technion Cardiac Pre-Beamformed Channel Data",
    "license": "cc-by-4.0",
@@ -1263,7 +1265,7 @@
    }
   },
   "technion/phantom": {
-   "sha": "af779c2247b61bd067bc9bd2d8262d5241291a4a",
+   "sha": "5e38ac92b7513c1ebc3efe83c3c3ac7c123bdb17",
    "collection": null,
    "pretty_name": "Technion Phantom Pre-Beamformed Channel Data",
    "license": "cc-by-4.0",
@@ -1315,7 +1317,7 @@
    }
   },
   "tel-aviv": {
-   "sha": "af6f550fd74fe744fee02f05a81bbf07359a58ed",
+   "sha": "503ad80e7756656abcaf2dc709f015bd356f9e47",
    "collection": null,
    "pretty_name": "Ilovitsh Lab Mice Tumors",
    "license": "cc-by-4.0",
@@ -1353,7 +1355,7 @@
    }
   },
   "tue-aaa": {
-   "sha": "221261198f671d6edda74224c06c498e46b33604",
+   "sha": "806d8a60e682088ce4cf5fefd7321f5b90b2ed42",
    "collection": null,
    "pretty_name": "TU/e PULS/e — Abdominal Aortic Aneurysm (C5-2v) channel data",
    "license": "cc-by-4.0",
@@ -1398,7 +1400,7 @@
    }
   },
   "tue-cardiac": {
-   "sha": "a720882bb2a67da1927612a5b92006ed0d1d1531",
+   "sha": "98aec6df7937b1ae38bfe27ea9620f5e15251a9e",
    "collection": null,
    "pretty_name": "TU/e Cardiac RF Multi-Transmit",
    "license": "cc-by-4.0",
@@ -1466,7 +1468,7 @@
    }
   },
   "tue-carotid": {
-   "sha": "4149ca121d424ef165e610166b5c777217e90050",
+   "sha": "5ef0862b2fb3954768fdb70cac7bafcd3f1d8b9f",
    "collection": null,
    "pretty_name": "TU/e carotid 2023",
    "license": "cc-by-4.0",
@@ -1527,7 +1529,7 @@
    }
   },
   "tumunich": {
-   "sha": "08632aa3186d7c786a970a62c41afad62dfa07a3",
+   "sha": "5acc4cfc1a8cc480a2df204fbb271244714d1cd9",
    "collection": null,
    "pretty_name": "Robotic Tracked Ultrasound (Verasonics L11-5gH, arm, CIRS 054GS and CIRS 074 thyroid phantoms)",
    "license": "cc-by-4.0",
@@ -1586,7 +1588,7 @@
    }
   },
   "twente-cavitation": {
-   "sha": "d9a3ecc6790b5a9d4ce2e735235cb7e2bc716791",
+   "sha": "aaec9c5b679da505e967f7a6b941ec9767f923dc",
    "collection": null,
    "pretty_name": "Twente Passive Cavitation Detection of Flowing Microbubbles",
    "license": "cc-by-4.0",
@@ -1596,7 +1598,7 @@
     "open-h-rf",
     "cavitation"
    ],
-   "summary": "The collected data is for cavitation mapping of microbubbles, insonified with focused ultrasound at various pressures and flowrates. This data applicable to therapeutic ultrasound and local drug delivery in any part of the human body. The used sensor hardware is a Verasonics research system with an L11-4v transducer for recording the bubble response during the treatment. Insonification is done using a single element transducer at 2.25MHz. The insonification is done with a 1000 cycles long pulse at 2.25MHz, where the first and last 2 microseconds are used for ramping up and down the pressure.",
+   "summary": "The collected data is for cavitation mapping of microbubbles, insonified with focused ultrasound at various pressures and flowrates. This data is applicable to therapeutic ultrasound and local drug delivery in any part of the human body. The used sensor hardware is a Verasonics research system with an L11-4v transducer for recording the bubble response during the treatment. Insonification is done using a single element transducer at 2.25MHz.",
    "contributors": [
     "Hermen de Roo",
     "Michel Versluis",
@@ -1623,7 +1625,7 @@
    ],
    "known_issues": null,
    "text": {
-    "description": "The collected data is for cavitation mapping of microbubbles, insonified with focused ultrasound at various pressures and flowrates. This data applicable to therapeutic ultrasound and local drug delivery in any part of the human body. The used sensor hardware is a Verasonics research system with an L11-4v transducer for recording the bubble response during the treatment. Insonification is done using a single element transducer at 2.25MHz. The insonification is done with a 1000 cycles long pulse at 2.25MHz, where the first and last 2 microseconds are used for ramping up and down the pressure. The pulse repetition frequency used is 20Hz, repeated 400 times.",
+    "description": "The collected data is for cavitation mapping of microbubbles, insonified with focused ultrasound at various pressures and flowrates. This data is applicable to therapeutic ultrasound and local drug delivery in any part of the human body. The used sensor hardware is a Verasonics research system with an L11-4v transducer for recording the bubble response during the treatment. Insonification is done using a single element transducer at 2.25MHz. The insonification is done with a 1000 cycles long pulse at 2.25MHz, where the first and last 2 microseconds are used for ramping up and down the pressure. The pulse repetition frequency used is 20Hz, repeated 400 times. The tube goes through the imaging plane of the L11-4v, and the transmitting single element transducer insonifies the tube from the side at 90 degrees. Both transducers are positioned to have their (elevation) focus aligned with the tube containing the microbubbles.\n\n\n\n*Top view of the setup: the flow tube crosses the L11-4v imaging plane and the 2.25 MHz single-element transducer insonifies it from the side at 90 degrees.*",
     "intended_usage": "The dataset contains data over a large pressure range, from very low pressures up to the very high pressures used in therapeutic ultrasound. With this data one can quantify the treatment threshold and treatment effects over this wide range. The dataset also includes data for different levels of perfusion by varying the flowrate, from which the effect of perfusion on treatment efficacy can be studied. The data is intended to be processed with passive cavitation detection algorithms.",
     "characterization": "- Data Collection Method: phantom\n- Labeling Method: N/A\n- Acquisition system: Verasonics Vantage 256, L11-4v transducer. 128 elements, 7.24MHz center frequency, 27.778 MHz sampling rate",
     "subject_metadata": "Only one phantom was used. This is a phantom made of PVCp with a single flow channel ~200 micrometer diameter. The used scanner is a Verasonics Vantage 256 with a L11-4v transducer."
@@ -1639,7 +1641,7 @@
    }
   },
   "twente-microbubblesim": {
-   "sha": "899fa4eed61423b32e9be4db09c509264908bdba",
+   "sha": "4a9df69e192eeaf769346e1eae9869dff68c19e7",
    "collection": null,
    "pretty_name": "Waveform-Specific Synthetic Microbubble RF Dataset",
    "license": "cc-by-4.0",
@@ -1697,7 +1699,7 @@
    }
   },
   "twente-vortexflow": {
-   "sha": "830e906480854e51c895ce0557a386af25e75ecf",
+   "sha": "5394e048d53a2763d7dd69ea0f4fd2322232a7a8",
    "collection": null,
    "pretty_name": "Flow Phantom Ultrasound Channel/Optical Data (Physics of Fluids, University of Twente)",
    "license": "cc-by-4.0",
@@ -1747,7 +1749,7 @@
    }
   },
   "ubc/module_A": {
-   "sha": "4b13119d1ee1c4fa34b3375a84df0971cc757d4b",
+   "sha": "24c97f1bbd2236d1df1a0f874c912ee91f03bd4c",
    "collection": null,
    "pretty_name": "UBC Module A Corrected Synthetic-Channel S-WAVE Phantom Dataset",
    "license": "cc-by-4.0",
@@ -1814,7 +1816,7 @@
    }
   },
   "ubc/module_C": {
-   "sha": "67cfd48fb26b9475dd2c05f36539d267757404e4",
+   "sha": "1f0e2c734466be4a16f08c48275eca8e57b261af",
    "collection": null,
    "pretty_name": "UBC Module C Fetal Phantom",
    "license": "cc-by-4.0",
@@ -1899,7 +1901,7 @@
    }
   },
   "ulmshare": {
-   "sha": "fff6c6826325bd8e62aae7599a479cb56cecfdcc",
+   "sha": "21543cbd2020503c6045abdff717c60cc8b0f0d9",
    "collection": null,
    "pretty_name": "ULMShare (in vivo mouse transcranial ULM)",
    "license": "cc-by-4.0",
@@ -1977,7 +1979,7 @@
    }
   },
   "unc-liver": {
-   "sha": "e625bdd2dd3110116260a13ba65c3e4f2d6f2ef3",
+   "sha": "701a5c70a01b418b4defdab0486db4989b05848c",
    "collection": null,
    "pretty_name": "fullwave-abdominal-wall: Fullwave Abdominal Wall Simulation (UNC / NC State / Stanford)",
    "license": "cc-by-4.0",
@@ -2047,7 +2049,7 @@
    }
   },
   "unc-openpros": {
-   "sha": "ab6bc7b0f234dc665f9a501ecc21c73250ea6c3b",
+   "sha": "6bf43780d2901fd6a19dd67f2dd8293e69fd2839",
    "collection": null,
    "pretty_name": "OpenPros Limited-View Prostate USCT",
    "license": "cc-by-4.0",
@@ -2107,7 +2109,7 @@
    }
   },
   "us4us": {
-   "sha": "435ba6dee3c2c828f187338f3a3fdcf49a75e745",
+   "sha": "bfffdf828f30c529c8d31cb5fdf1464ae4964d7a",
    "collection": null,
    "pretty_name": "us4us Ring-Array USCT (forearm, breast phantom, water)",
    "license": "cc-by-4.0",
@@ -2155,7 +2157,7 @@
    }
   },
   "vanderbilt": {
-   "sha": "48fbb0ac7ca503e41f69a45022c551b5bc01a044",
+   "sha": "54ecdde788d2850954cba8037cafa76318857b39",
    "collection": null,
    "pretty_name": "Vanderbilt / Multi-Frame Focused Transmit Echocardiography Channel Dataset",
    "license": "cc-by-4.0",
@@ -2206,7 +2208,7 @@
    }
   },
   "waterloo-carotid": {
-   "sha": "0415055d49ce9f26768782e495b6e5d4ecb2554a",
+   "sha": "56878ccdf31335aba79a82e15852cb0ebae04880",
    "collection": null,
    "pretty_name": "UW-CarotidRF",
    "license": "cc-by-4.0",
@@ -2273,7 +2275,7 @@
    }
   },
   "waterloo-femoralvein": {
-   "sha": "5044e44369c90426c1709a32a125ff0bd6cde510",
+   "sha": "22ebffa7b26d483b0cb75c885fcac0e0875e6e56",
    "collection": null,
    "pretty_name": "UW-FemVeinRF",
    "license": "cc-by-4.0",
@@ -2344,7 +2346,7 @@
    }
   },
   "waterloo-muscle": {
-   "sha": "ffe9d8ed268480c1c8a7bff409118a8235258ce2",
+   "sha": "a6485a151a7598f1b7e868a6ab28902e8e8463ed",
    "collection": null,
    "pretty_name": "UW-MuscleRF",
    "license": "cc-by-4.0",
@@ -2404,7 +2406,7 @@
    }
   },
   "weillcornell": {
-   "sha": "cdf43df0bc493331de8f8b3ecbd0698b78722ecb",
+   "sha": "6f313494fa18bd21044048e2133aa3cdff259f3c",
    "collection": null,
    "pretty_name": "Weill Cornell QUS Phantom Dataset",
    "license": "cc-by-4.0",
@@ -2449,7 +2451,7 @@
    }
   },
   "weizmann-sampl": {
-   "sha": "9db704ddfff9fe46396755209d83a6b331d11e5d",
+   "sha": "0f4618395ad6be050ba53a9eab2be7a2630d0f7b",
    "collection": null,
    "pretty_name": "Weizmann SAMPL Thyroid Clinical Scans",
    "license": "cc-by-4.0",
@@ -2515,7 +2517,7 @@
    }
   },
   "wpi": {
-   "sha": "9d73b0b678d4ceceb73dd23bedd4008ac4337b1d",
+   "sha": "5d80cc1525e6c8a8e98fe3ac2e6dd93a9644f117",
    "collection": null,
    "pretty_name": "eSAF Rotational 3D US Raw Channel Data (Medical FUSION Lab, WPI)",
    "license": "cc-by-4.0",
