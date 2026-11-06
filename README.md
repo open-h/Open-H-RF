@@ -18,7 +18,7 @@
 
 Open-H-RF is a collaborative initiative led by [Stanford University](https://med.stanford.edu/ultrasound.html), [Eindhoven University of Technology (TU/e)](https://www.tue.nl/en/research/research-groups/signal-processing-systems/biomedical-diagnostics) and [NVIDIA](https://www.nvidia.com/) to build a large-scale, openly licensed dataset of pre-beamformed (channel capture) medical ultrasound measurements. *The goal:* train general-purpose foundation models capable of multi-task *raw-to-insight* inference across echocardiography, general, fetal and transcranial imaging, blood flow measurement and ultrasound inverse problems.
 
-The initial (v1.0) release of the dataset contains **19,336** real and synthetic channel capture measurements, spanning a wide variety of acquisition types, targets and downstream tasks, including reconstruction, flow, quantitative imaging, motion estimation and interpretation tasks, contributed by **38 institutions** across academia and industry. Released under [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/).
+The v1.1 release of the dataset contains **19,336** real and synthetic channel capture measurements, spanning a wide variety of acquisition types, targets and downstream tasks, including reconstruction, flow, quantitative imaging, motion estimation and interpretation tasks, contributed by **39 institutions** across academia and industry. Released under [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/).
 
 The Open-H-RF format is implemented using the [`zea`](https://zea.readthedocs.io/en/stable/getting-started.html) ultrasound toolbox. Each file holds the raw per-element channel data together with the full transmit and receive geometry needed to beamform it. Where available, files also include derived images, maps, labels and auxiliary signals that help interpret the data.
 
@@ -187,7 +187,8 @@ If you use Open-H-RF in your research, please cite the [Open-H-RF paper](https:/
             P. McDowall and L. McHugh and I. Pirozzi and S. Simon-Trench and A. M. Bronstein and
             O. Senouf and S. Vedula and D. Zadok and H. Rivaz and M. Sharifzadeh and S. Chen and
             G. P. Luke and S. Wang and Yujia Wu and J. Verde and R. G{\"o}bl and O. Zettinig and
-            E. Boctor and Yixuan Wu and H.-M. Bae and M.-G. Kim and Y.-M. Kim and H. Lee and
+            M. A. L. Bell and E. Boctor and Yixuan Wu and H.-M. Bae and M.-G. Kim and
+            Y.-M. Kim and H. Lee and
             S.-H. Oh and P. Pinto and M. Berrada-Sounni and M. Carley and R. J. Fedewa and
             S. Gavin and N. Goldsmith and R. Kassayan and C. Low and R. Mehranfar and
             G. Bardoscia and M. Boccardo and A. Botter and M. Carbonaro and G. L. Cerone and

@@ -63,13 +63,14 @@ focus distance, so they read as plane waves.
 
 A dataset's institution comes from its card's contributors section. `catalog.yaml` overrides
 it where that section leaves the institution out or names it in a form `cards.py` does not
-read, and drops NC State University from `unc-liver` and the other OpenPros affiliations
-from `unc-openpros`, since neither is an author's affiliation.
+read, and drops the other OpenPros affiliations from `unc-openpros`, since they are not
+the affiliations of its authors.
 
 The other affiliations of a dataset's authors are its `collaborating_institutions`:
 NuevoSono (`mosaic-nuevosono`), Ruhr University Bochum (`politorino`), ImFusion
-(`tumunich`), Mila (`ulmshare`) and Johns Hopkins University, National Institutes of Health,
-Iowa State University and QT Imaging (`unc-openpros`). The page does not show them, but
+(`tumunich`), Mila (`ulmshare`), North Carolina State University (`unc-liver`) and Johns
+Hopkins University, National Institutes of Health, Iowa State University and QT Imaging
+(`unc-openpros`). The page does not show them, but
 search and the institution filter find the dataset by them, and the institution count
 counts them.
 
