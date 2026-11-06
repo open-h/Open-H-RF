@@ -121,8 +121,11 @@ datasets:
   twente-cavitation: {institution: University of Twente}
   # The card credits the converter at TU/e among the contributors.
   ulmshare: {institution: Polytechnique Montréal, collaborating_institutions: [Mila]}
-  # The card also names NC State University, which is none of the authors' affiliations.
-  unc-liver: {institution: University of North Carolina at Chapel Hill & Stanford University}
+  # The card names NC State University, the authors' second affiliation (the joint UNC/NC State
+  # department), in a form the authors list does not use.
+  unc-liver:
+    institution: University of North Carolina at Chapel Hill & Stanford University
+    collaborating_institutions: [North Carolina State University]
   # The card lists the affiliations of the OpenPros authors; the dataset comes from the UNC
   # group, and the collaborators are the affiliations of its authors in the paper.
   unc-openpros:

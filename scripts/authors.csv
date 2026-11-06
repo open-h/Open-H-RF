@@ -6,7 +6,7 @@ Author number,Affiliation order,Dataset(s),Author,Abbreviation,Affiliation
 13,1,tue-aaa,Marc van Sambeek,M. van Sambeek,Eindhoven University of Technology
 4,1,tue-carotid,Oisín Nolan,O. Nolan,Eindhoven University of Technology
 11,1,tue-aaa,Richard Lopata,R. Lopata,Eindhoven University of Technology
-185,1,"tue-cardiac, tue-carotid",Ruud van Sloun,R.J.G. van Sloun,Eindhoven University of Technology
+186,1,"tue-cardiac, tue-carotid",Ruud van Sloun,R.J.G. van Sloun,Eindhoven University of Technology
 2,1,"tue-cardiac, tue-carotid",Simon Penninga,S.W. Penninga,Eindhoven University of Technology
 1,1,tue-carotid,Tristan Stevens,T.S.W. Stevens,Eindhoven University of Technology
 8,1,tue-aaa,Vera van Hal,V. van Hal,Eindhoven University of Technology
@@ -19,24 +19,24 @@ Author number,Affiliation order,Dataset(s),Author,Abbreviation,Affiliation
 19,3,stanford-murine,Andrew Andrzejek,A. Andrzejek,Stanford University
 26,3,stanford-murine,Arsenii V. Telichko,A.V. Telichko,Stanford University
 6,3,stanford-murine,Benjamin N. Frey,B.N. Frey,Stanford University
-21,"3, 4","mosaic-intelligence, stanford-murine",Brian Boitnott,B. Boitnott,"Stanford University, Mosaic Intelligence"
+21,"3, 4","mosaic-nuevosono, stanford-murine",Brian Boitnott,B. Boitnott,"Stanford University, Mosaic Intelligence"
 27,3,stanford-murine,Caelia Thomas,C. Thomas,Stanford University
 24,3,unc-liver,Dongwoon Hyun,D. Hyun,Stanford University
 23,3,stanford-murine,Hoda Hashemi,H. Hashemi,Stanford University
-184,3,"stanford-murine, unc-liver",Jeremy Dahl,J. Dahl,Stanford University
+185,3,"stanford-murine, unc-liver",Jeremy Dahl,J. J. Dahl,Stanford University
 20,3,stanford-murine,Jihye Baek,J. Baek,Stanford University
 25,3,stanford-murine,Jun Hong Park,J.H. Park,Stanford University
 28,3,"stanford-murine, unc-liver",Louise Zhuang,L. Zhuang,Stanford University
 18,3,stanford-murine,Rehman Ali,R. Ali,Stanford University
 22,3,stanford-murine,Thurston Brevett,T. Brevett,Stanford University
-32,4,mosaic-intelligence,Ali Kight Mackanic,A.K. Mackanic,Mosaic Intelligence
-35,4,mosaic-intelligence,Ileana Pirozzi,I. Pirozzi,Mosaic Intelligence
-31,4,mosaic-intelligence,Jocelyn Barker,J. Barker,Mosaic Intelligence
-30,4,mosaic-intelligence,,H. Arora,Mosaic Intelligence
-34,4,mosaic-intelligence,Liam McHugh,L. McHugh,Mosaic Intelligence
-33,4,mosaic-intelligence,Pink McDowall,P. McDowall,Mosaic Intelligence
-36,4,mosaic-intelligence,Sofia Simon-Trench,S. Simon-Trench,Mosaic Intelligence
-29,4,mosaic-intelligence,Yohannes Aklilu,Y. Aklilu,Mosaic Intelligence
+32,4,mosaic-nuevosono,Ali Kight Mackanic,A.K. Mackanic,Mosaic Intelligence
+35,4,mosaic-nuevosono,Ileana Pirozzi,I. Pirozzi,Mosaic Intelligence
+31,4,mosaic-nuevosono,Jocelyn Barker,J. Barker,Mosaic Intelligence
+30,4,mosaic-nuevosono,,H. Arora,Mosaic Intelligence
+34,4,mosaic-nuevosono,Liam McHugh,L. McHugh,Mosaic Intelligence
+33,4,mosaic-nuevosono,Pink McDowall,P. McDowall,Mosaic Intelligence
+36,4,mosaic-nuevosono,Sofia Simon-Trench,S. Simon-Trench,Mosaic Intelligence
+29,4,mosaic-nuevosono,Yohannes Aklilu,Y. Aklilu,Mosaic Intelligence
 37,5,technion,Alexander M. Bronstein,A.M. Bronstein,Technion – Israel Institute of Technology
 40,5,technion,Dean Zadok,D. Zadok,Technion – Israel Institute of Technology
 38,5,technion,Ortal Senouf,O. Senouf,Technion – Israel Institute of Technology
@@ -50,138 +50,139 @@ Author number,Affiliation order,Dataset(s),Author,Abbreviation,Affiliation
 47,8,strasbourg-basel,Juan Verde,J. Verde,IHU Strasbourg
 49,9,tumunich,Oliver Zettinig,O. Zettinig,ImFusion
 48,9,tumunich,Rüdiger Göbl,R. Göbl,ImFusion
-51,10,unc-openpros,Yixuan Wu,Y. Wu,Johns Hopkins University
-50,10,unc-openpros,E. Boctor,E. Boctor,Johns Hopkins University
-52,"11, 12",kaist-snubh-barreleye,Hyeon-Min Bae,H.-M. Bae,"KAIST, Barreleye Inc."
-55,"11, 12",kaist-snubh-barreleye,HyeonJik Lee,H. Lee,"KAIST, Barreleye Inc."
-53,"11, 12",kaist-snubh-barreleye,Myeong-Gee Kim,M.-G. Kim,"KAIST, Barreleye Inc."
-56,"11, 12",kaist-snubh-barreleye,Seok-Hwan Oh,S.-H. Oh,"KAIST, Barreleye Inc."
-54,"11, 12",kaist-snubh-barreleye,Young-Min Kim,Y.-M. Kim,"KAIST, Barreleye Inc."
-57,13,unc-openpros,Peter Pinto,P. Pinto,National Institutes of Health
-64,14,mosaic-intelligence,Crystal Low,C. Low,NuevoSono
-58,14,mosaic-intelligence,Marwan Berrada-Sounni,M. Berrada-Sounni,NuevoSono
-59,14,mosaic-intelligence,Mike Carley,M. Carley,NuevoSono
-62,14,mosaic-intelligence,Noah Goldsmith,N. Goldsmith,NuevoSono
-63,14,mosaic-intelligence,Reza Kassayan,R. Kassayan,NuevoSono
-65,14,mosaic-intelligence,Robert Mehranfar,R. Mehranfar,NuevoSono
-60,14,mosaic-intelligence,Russell J Fedewa,R.J. Fedewa,NuevoSono
-61,14,mosaic-intelligence,Siena Gavin,S. Gavin,NuevoSono
-68,15,politorino,Alberto Botter,A. Botter,Politecnico di Torino
-72,15,politorino,Kristen Meiburger,K. Meiburger,Politecnico di Torino
-66,15,politorino,G. Bardoscia,G. Bardoscia,Politecnico di Torino
-67,15,politorino,M. Boccardo,M. Boccardo,Politecnico di Torino
-69,15,politorino,M. Carbonaro,M. Carbonaro,Politecnico di Torino
-70,15,politorino,G.L. Cerone,G.L. Cerone,Politecnico di Torino
-71,15,politorino,E. Cesti,E. Cesti,Politecnico di Torino
-73,15,politorino,S. Seoni,S. Seoni,Politecnico di Torino
-74,15,politorino,F. Truscello,F. Truscello,Politecnico di Torino
-75,16,politorino,B.J. Raiteri,B.J. Raiteri,Ruhr University Bochum
-80,17,ulmshare,Alexis Leconte,A. Leconte,Polytechnique Montréal
-87,"17, 18",ulmshare,Brice Rauby,B. Rauby,"Polytechnique Montréal, Mila"
-78,17,ulmshare,Nin Ghigo,N. Ghigo,Polytechnique Montréal
-91,17,ulmshare,Paul Xing,P. Xing,Polytechnique Montréal
-81,17,ulmshare,Stephen A. Lee,S.A. Lee,Polytechnique Montréal
-76,17,ulmshare,L. Caron,L. Caron,Polytechnique Montréal
-77,17,ulmshare,M. Gasse,M. Gasse,Polytechnique Montréal
-79,17,ulmshare,O. Gulenko,O. Gulenko,Polytechnique Montréal
-82,17,ulmshare,A. Malescot,A. Malescot,Polytechnique Montréal
-83,17,ulmshare,E. Martineau,E. Martineau,Polytechnique Montréal
-84,17,ulmshare,J. Porée,J. Porée,Polytechnique Montréal
-86,17,ulmshare,G. Ramos-Palacios,G. Ramos-Palacios,Polytechnique Montréal
-88,17,ulmshare,R. L. Rungta,R. L. Rungta,Polytechnique Montréal
-89,17,ulmshare,A. F. Sadikot,A. F. Sadikot,Polytechnique Montréal
-90,17,ulmshare,A. Wu,A. Wu,Polytechnique Montréal
-85,17,ulmshare,Jean Provost,J. Provost,Polytechnique Montréal
-96,19,resolvestroke,Aitana Waelbroeck,A. Waelbroeck,Resolve Stroke
-92,19,resolvestroke,Arthur Chavignon,A. Chavignon,Resolve Stroke
-93,19,resolvestroke,Carl Ferlay,C. Ferlay,Resolve Stroke
-95,19,resolvestroke,Maxence Reberol,M. Reberol,Resolve Stroke
-94,19,resolvestroke,Vincent Hingot,V. Hingot,Resolve Stroke
-97,20,kaist-snubh-barreleye,Hyuk-Sool Kwon,H.-S. Kwon,Seoul National University Bundang Hospital
-100,21,siemens-healthineers,Rickard Loftman,R. Loftman,Siemens Healthineers
-99,21,siemens-healthineers,Ismayil Guracar,I. Guracar,Siemens Healthineers
-98,21,siemens-healthineers,Jane Bucholz,J. Bucholz,Siemens Healthineers
-101,21,siemens-healthineers,Craig Williams,C. Williams,Siemens Healthineers
-102,22,tel-aviv,Tal Grutman,T. Grutman,"School of Biomedical Engineering, Tel-Aviv University"
-103,22,tel-aviv,Tali Ilovitsh,T. Ilovitsh,"School of Biomedical Engineering, Tel-Aviv University"
-112,23,ubc,Hamid Moradi,H. Moradi,The University of British Columbia
-108,23,ubc,Michael Frew,M. Frew,The University of British Columbia
-109,23,ubc,Mohammad Honarvar,M. Honarvar,The University of British Columbia
-105,23,ubc,Patrick Boyan Chen,P.B. Chen,The University of British Columbia
-116,23,ubc,Qi Zeng,Q. Zeng,The University of British Columbia
-113,23,ubc,Robert Rohling,R. Rohling,The University of British Columbia
-114,23,ubc,Septimiu E. Salcudean,S.E. Salcudean,The University of British Columbia
-104,23,ubc,Tajwar Abrar Aleef,T.A. Aleef,The University of British Columbia
-106,23,ubc,Wanwen Chen,W. Chen,The University of British Columbia
-110,23,ubc,Yu Chung Lee,Y.C. Lee,The University of British Columbia
-107,23,ubc,Yuxin Chen,Y. Chen,The University of British Columbia
-115,23,ubc,Zijian Wu,Z. Wu,The University of British Columbia
-111,23,ubc,Zongze Li,Z. Li,The University of British Columbia
-117,24,strasbourg-basel,Philippe C. Cattin,P.C. Cattin,University of Basel
-118,24,strasbourg-basel,Sidaty El Hadramy,S. El Hadramy,University of Basel
-120,25,colorado-boulder,Anet Sanchez Perez,A.S. Perez,University of Colorado Boulder
-119,25,colorado-boulder,Nick Bottenus,N. Bottenus,University of Colorado Boulder
-127,26,unc-liver,Francisco Santibanez,F. Santibanez,University of North Carolina at Chapel Hill
-126,26,unc-liver,Gianmarco Pinton,G. Pinton,University of North Carolina at Chapel Hill
-128,26,unc-liver,Masashi Sode,M. Sode,University of North Carolina at Chapel Hill
-125,26,unc-liver,Oleksii Ostras,O. Ostras,University of North Carolina at Chapel Hill
-123,26,unc-openpros,Peng Jin,P. Jin,University of North Carolina at Chapel Hill
-124,26,unc-openpros,Youzuo Lin,Y. Lin,University of North Carolina at Chapel Hill
-122,26,unc-openpros,Y. Feng,Y. Feng,University of North Carolina at Chapel Hill
-121,26,unc-openpros,S. Feng,S. Feng,University of North Carolina at Chapel Hill
-129,26,unc-openpros,B. Turkbey,B. Turkbey,University of North Carolina at Chapel Hill
-130,26,unc-openpros,H. Wang,H. Wang,University of North Carolina at Chapel Hill
-131,26,unc-openpros,B. J. Wood,B. J. Wood,University of North Carolina at Chapel Hill
-132,26,unc-openpros,L. Zhang,L. Zhang,University of North Carolina at Chapel Hill
-133,27,unc-openpros,S. Luo,S. Luo,Iowa State University
-134,28,unc-openpros,J. Wiskin,J. Wiskin,"QT Imaging, Inc."
-135,29,oslo,Andreas Austeng,A. Austeng,"University of Oslo (UiO), Norway"
-138,29,oslo,Ole Marius Hoel Rindal,O.M.H. Rindal,"University of Oslo (UiO), Norway"
-137,29,oslo,Sven Peter Näsholm,S.P. Näsholm,"University of Oslo (UiO), Norway"
-136,29,oslo,Yücel Karabiyik,Y. Karabiyik,"University of Oslo (UiO), Norway"
-139,30,dartmouth-uct,David Bustamante,D. Bustamante,University of Rochester
-141,30,dartmouth-uct,Hossein Raeis,H. Raeis,University of Rochester
-140,30,dartmouth-uct,Mohammad Mehrmohammadi,M. Mehrmohammadi,University of Rochester
-142,31,twente-microbubblesim,Anass Hameddine,A. Hameddine,University of Twente
-143,31,"twente-cavitation, twente-microbubblesim, twente-vortexflow",Guillaume Lajoinie,G. Lajoinie,University of Twente
-144,31,twente-cavitation,Hermen de Roo,H. de Roo,University of Twente
-145,31,"twente-cavitation, twente-microbubblesim, twente-vortexflow",Michel Versluis,M. Versluis,University of Twente
-146,31,"twente-microbubblesim, twente-vortexflow",Rienk Zorgdrager,R. Zorgdrager,University of Twente
-148,32,"waterloo-carotid, waterloo-muscle",Adrian J.Y. Chee,A.J.Y. Chee,University of Waterloo
-157,32,"waterloo-carotid, waterloo-largeartery, waterloo-muscle",Alfred C. H. Yu,A.C.H. Yu,University of Waterloo
-156,32,waterloo-muscle,Di Xiao,D. Xiao,University of Waterloo
-158,32,waterloo-largeartery,Eudoxia Zafiris,E. Zafiris,University of Waterloo
-154,32,"waterloo-carotid, waterloo-largeartery, waterloo-muscle",Hassan Nahas,H. Nahas,University of Waterloo
-147,32,waterloo-largeartery,Jason S. Au,J.S. Au,University of Waterloo
-151,32,waterloo-carotid,Jason Y. -H. Hsu,J.Y.-H. Hsu,University of Waterloo
-149,32,waterloo-largeartery,Jeremy Cohen,J. Cohen,University of Waterloo
-153,32,waterloo-muscle,Marina Mourtzakis,M. Mourtzakis,University of Waterloo
-155,32,waterloo-muscle,Pat de la Torre,P. de la Torre,University of Waterloo
-152,32,waterloo-largeartery,Skye Ling,S. Ling,University of Waterloo
-150,32,waterloo-carotid,Theresa Gu,T. Gu,University of Waterloo
-162,33,us4us,Marcin Lewandowski,M. Lewandowski,us4us Ltd.
-159,33,us4us,Piotr Jarosik,P. Jarosik,us4us Ltd.
-160,33,us4us,Piotr Karwat,P. Karwat,us4us Ltd.
-161,33,us4us,Ziemowit Klimonda,Z. Klimonda,us4us Ltd.
-163,34,vanderbilt,Brett Byram,B. Byram,Vanderbilt University
-164,34,vanderbilt,Christopher Khan,C. Khan,Vanderbilt University
-166,34,vanderbilt,Ying-Chun (Preston) Pan,Y.-C. Pan,Vanderbilt University
-165,34,vanderbilt,Zoe Marshall,Z. Marshall,Vanderbilt University
-167,35,weillcornell,Shangke Liu,S. Liu,Weill Cornell Medicine
-168,35,weillcornell,Tipu Sultan,T. Sultan,Weill Cornell Medicine
-169,35,weillcornell,Cameron Hoerig,C. Hoerig,Weill Cornell Medicine
-170,35,weillcornell,Jonathan Mamou,J. Mamou,Weill Cornell Medicine
-172,36,weizmann-sampl,Yonina C. Eldar,Y.C. Eldar,"SAMPL LAB, Weizmann Institute of Science"
-173,36,weizmann-sampl,Adi Wegerhoff,A. Wegerhoff,"SAMPL LAB, Weizmann Institute of Science"
-171,36,weizmann-sampl,Ditza Auerbach,D. Auerbach,"SAMPL LAB, Weizmann Institute of Science"
-174,37,wpi,Gregory S. Fischer,G.S. Fischer,Worcester Polytechnic Institute
-181,37,wpi,Haichong K. Zhang,H.K. Zhang,Worcester Polytechnic Institute
-177,37,wpi,Ryo Murakami,R. Murakami,Worcester Polytechnic Institute
-179,37,wpi,Ryosuke Tsumura,R. Tsumura,Worcester Polytechnic Institute
-175,37,wpi,Shun Katayose,S. Katayose,Worcester Polytechnic Institute
-176,37,wpi,Xihan Ma,X. Ma,Worcester Polytechnic Institute
-180,37,wpi,Yang Wang,Y. Wang,Worcester Polytechnic Institute
-178,37,wpi,Yichuan Tang,Y. Tang,Worcester Polytechnic Institute
-186,38,"nv-raw2insights-us, siemens-healthineers, unc-liver",Walter Simson,W. Simson,NVIDIA
-182,38,nv-raw2insights-us,Mahdi Azizian,M. Azizian,NVIDIA
-183,38,nv-raw2insights-us,Sean Huver,S. Huver,NVIDIA
+50,10,jhu-pulselab,Muyinatu A. Lediju Bell,M.A.L. Bell,Johns Hopkins University
+52,10,unc-openpros,Yixuan Wu,Y. Wu,Johns Hopkins University
+51,10,unc-openpros,E. Boctor,E. Boctor,Johns Hopkins University
+53,"11, 12",kaist-snubh-barreleye,Hyeon-Min Bae,H.-M. Bae,"KAIST, Barreleye Inc."
+56,"11, 12",kaist-snubh-barreleye,HyeonJik Lee,H. Lee,"KAIST, Barreleye Inc."
+54,"11, 12",kaist-snubh-barreleye,Myeong-Gee Kim,M.-G. Kim,"KAIST, Barreleye Inc."
+57,"11, 12",kaist-snubh-barreleye,Seok-Hwan Oh,S.-H. Oh,"KAIST, Barreleye Inc."
+55,"11, 12",kaist-snubh-barreleye,Young-Min Kim,Y.-M. Kim,"KAIST, Barreleye Inc."
+58,13,unc-openpros,Peter Pinto,P. Pinto,National Institutes of Health
+65,14,mosaic-nuevosono,Crystal Low,C. Low,NuevoSono
+59,14,mosaic-nuevosono,Marwan Berrada-Sounni,M. Berrada-Sounni,NuevoSono
+60,14,mosaic-nuevosono,Mike Carley,M. Carley,NuevoSono
+63,14,mosaic-nuevosono,Noah Goldsmith,N. Goldsmith,NuevoSono
+64,14,mosaic-nuevosono,Reza Kassayan,R. Kassayan,NuevoSono
+66,14,mosaic-nuevosono,Robert Mehranfar,R. Mehranfar,NuevoSono
+61,14,mosaic-nuevosono,Russell J Fedewa,R.J. Fedewa,NuevoSono
+62,14,mosaic-nuevosono,Siena Gavin,S. Gavin,NuevoSono
+69,15,politorino,Alberto Botter,A. Botter,Politecnico di Torino
+73,15,politorino,Kristen Meiburger,K. Meiburger,Politecnico di Torino
+67,15,politorino,G. Bardoscia,G. Bardoscia,Politecnico di Torino
+68,15,politorino,M. Boccardo,M. Boccardo,Politecnico di Torino
+70,15,politorino,M. Carbonaro,M. Carbonaro,Politecnico di Torino
+71,15,politorino,G.L. Cerone,G.L. Cerone,Politecnico di Torino
+72,15,politorino,E. Cesti,E. Cesti,Politecnico di Torino
+74,15,politorino,S. Seoni,S. Seoni,Politecnico di Torino
+75,15,politorino,F. Truscello,F. Truscello,Politecnico di Torino
+76,16,politorino,B.J. Raiteri,B.J. Raiteri,Ruhr University Bochum
+81,17,ulmshare,Alexis Leconte,A. Leconte,Polytechnique Montréal
+88,"17, 18",ulmshare,Brice Rauby,B. Rauby,"Polytechnique Montréal, Mila"
+79,17,ulmshare,Nin Ghigo,N. Ghigo,Polytechnique Montréal
+92,17,ulmshare,Paul Xing,P. Xing,Polytechnique Montréal
+82,17,ulmshare,Stephen A. Lee,S.A. Lee,Polytechnique Montréal
+77,17,ulmshare,L. Caron,L. Caron,Polytechnique Montréal
+78,17,ulmshare,M. Gasse,M. Gasse,Polytechnique Montréal
+80,17,ulmshare,O. Gulenko,O. Gulenko,Polytechnique Montréal
+83,17,ulmshare,A. Malescot,A. Malescot,Polytechnique Montréal
+84,17,ulmshare,E. Martineau,E. Martineau,Polytechnique Montréal
+85,17,ulmshare,J. Porée,J. Porée,Polytechnique Montréal
+87,17,ulmshare,G. Ramos-Palacios,G. Ramos-Palacios,Polytechnique Montréal
+89,17,ulmshare,R. L. Rungta,R. L. Rungta,Polytechnique Montréal
+90,17,ulmshare,A. F. Sadikot,A. F. Sadikot,Polytechnique Montréal
+91,17,ulmshare,A. Wu,A. Wu,Polytechnique Montréal
+86,17,ulmshare,Jean Provost,J. Provost,Polytechnique Montréal
+97,19,resolvestroke,Aitana Waelbroeck,A. Waelbroeck,Resolve Stroke
+93,19,resolvestroke,Arthur Chavignon,A. Chavignon,Resolve Stroke
+94,19,resolvestroke,Carl Ferlay,C. Ferlay,Resolve Stroke
+96,19,resolvestroke,Maxence Reberol,M. Reberol,Resolve Stroke
+95,19,resolvestroke,Vincent Hingot,V. Hingot,Resolve Stroke
+98,20,kaist-snubh-barreleye,Hyuk-Sool Kwon,H.-S. Kwon,Seoul National University Bundang Hospital
+101,21,siemens-healthineers,Rickard Loftman,R. Loftman,Siemens Healthineers
+100,21,siemens-healthineers,Ismayil Guracar,I. Guracar,Siemens Healthineers
+99,21,siemens-healthineers,Jane Bucholz,J. Bucholz,Siemens Healthineers
+102,21,siemens-healthineers,Craig Williams,C. Williams,Siemens Healthineers
+103,22,tel-aviv,Tal Grutman,T. Grutman,School of Biomedical Engineering Tel-Aviv University
+104,22,tel-aviv,Tali Ilovitsh,T. Ilovitsh,School of Biomedical Engineering Tel-Aviv University
+113,23,ubc,Hamid Moradi,H. Moradi,The University of British Columbia
+109,23,ubc,Michael Frew,M. Frew,The University of British Columbia
+110,23,ubc,Mohammad Honarvar,M. Honarvar,The University of British Columbia
+106,23,ubc,Patrick Boyan Chen,P.B. Chen,The University of British Columbia
+117,23,ubc,Qi Zeng,Q. Zeng,The University of British Columbia
+114,23,ubc,Robert Rohling,R. Rohling,The University of British Columbia
+115,23,ubc,Septimiu E. Salcudean,S.E. Salcudean,The University of British Columbia
+105,23,ubc,Tajwar Abrar Aleef,T.A. Aleef,The University of British Columbia
+107,23,ubc,Wanwen Chen,W. Chen,The University of British Columbia
+111,23,ubc,Yu Chung Lee,Y.C. Lee,The University of British Columbia
+108,23,ubc,Yuxin Chen,Y. Chen,The University of British Columbia
+116,23,ubc,Zijian Wu,Z. Wu,The University of British Columbia
+112,23,ubc,Zongze Li,Z. Li,The University of British Columbia
+118,24,strasbourg-basel,Philippe C. Cattin,P.C. Cattin,University of Basel
+119,24,strasbourg-basel,Sidaty El Hadramy,S. El Hadramy,University of Basel
+121,25,colorado-boulder,Anet Sanchez Perez,A.S. Perez,University of Colorado Boulder
+120,25,colorado-boulder,Nick Bottenus,N. Bottenus,University of Colorado Boulder
+128,"26, 27",unc-liver,Francisco Santibanez,F. Santibanez,"University of North Carolina at Chapel Hill, North Carolina State University"
+127,"26, 27",unc-liver,Gianmarco Pinton,G. Pinton,"University of North Carolina at Chapel Hill, North Carolina State University"
+129,"26, 27",unc-liver,Masashi Sode,M. Sode,"University of North Carolina at Chapel Hill, North Carolina State University"
+126,"26, 27",unc-liver,Oleksii Ostras,O. Ostras,"University of North Carolina at Chapel Hill, North Carolina State University"
+124,26,unc-openpros,Peng Jin,P. Jin,University of North Carolina at Chapel Hill
+125,26,unc-openpros,Youzuo Lin,Y. Lin,University of North Carolina at Chapel Hill
+123,26,unc-openpros,Y. Feng,Y. Feng,University of North Carolina at Chapel Hill
+122,26,unc-openpros,S. Feng,S. Feng,University of North Carolina at Chapel Hill
+130,26,unc-openpros,B. Turkbey,B. Turkbey,University of North Carolina at Chapel Hill
+131,26,unc-openpros,H. Wang,H. Wang,University of North Carolina at Chapel Hill
+132,26,unc-openpros,B. J. Wood,B. J. Wood,University of North Carolina at Chapel Hill
+133,26,unc-openpros,L. Zhang,L. Zhang,University of North Carolina at Chapel Hill
+134,28,unc-openpros,S. Luo,S. Luo,Iowa State University
+135,29,unc-openpros,J. Wiskin,J. Wiskin,QT Imaging Inc.
+136,30,oslo,Andreas Austeng,A. Austeng,University of Oslo
+139,30,oslo,Ole Marius Hoel Rindal,O.M.H. Rindal,University of Oslo
+138,30,oslo,Sven Peter Näsholm,S.P. Näsholm,University of Oslo
+137,30,oslo,Yücel Karabiyik,Y. Karabiyik,University of Oslo
+140,31,dartmouth-uct,David Bustamante,D. Bustamante,University of Rochester
+142,31,dartmouth-uct,Hossein Raeis,H. Raeis,University of Rochester
+141,31,dartmouth-uct,Mohammad Mehrmohammadi,M. Mehrmohammadi,University of Rochester
+143,32,twente-microbubblesim,Anass Hameddine,A. Hameddine,University of Twente
+144,32,"twente-cavitation, twente-microbubblesim, twente-vortexflow",Guillaume Lajoinie,G. Lajoinie,University of Twente
+145,32,twente-cavitation,Hermen de Roo,H. de Roo,University of Twente
+146,32,"twente-cavitation, twente-microbubblesim, twente-vortexflow",Michel Versluis,M. Versluis,University of Twente
+147,32,"twente-microbubblesim, twente-vortexflow",Rienk Zorgdrager,R. Zorgdrager,University of Twente
+149,33,"waterloo-carotid, waterloo-muscle",Adrian J.Y. Chee,A.J.Y. Chee,University of Waterloo
+158,33,"waterloo-carotid, waterloo-largeartery, waterloo-muscle",Alfred C. H. Yu,A.C.H. Yu,University of Waterloo
+157,33,waterloo-muscle,Di Xiao,D. Xiao,University of Waterloo
+159,33,waterloo-largeartery,Eudoxia Zafiris,E. Zafiris,University of Waterloo
+155,33,"waterloo-carotid, waterloo-largeartery, waterloo-muscle",Hassan Nahas,H. Nahas,University of Waterloo
+148,33,waterloo-largeartery,Jason S. Au,J.S. Au,University of Waterloo
+152,33,waterloo-carotid,Jason Y. -H. Hsu,J.Y.-H. Hsu,University of Waterloo
+150,33,waterloo-largeartery,Jeremy Cohen,J. Cohen,University of Waterloo
+154,33,waterloo-muscle,Marina Mourtzakis,M. Mourtzakis,University of Waterloo
+156,33,waterloo-muscle,Pat de la Torre,P. de la Torre,University of Waterloo
+153,33,waterloo-largeartery,Skye Ling,S. Ling,University of Waterloo
+151,33,waterloo-carotid,Theresa Gu,T. Gu,University of Waterloo
+163,34,us4us,Marcin Lewandowski,M. Lewandowski,us4us Ltd.
+160,34,us4us,Piotr Jarosik,P. Jarosik,us4us Ltd.
+161,34,us4us,Piotr Karwat,P. Karwat,us4us Ltd.
+162,34,us4us,Ziemowit Klimonda,Z. Klimonda,us4us Ltd.
+164,35,vanderbilt,Brett Byram,B. Byram,Vanderbilt University
+165,35,vanderbilt,Christopher Khan,C. Khan,Vanderbilt University
+167,35,vanderbilt,Ying-Chun (Preston) Pan,Y.-C. Pan,Vanderbilt University
+166,35,vanderbilt,Zoe Marshall,Z. Marshall,Vanderbilt University
+168,36,weillcornell,Shangke Liu,S. Liu,Weill Cornell Medicine
+169,36,weillcornell,Tipu Sultan,T. Sultan,Weill Cornell Medicine
+170,36,weillcornell,Cameron Hoerig,C. Hoerig,Weill Cornell Medicine
+171,36,weillcornell,Jonathan Mamou,J. Mamou,Weill Cornell Medicine
+173,37,weizmann-sampl,Yonina C. Eldar,Y.C. Eldar,Weizmann Institute of Science
+174,37,weizmann-sampl,Adi Wegerhoff,A. Wegerhoff,Weizmann Institute of Science
+172,37,weizmann-sampl,Ditza Auerbach,D. Auerbach,Weizmann Institute of Science
+175,38,wpi,Gregory S. Fischer,G.S. Fischer,Worcester Polytechnic Institute
+182,38,wpi,Haichong K. Zhang,H.K. Zhang,Worcester Polytechnic Institute
+178,38,wpi,Ryo Murakami,R. Murakami,Worcester Polytechnic Institute
+180,38,wpi,Ryosuke Tsumura,R. Tsumura,Worcester Polytechnic Institute
+176,38,wpi,Shun Katayose,S. Katayose,Worcester Polytechnic Institute
+177,38,wpi,Xihan Ma,X. Ma,Worcester Polytechnic Institute
+181,38,wpi,Yang Wang,Y. Wang,Worcester Polytechnic Institute
+179,38,wpi,Yichuan Tang,Y. Tang,Worcester Polytechnic Institute
+187,39,"nv-raw2insights-us, siemens-healthineers, unc-liver",Walter Simson,W. Simson,NVIDIA
+183,39,nv-raw2insights-us,Mahdi Azizian,M. Azizian,NVIDIA
+184,39,nv-raw2insights-us,Sean Huver,S. Huver,NVIDIA
