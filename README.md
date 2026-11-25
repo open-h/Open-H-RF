@@ -87,7 +87,19 @@ Contributions to v1.0 are closed; its call and participation instructions are re
 
 </details>
 
-## Key Dates (v1.0)
+## Key Dates
+
+### v2.0
+
+| Milestone | Date |
+|-----------|------|
+| Proposal submission deadline (rolling acceptance) | April 30, 2027 |
+| Data collection window | November 2026–July 2027 |
+| Dataset delivery deadline | July 16, 2027 |
+| Data cleanup/standardization and release approvals | November 2026–August 2027 |
+| Planned public dataset release | September 2027 |
+
+### v1.0
 
 | Milestone | Date |
 |-----------|------|
