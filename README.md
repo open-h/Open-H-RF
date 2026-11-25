@@ -14,6 +14,10 @@
 
 </div>
 
+> [!IMPORTANT]
+> **Open-H-RF v2.0 — Call for Proposals is open!** Proposals are due **April 30, 2027**, with rolling acceptance.
+> [Read the call](assets/Open-H-RF-v2.0-Call-for-Proposals.pdf) · [Submit a proposal](https://forms.gle/ATxQqRm4EU2TA2L97)
+
 ## About
 
 Open-H-RF is a collaborative initiative led by [Stanford University](https://med.stanford.edu/ultrasound.html), [Eindhoven University of Technology (TU/e)](https://www.tue.nl/en/research/research-groups/signal-processing-systems/biomedical-diagnostics) and [NVIDIA](https://www.nvidia.com/) to build a large-scale, openly licensed dataset of pre-beamformed (channel capture) medical ultrasound measurements. *The goal:* train general-purpose foundation models capable of multi-task *raw-to-insight* inference across echocardiography, general, fetal and transcranial imaging, blood flow measurement and ultrasound inverse problems.
@@ -27,6 +31,7 @@ The Open-H-RF format is implemented using the [`zea`](https://zea.readthedocs.io
 
 ## 📣 Updates
 
+- 📣 **November 2026:** [Open-H-RF v2.0 call for proposals is open!](#how-to-participate) Proposals are due **April 30, 2027**.
 - 📄 **October 2026:** [The Open-H-RF preprint is out on arXiv!](https://arxiv.org/abs/2610.13616)
 - 🤗 **October 2026:** [Open-H-RF v1.0 is publicly released on Hugging Face!](https://huggingface.co/datasets/nvidia/Open-H-RF)
 - 🚀 **September 2026:** [Open-H-RF v1.0 early-access pre-release is live on Hugging Face!](https://huggingface.co/datasets/nvidia/Open-H-RF)
