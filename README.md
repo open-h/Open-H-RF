@@ -67,8 +67,6 @@ To get only the data you need, use the [dataset explorer](https://open-h.github.
 
 ### Open-H-RF v2.0 — Call for Proposals
 
-We invite raw ultrasound channel data contributions in ultrasound computed tomography, functional ultrasound, ultrasound therapy, and clinical ultrasound, including obstetric imaging.
-
 Read the [v2.0 Request for Proposals](assets/Open-H-RF-v2.0-Call-for-Proposals.pdf) for scope, requirements, and submission details. Proposals are limited to **2 pages** and due **April 30, 2027**, with rolling acceptance. Dataset delivery is due **July 16, 2027**, with public release planned for **September 2027**.
 
 [Submit a v2.0 proposal](https://forms.gle/ATxQqRm4EU2TA2L97).
