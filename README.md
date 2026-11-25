@@ -65,8 +65,15 @@ To get only the data you need, use the [dataset explorer](https://open-h.github.
 
 ## How to Participate
 
-> [!NOTE]
-> Contributions to Open-H-RF v1.0 are now closed. We are planning a v2.0 release in the future. If you are interested, please [get in touch](#contact) and [join our Discord](https://discord.gg/gNTJeUsH2B) to stay updated.
+### Open-H-RF v2.0 — Call for Proposals
+
+Open-H-RF v2.0 builds on v1.0 to expand the dataset for ultrasound foundation models. We welcome proposals from academic, clinical, and industry teams worldwide.
+
+Read the [v2.0 Request for Proposals](assets/Open-H-RF-v2.0-Call-for-Proposals.pdf) for scope, requirements, and submission details. Proposals are limited to **2 pages** and due **April 30, 2027**, with rolling acceptance. Dataset delivery is due **July 16, 2027**, with public release planned for **September 2027**.
+
+[Submit a v2.0 proposal](https://forms.gle/ATxQqRm4EU2TA2L97).
+
+Contributions to v1.0 are closed; its call and participation instructions are retained below.
 
 <details>
 <summary><b>Open-H-RF v1.0 participation instructions</b></summary>
@@ -81,6 +88,18 @@ To get only the data you need, use the [dataset explorer](https://open-h.github.
 </details>
 
 ## Key Dates
+
+### v2.0
+
+| Milestone | Date |
+|-----------|------|
+| Proposal submission deadline (rolling acceptance) | April 30, 2027 |
+| Data collection window | November 2026–July 2027 |
+| Dataset delivery deadline | July 16, 2027 |
+| Data cleanup/standardization and release approvals | November 2026–August 2027 |
+| Planned public dataset release | September 2027 |
+
+### v1.0
 
 | Milestone | Date |
 |-----------|------|
